@@ -147,5 +147,5 @@ theme: huxblog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://gitee.com/owen2016/owen2016
+  repo: https://gitee.com/owen2016/owen2016.git
   branch: master
