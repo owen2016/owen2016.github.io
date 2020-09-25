@@ -3,23 +3,23 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Kaijun's Blog
+title: Owen's Blog
 subtitle: To Be A Lean Developer!
-author: Kaijun Chen
+author: Owen Li
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://kaijun.rocks/hexo-theme-huxblog
-root: /hexo-theme-huxblog/
+url: http://example.com
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 #Custom Setting Start
 
 # Site settings
-SEOTitle: Kaijun的博客 | Kaijun's Blog
+SEOTitle: Owen的博客 | Owen's Blog
 header-img: img/home-bg.jpg
 email: Kaijun.cn@gmail.com
 description: ""
@@ -147,5 +147,5 @@ theme: huxblog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://gitee.com/owen2016/owen2016.git
-  branch: master
+  repo: https://gitee.com/owen2016/owen2016
+  branch: blog_pages
