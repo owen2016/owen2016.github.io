@@ -173,6 +173,7 @@ deploy:
   repo: 
     gitee: git@gitee.com:owen2016/owen2016.git,gh-pages
     github: git@github.com:owen2016/owen2016.github.io.git,gh-pages
+  message: "commit by hexo-one-command-deployment"
 # type: baidu_url_submitter
 
 # 百度推送SEO
