@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Owen's Blog
+title: DevOps在路上
 subtitle: 'DevOps在路上'
 description: ''
 keywords: "DevOps在路上|DevOps|Docker|CICD|K8S"
@@ -75,10 +75,7 @@ feed:
   content_limit_delim: ' '
   order_by: -date
 
-Plugins:
-- hexo-generator-baidu-sitemap
-- hexo-generator-sitemap
-
+## 站点地图生成后， 分别在百度和谷歌上提交站点地图
 baidusitemap:
     path: baidusitemap.xml
 sitemap:
@@ -105,6 +102,25 @@ music:
   volume: 0.7 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
   listFolded: false # 列表默认折叠
   listMaxHeight: # 列表最大高度
+
+live2d:
+  enable: false
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  model:
+    use: live2d-widget-model-shizuku
+  display:
+    position: left
+    width: 200
+    height: 400
+  mobile:
+    show: false
+  react:
+    opacity: 0.7
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -152,34 +168,18 @@ theme: hexo-theme-matery
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-- type: git
-  repo: 
-       gitee: git@gitee.com:owen2016/owen2016.git
-       #github: git@github.com:owen2016/owen2016.github.io.git
-  branch: blog_pages
-- type: baidu_url_submitter
+  type: git
+#   repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  repo:
+     gitee: git@gitee.com:owen2016/owen2016.git
+     #github: git@github.com:owen2016/owen2016.github.io.git
+  branch: gh-pages
+  message: "commit by hexo-one-command-deployment"
+#   type: baidu_url_submitter
 
-live2d:
-  enable: false
-  scriptFrom: local
-  pluginRootPath: live2dw/
-  pluginJsPath: lib/
-  pluginModelPath: assets/
-  tagMode: false
-  log: false
-  model:
-    use: live2d-widget-model-shizuku
-  display:
-    position: left
-    width: 200
-    height: 400
-  mobile:
-    show: false
-  react:
-    opacity: 0.7
-
+# 百度推送SEO
 baidu_url_submit:
   count: 100
-  host: godweiyang.com
+  host: blog.devopsing.site
   token:  # 填写你的百度统计token，不写也没事
   path: baidu_urls.txt

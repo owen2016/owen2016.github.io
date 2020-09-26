@@ -16,7 +16,7 @@
         "hexo-baidu-url-submit": "0.0.6",
         "hexo-deployer-git": "^1.0.0",
         "hexo-generator-archive": "^1.0.0",
-        "hexo-generator-baidu-sitemap": "^0.1.6",
+        "hexo-generator-baidu-sitemap": "^0.1.9",
         "hexo-generator-category": "^1.0.0",
         "hexo-generator-feed": "^3.0.0",
         "hexo-generator-index": "^2.0.0",
@@ -30,6 +30,7 @@
         "hexo-renderer-marked": "^3.0.0",
         "hexo-renderer-stylus": "^2.0.0",
         "hexo-server": "^2.0.0",
-        "hexo-wordcount": "^6.0.1"
+        "hexo-wordcount": "^6.0.1",
+        "live2d-widget-model-shizuku": "^1.0.5"
     }
 }
