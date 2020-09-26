@@ -1,0 +1,9 @@
+http://example.com/2020/02/20/devops-practices-thinking/
+http://example.com/2019/11/16/jin-hua-du-hou-gan-1/
+http://example.com/2019/11/16/hello-devops/
+http://example.com/2019/10/02/devops-tools/
+http://example.com/2015/07/09/js-module-7day/
+http://example.com/2015/04/14/unix-linux-note/
+http://example.com/2014/09/22/js-version/
+http://example.com/2014/01/29/hello-2015/
+http://example.com/2013/05/25/js-module-loader/

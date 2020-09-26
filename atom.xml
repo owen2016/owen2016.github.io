@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>DevOps在路上</title>
+  
+  <subtitle>DevOps在路上</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2020-09-24T14:47:09.199Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Owen Li</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>持续集成实践中的思考</title>
+    <link href="http://example.com/2020/02/20/devops-practices-thinking/"/>
+    <id>http://example.com/2020/02/20/devops-practices-thinking/</id>
+    <published>2020-02-19T16:00:00.000Z</published>
+    <updated>2020-09-24T14:47:09.199Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最近在看到ThoughtWorks的一篇技术文章提到“几项与持续集成相关的反模式”, 结合自己的实践体会特别有深切体会，所以记录下来&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;持续集成的反模式&quot;&gt;&lt;a href=&quot;#持续集成的反模式&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="DevOps" scheme="http://example.com/tags/DevOps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>进化-读后感-1</title>
+    <link href="http://example.com/2019/11/16/jin-hua-du-hou-gan-1/"/>
+    <id>http://example.com/2019/11/16/jin-hua-du-hou-gan-1/</id>
+    <published>2019-11-16T07:09:23.000Z</published>
+    <updated>2020-09-26T11:52:59.740Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;关于&quot;&gt;&lt;a href=&quot;#关于&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="读书" scheme="http://example.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+    <category term="SRE" scheme="http://example.com/tags/SRE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello DevOps</title>
+    <link href="http://example.com/2019/11/16/hello-devops/"/>
+    <id>http://example.com/2019/11/16/hello-devops/</id>
+    <published>2019-11-15T16:00:00.000Z</published>
+    <updated>2020-09-24T14:50:39.752Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;为什么会有这个博客&quot;&gt;&lt;a href=&quot;#为什么会有这个博客&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="DevOps" scheme="http://example.com/tags/DevOps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DevOps-Tools</title>
+    <link href="http://example.com/2019/10/02/devops-tools/"/>
+    <id>http://example.com/2019/10/02/devops-tools/</id>
+    <published>2019-10-01T16:00:00.000Z</published>
+    <updated>2020-09-24T14:47:09.198Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="DevOps" scheme="http://example.com/tags/DevOps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example Post using Keynote Layout</title>
+    <link href="http://example.com/2015/07/09/js-module-7day/"/>
+    <id>http://example.com/2015/07/09/js-module-7day/</id>
+    <published>2015-07-08T16:00:00.000Z</published>
+    <updated>2020-09-23T23:12:24.675Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;下滑这里查看更多内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;7月9日，我在公司内部进行了名为「JavaScript 模块化七日谈」分享，并将该 Slides 分享到了微博上。出乎意料地，这篇微博先后被 @JS小组 @尤小右 @寸志 等近</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端开发" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="JavaScript" scheme="http://example.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example Post With Default Header Image</title>
+    <link href="http://example.com/2015/04/14/unix-linux-note/"/>
+    <id>http://example.com/2015/04/14/unix-linux-note/</id>
+    <published>2015-04-13T16:00:00.000Z</published>
+    <updated>2020-09-23T23:12:24.679Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;This document is not completed and will be updated anytime.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Catagory&quot;&gt;&lt;a href=&quot;#Catagory&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="OS" scheme="http://example.com/tags/OS/"/>
+    
+    <category term="Unix" scheme="http://example.com/tags/Unix/"/>
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example Post</title>
+    <link href="http://example.com/2014/09/22/js-version/"/>
+    <id>http://example.com/2014/09/22/js-version/</id>
+    <published>2014-09-21T16:00:00.000Z</published>
+    <updated>2020-09-23T23:12:24.677Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;JavaScript 有着很奇怪的命名史。&lt;/p&gt;
+&lt;p&gt;1995 年，它作为网景浏览器（Netscape Navigator）的一部分首次发布，网景给这个新语言命名为 LiveScript。一年后，为了搭上当时媒体热炒 Java 的顺风车，临时改名为了</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端开发" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="JavaScript" scheme="http://example.com/tags/JavaScript/"/>
+    
+    <category term="翻译" scheme="http://example.com/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Welcome to Hux Blog</title>
+    <link href="http://example.com/2014/01/29/hello-2015/"/>
+    <id>http://example.com/2014/01/29/hello-2015/</id>
+    <published>2014-01-29T04:00:00.000Z</published>
+    <updated>2020-09-23T23:12:24.673Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;“Yeah It’s on. ”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Hux 的 Blog</summary>
+        
+      
+    
+    
+    
+    
+    <category term="生活" scheme="http://example.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example Post with Code Highlight</title>
+    <link href="http://example.com/2013/05/25/js-module-loader/"/>
+    <id>http://example.com/2013/05/25/js-module-loader/</id>
+    <published>2013-05-24T16:00:00.000Z</published>
+    <updated>2020-09-23T23:12:24.676Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Foreword&quot;&gt;&lt;a href=&quot;#Foreword&quot; class=&quot;headerlink&quot; title=&quot;Foreword&quot;&gt;&lt;/a&gt;Foreword&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Here comes</summary>
+        
+      
+    
+    
+    
+    
+    <category term="前端开发" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="JavaScript" scheme="http://example.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+</feed>
