@@ -75,12 +75,36 @@ feed:
   content_limit_delim: ' '
   order_by: -date
 
+Plugins:
+- hexo-generator-baidu-sitemap
+- hexo-generator-sitemap
+
+baidusitemap:
+    path: baidusitemap.xml
+sitemap:
+    path: sitemap.xml
+
 # 文章字数统计插件
 wordCount:
   enable: true # 将这个值设置为 true 即可.
   postWordCount: true
   min2read: true
   totalCount: true
+
+# 是否在首页显示音乐.
+music:
+  enable: false
+  showTitle: false
+  title: 听听音乐
+  fixed: false # 是否开启吸底模式
+  autoplay: false # 是否自动播放
+  theme: '#42b983'
+  loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: false # 列表默认折叠
+  listMaxHeight: # 列表最大高度
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -114,7 +138,7 @@ updated_option: 'mtime'
 per_page: 12
 pagination_dir: page
 
-# Include / Exclude file(s)
+# Include / Exclude file(s) 在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
@@ -131,7 +155,7 @@ deploy:
 - type: git
   repo: 
        gitee: git@gitee.com:owen2016/owen2016.git
-       github: git@github.com:owen2016/owen2016.github.io.git
+       #github: git@github.com:owen2016/owen2016.github.io.git
   branch: blog_pages
 - type: baidu_url_submitter
 
