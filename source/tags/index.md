@@ -1,6 +1,6 @@
 ---
+title: tags
+date: 2018-09-30 18:23:38
+type: "tags"
 layout: "tags"
-title: "Tags"
-description: "Hey, this is Tags."
-header-img: "img/tag-bg.jpg"
 ---
