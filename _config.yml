@@ -167,22 +167,13 @@ theme: hexo-theme-matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-# deploy:
-# - type: git
-# #   repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-#   repository:
-#      gitee: https://gitee.com/owen2016/owen2016.git
-#      #github: git@github.com:owen2016/owen2016.github.io.git
-#   branch: gh-pages
-#   message: "commit by hexo-one-command-deployment"
-# #   type: baidu_url_submitter
-
+# 同时部署到gh-pages分支，必须使用下列格式
 deploy:
   type: git
   repo: 
-    https://gitee.com/owen2016/owen2016.git
-    https://github.com/owen2016/owen2016.github.io.git
-  branch: gh-pages
+    gitee: git@gitee.com:owen2016/owen2016.git,gh-pages
+    github: git@github.com:owen2016/owen2016.github.io.git,gh-pages
+# type: baidu_url_submitter
 
 # 百度推送SEO
 baidu_url_submit:
