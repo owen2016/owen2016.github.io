@@ -5,7 +5,7 @@
 # Site
 title: DevOps在路上
 subtitle: 'DevOps在路上'
-description: ''
+description: 'Every failure is leading towards success.'
 keywords: "DevOps在路上|DevOps|Docker|CICD|K8S"
 author: Owen Li
 language: zh-CN
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://example.com
+url: http://blog.devopsing.site
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
