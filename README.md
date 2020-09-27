@@ -6,7 +6,7 @@
 
 但是发现Jekyll是基于ruby的，构建配置有点麻烦，需要更多专业前端的知识。后来就看到了目前使用的[hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery), 这个主题满足我心目中的要求 `清新、简洁、定制化程度高、构建简单`. 如果你的博客准备基于`Hexo`, 可以果断使用这个主题。
 
-最后感谢[闪烁之狐狸](http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/)
+最后感谢[闪烁之狐狸](http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/) 和 [godweiyang.com](https://godweiyang.com/)
 
 ## 个性化功能
 
@@ -47,4 +47,33 @@ git push github master -f
 hexo clean
 hexo g
 hexo d
+```
+
+## 文章示例
+
+``` yml
+---
+title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+---
+```
+
+``` yml
+---
+title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+author: 赵奇
+img: /source/images/xxx.jpg
+top: true
+cover: true
+coverImg: /images/1.jpg
+password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+toc: false
+mathjax: false
+summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+categories: Markdown
+tags:
+  - Typora
+  - Markdown
+---
 ```
