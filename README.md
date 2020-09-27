@@ -6,7 +6,7 @@
 
 但是发现Jekyll是基于ruby的，构建配置有点麻烦，需要更多专业前端的知识。后来就看到了目前使用的[hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery), 这个主题满足我心目中的要求 `清新、简洁、定制化程度高、构建简单`. 如果你的博客准备基于`Hexo`, 可以果断使用这个主题。
 
-最后感谢[闪烁之狐狸](http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/) 和 [godweiyang.com](https://godweiyang.com/)
+最后感谢[闪烁之狐狸](http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/) 和 [godweiyang.com](https://github.com/godweiyang/hexo-matery-modified)
 
 ## 个性化功能
 
