@@ -12,7 +12,7 @@
 
 基于原主题，我增加了一些我特殊的需求
 
-### 支持同步到 gitee/github
+### 1. 支持同步到 gitee/github
 
 ``` shell
 git remote rm origin
@@ -25,7 +25,7 @@ git push github master
 
 ```
 
-### 支持 “生成静态文件” 和 “开发源码” 同一个库不同分支 ph-pages/master
+### 2. 支持 “生成静态文件” 和 “开发源码” 同一个库不同分支 ph-pages/master
 
 ```yml
 deploy:
