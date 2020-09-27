@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.devopsing.site/404.html</loc>
+    
+    <lastmod>2020-09-27T14:39:47.016Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.devopsing.site/contact/index.html</loc>
     
     <lastmod>2020-09-27T01:56:39.182Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://blog.devopsing.site/2019/11/16/jin-hua-du-hou-gan-1/</loc>
     
     <lastmod>2020-09-26T11:52:59.740Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.devopsing.site/404.html</loc>
-    
-    <lastmod>2020-09-26T09:47:26.366Z</lastmod>
     
   </url>
   
