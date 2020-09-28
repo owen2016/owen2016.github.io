@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.devopsing.site/2019/11/15/hello-devops/</loc>
+    
+    <lastmod>2020-09-28T15:37:39.788Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.devopsing.site/2019/10/02/devops-tools/</loc>
     
     <lastmod>2020-09-28T15:32:47.319Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://blog.devopsing.site/about/index.html</loc>
     
     <lastmod>2020-09-28T15:04:07.518Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.devopsing.site/2019/11/15/hello-devops/</loc>
-    
-    <lastmod>2020-09-28T15:02:41.575Z</lastmod>
     
   </url>
   
