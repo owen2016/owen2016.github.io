@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="keywords" content="DevOps 工具, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="keywords" content="【漫话DevOps】-Agile, CI/CD, DevOps, DevOps在路上|DevOps|Docker|CICD|K8S">
         <meta name="description" content="Every failure is leading towards success.">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -22,7 +22,7 @@
 
 
             <title>
-                DevOps 工具 | DevOps在路上
+                【漫话DevOps】-Agile, CI/CD, DevOps | DevOps在路上
             </title>
             <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -294,12 +294,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DevOps 工具</h1>
+                    <h1 class="description center-align post-title">【漫话DevOps】-Agile, CI/CD, DevOps</h1>
                 </div>
             </div>
         </div>
@@ -428,8 +428,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                工具
+                            <a href="/categories/DevOps/" class="post-category">
+                                DevOps
                             </a>
                         
                     </div>
@@ -441,7 +441,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-02
+                    2020-03-27
                 </div>
                 
 
@@ -455,14 +455,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    6 分
                 </div>
                 
 
@@ -477,105 +477,70 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20200928233152.png" alt="devops-tools"></p>
-<h2 id="版本控制-amp-协作开发"><a href="#版本控制-amp-协作开发" class="headerlink" title="版本控制&amp;协作开发"></a>版本控制&amp;协作开发</h2><ul>
-<li><p>版本控制系统 Git</p>
-<p>  Git 是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。开源中国 Git 代码托管平台：<a target="_blank" rel="noopener" href="http://git.oschina.net/">http://git.oschina.net/</a></p>
+                <p>随着DevOps理念的普及与扩散，可能会被一大堆名字概念搞的莫名其妙，理清它们之间的关系可以帮助团队知道DevOps如何落地，改善工作流程。</p>
+<p><strong>Here’s a quick and easy way to differentiate agile, DevOps, and CI/CD:</strong></p>
+<ul>
+<li>Agile focuses on processes highlighting change while accelerating delivery.</li>
+<li>CI/CD focuses on software-defined life cycles highlighting tools that emphasize automation.</li>
+<li>DevOps focuses on culture highlighting roles that emphasize responsiveness.</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/2504773-d080c042303e3b84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="Agile-Development"><a href="#Agile-Development" class="headerlink" title="Agile Development"></a>Agile Development</h2><ul>
+<li>拥抱变化</li>
+<li>快速迭代<br><img src="https://upload-images.jianshu.io/upload_images/2504773-906788b9c2e462ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+</ul>
+<h2 id="CI-CD"><a href="#CI-CD" class="headerlink" title="CI /CD"></a>CI /CD</h2><p>CI/CD 都体现了如今快节奏市场中的文化和发展原则，旨在缩短开发周期、提高软件交付效率以及实现全流程的自动化。同时，两者都有着共同的目标：让软件开发更少地依赖于手动执行的任务，在此基础上使得软件的发布更加频繁、更加安全可靠。由于有着相同的目标，因此持续集成和持续交付并非相互排斥的, 只是它们的应用范围有所不同。</p>
+<ul>
+<li>CI：持续集成（CONTINUOUS INTEGRATION）</li>
+<li>CD：持续部署（CONTINUOUS DEPLOYMENT）</li>
+<li>CD：持续交付（CONTINUOUS DELIVERY）</li>
+</ul>
+<h3 id="持续集成CI（Continuous-Integration）"><a href="#持续集成CI（Continuous-Integration）" class="headerlink" title="持续集成CI（Continuous Integration）"></a>持续集成CI（Continuous Integration）</h3><p>参考大师的定义: <a target="_blank" rel="noopener" href="http://www.martinfowler.com/articles/continuousIntegration.html">http://www.martinfowler.com/articles/continuousIntegration.html</a></p>
+<p>持续集成（CI）是在源代码变更后自动检测、拉取、构建和（在大多数情况下）进行单元测试的过程</p>
+<ul>
+<li><p>对项目而言，持续集成（CI）的目标是确保开发人员新提交的变更是好的， 不会发生break build; 并且最终的主干分支一直处于可发布的状态，</p>
 </li>
-<li><p>代码托管平台 GitLab</p>
-<p>  GitLab 是一个利用 Ruby on Rails 开发的开源应用程序，实现一个自托管的Git项目仓库，可通过Web界面进行访问公开的或者私人项目。开源中国代码托管平台 git.oschina.net 就是基于 GitLab 项目搭建。</p>
-</li>
-<li><p>代码评审工具 Gerrit</p>
-<p>  Gerrit 是一个免费、开放源代码的代码审查软件，使用网页界面。利用网页浏览器，同一个团队的软件程序员，可以相互审阅彼此修改后的程序代码，决定是否能够提交，退回或者继续修改。它使用 Git 作为底层版本控制系统。</p>
-</li>
-<li><p>版本控制系统 Mercurial</p>
-<p>  Mercurial 是一种轻量级分布式版本控制系统，采用 Python 语言实现，易于学习和使用，扩展性强。</p>
-</li>
-<li><p>版本控制系统 Subversion</p>
-<p>  Subversion 是一个版本控制系统，相对于的 RCS、CVS，采用了分支管理系统，它的设计目标就是取代CVS。互联网上免费的版本控制服务多基于Subversion。</p>
-</li>
-<li><p>版本控制系统 Bazaar</p>
-<p>  Bazaar 是一个分布式的版本控制系统，它发布在 GPL 许可协议之下，并可用于 Windows、GNU/Linux、UNIX 以及 Mac OS 系统。</p>
+<li><p>对于开发人员而言，要求他们必须频繁地向主干提交代码，相应也可以即时得到问题的反馈。实时获取到相关错误的信息，以便快速地定位与解决问题<br><img src="https://upload-images.jianshu.io/upload_images/2504773-064a281aa9596dca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 </li>
 </ul>
-<h2 id="包-amp-产品管理工具"><a href="#包-amp-产品管理工具" class="headerlink" title="包&amp;产品管理工具"></a>包&amp;产品管理工具</h2><ul>
-<li><p>Chocolatey：Chocolatey是Windows下一款开源的命令行包管理软件 ，简单说这就是Windows的apt-get；</p>
+<p>显然这个过程可以大大地提高开发人员以及整个IT团队的工作效率，避免陷入好几天得不到好的“部署产出”，影响后续的测试和交付。</p>
+<h3 id="持续交付-（Continuous-Delivery）"><a href="#持续交付-（Continuous-Delivery）" class="headerlink" title="持续交付 （Continuous Delivery）"></a>持续交付 （Continuous Delivery）</h3><p>持续交付在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境的「预发布环境」（production-like environments）中。交付给质量团队或者用户，以供评审。如果评审通过，代码就进入生产阶段 持续交付并不是指软件每一个改动都要尽快部署到产品环境中，它指的是任何的代码修改都可以在任何时候实时部署。<br><img src="https://upload-images.jianshu.io/upload_images/2504773-4cb36753a452ee83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>强调：<br>1、手动部署<br>2、有部署的能力，但不一定部署</p>
+<h3 id="持续部署（Continuous-Deployment）"><a href="#持续部署（Continuous-Deployment）" class="headerlink" title="持续部署（Continuous Deployment）"></a>持续部署（Continuous Deployment）</h3><p>代码通过评审之后，自动部署到生产环境中。持续部署是持续交付的最高阶段。 </p>
+<p>强调<br>1、持续部署是自动的<br>2、持续部署是持续交付的最高阶段<br>3、持续交付表示的是一种能力，持续部署则是一种方式<br><img src="https://upload-images.jianshu.io/upload_images/2504773-c2437eaef9c367ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<ul>
+<li>DEV Development environment -开发环境，用于开发者调试使用</li>
+<li>FAT Feature Acceptance Test environment  -功能验收测试环境，用于软件测试者测试使用</li>
+<li>UAT User Acceptance Test environment  -用户验收测试环境，用于生产环境下的软件测试者测试使用</li>
+<li>PRO Production environment -生产环境</li>
+</ul>
+<p>通过CD可以加快软件交付速度，目标用户可以在几天或几周内就收到修复后的功能与新增的功能，而无需等待数月后才更新。CD的部署频率也加快了整个流程中的反馈循环。最新版本真的解决了预期的问题吗？是否满足了用户的需求？用户就可以快速地验收并作出判断，而IT团队也可以在问题影响到开发周期之前就解决反馈的问题。持续的反馈循环使得用户与IT团队更紧密地合作，以确保能准确的理解与满足他们的需求。整个交付过程进度可视化，方便团队人员与客户了解项目的进度。</p>
+<ul>
+<li><p>持续集成可确保代码库中始终保持最新的代码，同时可以快速集成来自多个开发人员的代码，并确保这些代码可在多个环境中协同工作。它通常有助于减少错误并通过自动化流程来减少手动任务。CI可以实现代码的自动构建与测试，减少开发中的Bug。因此，CI适用于那些过度依赖手动任务和复杂构建过程的企业。</p>
 </li>
-<li><p>WiX Toolset：提供一组最强大的工具集来帮助你创建Windows安装包。该工具集从XML源代码构建你的Windows安装程序包，可以无缝集成到构建过程；</p>
+<li><p>持续交付适用于需要缩短开发周期，更快地为目标用户提供软件的企业。CD降低了部署新软件或升级已有软件的难度，且实现了全流程的自动化，因此您的团队无需手动执行复杂繁琐的任务，从而加快反馈速度，来确保您增加的功能真正地满足用户的需求。</p>
 </li>
 </ul>
-<h2 id="自动化构建和测试"><a href="#自动化构建和测试" class="headerlink" title="自动化构建和测试"></a>自动化构建和测试</h2><ul>
-<li><p>Apache Ant<br>  Apache Ant是一个将软件编译、测试、部署等步骤联系在一起加以自动化的一个工具，大多用于Java环境中的软件开发。</p>
-</li>
-<li><p>Maven<br>  Maven 除了以程序构建能力为特色之外，还提供 Ant 所缺少的高级项目管理工具。由于 Maven 的缺省构建规则有较高的可重用性，所以常常用两三行 Maven 构建脚本就可以构建简单的项目，而使用 Ant 则需要十几行。<br>  事实上，由于 Maven 的面向项目的方法，许多 Apache Jakarta 项目现在使用 Maven，而且公司项目采用 Maven 的比例在持续增长。开源中国的<a target="_blank" rel="noopener" href="http://maven.oschina.net/">Maven 库</a></p>
-</li>
-<li><p>Selenium<br>Selenium (SeleniumHQ) 是 thoughtworks公司的一个集成测试的强大工具。</p>
-</li>
-<li><p>PyUnit<br>Python单元测试框架（The Python unit testing framework），简称为PyUnit， 是Kent Beck和Erich Gamma这两位聪明的家伙所设计的 JUnit 的Python版本。</p>
-</li>
-<li><p>QUnit<br>QUnit 是 jQuery 的单元测试框架。</p>
-</li>
-<li><p>JMeter<br>JMeter 是 Apache 组织的开放源代码项目，它是功能和性能测试的工具，100% 的用 java 实现。</p>
-</li>
-<li><p>Gradle<br>Gradle 就是可以使用 Groovy 来书写构建脚本的构建系统，支持依赖管理和多项目，类似 Maven，但比之简单轻便。</p>
-</li>
-<li><p>PHPUnit<br>PHPUnit 是一个轻量级的PHP测试框架。它是在PHP5下面对JUnit3系列版本的完整移植，是xUnit测试框架家族的一员(它们都基于模式先锋Kent Beck的设计)。</p>
-</li>
+<p>此外，也有不少人认为CI是CD的前提与基础，没有CI就不能实现CD。这种说法也是比较流行的，其思路如下图。因此，不管是哪种说法，CI与CD都是DevOps工具中不可或缺的理念与方法。<br><img src="https://upload-images.jianshu.io/upload_images/2504773-74ab14bc8a196e6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><strong>持续交付与持续部署，到底谁应该包含谁 ?</strong></p>
+<p>持续部署是自动化的将一切变更放到生产环境，而持续交付则有判断决策过程，并直接说“In order to do Continuous Deployment you must be doing Continuous Delivery.”</p>
+<blockquote>
+<p>“Continuous Delivery is sometimes confused with Continuous Deployment.Continuous Deploymentmeans that every change goes through the pipeline and automatically gets put into production, resulting in many production deployments every day. Continuous Delivery just means that you are able to do frequent deployments but may choose not to do it, usually due to businesses preferring a slower rate of deployment. In order to do Continuous Deployment you must be doing Continuous Delivery.”</p>
+</blockquote>
+<p>对持续交付与持续部署的关系，Martin也承认两个概念容易造成困惑，持续部署代表将所有变更自动通过流水线推到生产环境，持续交付则意味着你有能力这样做，但可以基于业务选择不这样做。</p>
+<p>所以我不觉得两者有谁包含谁，两者在这个层面讲，一个是技术领域，一个是业务领域。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment">Continuous integration vs. continuous delivery vs. continuous deployment</a></li>
 </ul>
-<h2 id="持续集成-amp-交付"><a href="#持续集成-amp-交付" class="headerlink" title="持续集成&amp;交付"></a>持续集成&amp;交付</h2><ul>
-<li><p>Jenkins<br>  Jenkins 是一个开源的持续集成工具，使用 Java 编程语言编写的。它有助于实时检测和报告较大代码库中的单一更改。该软件可帮助开发人员快速查找和解决代码库中的问题并自动测试其构建。</p>
+<p>-<a target="_blank" rel="noopener" href="https://dzone.com/articles/continuous-integration-vs-continuous-delivery">Continuous Integration vs. Continuous Delivery</a></p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.mindtheproduct.com/what-the-hell-are-ci-cd-and-devops-a-cheatsheet-for-the-rest-of-us/">The Product Managers’ Guide to Continuous Delivery and DevOps</a></p>
 </li>
-<li><p>Travis CI<br>  Travis 是一款流行的 CI 工具，可免费用于开源项目。在托管时，不必依赖任何平台。此 CI 工具为许多构建配置和语言提供支持，如 Node，PHP，Python，Java，Perl 等。</p>
+<li><p><a target="_blank" rel="noopener" href="https://theagileadmin.com/what-is-devops/">What Is DevOps?</a></p>
 </li>
-<li><p>GoCD<br>  GoCD 是一个开源的持续集成服务器。它可轻松模拟和可视化复杂的工作流程。此 CI 工具允许持续交付，并为构建 CD Pipeline 提供直观的界面。</p>
+<li><p><a target="_blank" rel="noopener" href="https://www.mabl.com/blog/what-is-cicd">What is CI/CD?</a></p>
 </li>
-<li><p>Bamboo<br>  Bamboo 是一个持续集成的构建服务器，可以自动构建、测试和发布，并可与 JIRA 和 Bitbucket 无缝协作。Bamboo 支持多语言和平台，如 CodeDeply、Ducker、Git，SVN、Mercurial、AWS 及 Amazon S3 bucket</p>
-</li>
-<li><p>GitLab CI<br>  GitLab CI 是 GitLab 的一部分。它是一个提供 API 的 Web 应用程序，可将其状态存储在数据库中。GitLab CI 可以管理项目并提供友好的用户界面，并充分利用 GitLab 所有功能</p>
-</li>
-</ul>
-<h2 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h2><ul>
-<li><p>Chef<br>  Chef 是一个系统集成框架，为整个架构提供配置管理功能。</p>
-</li>
-<li><p>Puppet<br>  Puppet，您可以集中管理每一个重要方面，您的系统使用的是跨平台的规范语言，管理所有的单独的元素通常聚集在不同的文件，如用户， CRON作业，和主机一起显然离散元素，如包装，服务和文件。</p>
-</li>
-<li><p>RunDeck<br>  RunDeck 是用 Java/Grails 写的开源工具，帮助用户在数据中心或者云环境中自动化各种操作和流程。通过命令行或者web界面，用户可以对任意数量的服务器进行操作，大大降低了对服务器自动化的门槛。</p>
-</li>
-<li><p>Saltstack<br>  Saltstack 可以看做是func的增强版+Puppet的弱化版。使用Python编写。非常好用,快速可以基于EPEL部署。Salt 是一个开源的工具用来管理你的基础架构，可轻松管理成千上万台服务器。</p>
-</li>
-<li><p>Ansible<br>  Ansible 提供一种最简单的方式用于发布、管理和编排计算机系统的工具，你可在数分钟内搞定。Ansible 是一个模型驱动的配置管理器，支持多节点发布、远程任务执行。默认使用 SSH 进行远程连接。无需在被管理节点上安装附加软件，可使用各种编程语言进行扩展。</p>
-</li>
-</ul>
-<h2 id="日志监控"><a href="#日志监控" class="headerlink" title="日志监控"></a>日志监控</h2><ul>
-<li><p>Logstash<br>Logstash 是一个应用程序日志、事件的传输、处理、管理和搜索的平台。你可以用它来统一对应用程序日志进行收集管理，提供 Web 接口用于查询和统计。</p>
-</li>
-<li><p>CollectD<br>Collectd 是一个守护(daemon)进程，用来收集系统性能和提供各种存储方式来存储不同值的机制。比如以RRD 文件形式。</p>
-</li>
-<li><p>StatsD<br>StatsD 是一个简单的网络守护进程，基于 Node.js 平台，通过 UDP 或者 TCP 方式侦听各种统计信息，包括计数器和定时器，并发送聚合信息到后端服务，例如 Graphite。</p>
-</li>
-<li><p>Nagios<br>Nagios 是一个监视系统运行状态和网络信息的监视系统。Nagios能监视所指定的本地或远程主机以及服务，同时提供异常通知功能等。</p>
-</li>
-<li><p>Ganglia<br>Ganglia 是一个跨平台可扩展的，高 性能计算系统下的分布式监控系统，如集群和网格。它是基于分层设计，它使用广泛的技术，如XML数据代表，便携数据传输，RRDtool用于数据存储和可视化。</p>
-</li>
-<li><p>Sensu<br>Sensu 是开源的监控框架。主要特性：高度可组合；提供一个监控代理，一个事件处理器和文档 APIs；为云而设计；Sensu 的现代化架构允许监控大规模的动态基础设施，能够通过复杂的公共网络监控几千个全球分布式的机器和服务；热情的社区。</p>
-</li>
-<li><p>Zabbix<br>Zabbix 是一个基于WEB界面的提供分布式系统监视以及网络监视功能的企业级的开源解决方案。</p>
-</li>
-<li><p>ICINGA<br>ICINGA 项目是 由Michael Luebben、HendrikB?cker和JoergLinge等人发起的，他们都是现有的Nagios项目社区委员会的成员，他们承诺，新的开源项 目将完全兼容以前的Nagios应用程序及扩展功能。</p>
-</li>
-<li><p>Graphite<br>Graphite 是一个用于采集网站实时信息并进行统计的开源项目，可用于采集多种网站服务运行状态信息。Graphite服务平均每分钟有4800次更新操作。</p>
-</li>
-<li><p>Kibana<br>Kibana 是一个为 Logstash 和 ElasticSearch 提供的日志分析的 Web 接口。可使用它对日志进行高效的搜索、可视化、分析等各种操作</p>
-</li>
-</ul>
-<h2 id="微服务-容器平台"><a href="#微服务-容器平台" class="headerlink" title="微服务/容器平台"></a>微服务/容器平台</h2><ul>
-<li><p>OpenShift<br>OpenShift 是由红帽推出的一款面向开源开发人员开放的平台即服务(PaaS)。 OpenShift通过为开发人员提供在语言、框架和云上的更多的选择，使开发人员可以构建、测试、运行和管理他们的应用。</p>
-</li>
-<li><p>Cloud Foundry<br>Cloud Foundry 是VMware于2011年4月12日推出的业界第一个开源PaaS云平台，它支持多种框架、语言、运行时环境、云平台及应用服务，使开发 人员能够在几秒钟内进行应用程序的部署和扩展，无需担心任何基础架构的问题。</p>
-</li>
-<li><p>Kubernetes<br>Kubernetes 是来自 Google 云平台的开源容器集群管理系统。基于 Docker 构建一个容器的调度服务。该系统可以自动在一个容器集群中选择一个工作容器供使用。其核心概念是 Container Pod。</p>
-</li>
-<li><p>Mesosphere<br>Apache Mesos 是一个集群管理器，提供了有效的、跨分布式应用或框架的资源隔离和共享，可以运行Hadoop、MPI、Hypertable、Spark。</p>
+<li><p><a target="_blank" rel="noopener" href="https://www.synopsys.com/blogs/software-security/agile-cicd-devops-difference/">What’s the difference between agile, CI/CD, and DevOps</a></p>
 </li>
 </ul>
 
@@ -603,7 +568,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.devopsing.site/2019/10/02/devops-tools/">http://blog.devopsing.site/2019/10/02/devops-tools/</a>
+                    <a href="http://blog.devopsing.site/2020/03/27/agile-cicd-devops/">http://blog.devopsing.site/2020/03/27/agile-cicd-devops/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -810,42 +775,44 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/15/hello-devops/">
+                <a href="/2020/03/27/agile-cicd-devops/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="DevOps 我们都在路上">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【漫话DevOps】-Agile, CI/CD, DevOps">
                         
-                        <span class="card-title">DevOps 我们都在路上</span>
+                        <span class="card-title">【漫话DevOps】-Agile, CI/CD, DevOps</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-为什么会有这个博客工作很多年了，一直从事与持续交付，版本上线发布相关的工作，从最初连什么是“daily build”都不知道，到慢慢接触到持续集成，devops等，随着经验的积累，对devops有了一定的理解，也确定了自己今后的专注的方向
+                            随着DevOps理念的普及与扩散，可能会被一大堆名字概念搞的莫名其妙，理清它们之间的关系可以帮助团队知道DevOps如何落地，改善工作流程。
+Here’s a quick and easy way to differentiate agil
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
+                            <a href="/categories/DevOps/" class="post-category">
+                                    DevOps
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -864,37 +831,32 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/02/markdown-guide/">
+                <a href="/2020/02/27/what-is-devops/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Markdown 教程">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="【漫话DevOps】-What is DevOps">
                         
-                        <span class="card-title">Markdown 教程</span>
+                        <span class="card-title">【漫话DevOps】-What is DevOps</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-
-Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。
-Markdown具有很多优点：
-
-写作中添加简单符号即完成排版，所见即所得。让你专注于文字而不是排版。
-
+最近几年”DevOps”这个关键词经常出现在项目开发当中，特别是随着微服务/容器/cloud在项目中的大范围应用，你不想知道都很难。作为一个伴随CI/CD到DevOps一路走来的工程师，我将分几个部分漫话DevOps以及相关的概念，作为软
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-27
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/DevOps/" class="post-category">
+                                    DevOps
                                 </a>
                             
                             
@@ -904,8 +866,8 @@ Markdown具有很多优点：
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/DevOps/">
+                        <span class="chip bg-color">DevOps</span>
                     </a>
                     
                 </div>

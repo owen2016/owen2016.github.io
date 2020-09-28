@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="keywords" content="DevOps 工具, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="keywords" content="【读书】进化, DevOps在路上|DevOps|Docker|CICD|K8S">
         <meta name="description" content="Every failure is leading towards success.">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -22,7 +22,7 @@
 
 
             <title>
-                DevOps 工具 | DevOps在路上
+                【读书】进化 | DevOps在路上
             </title>
             <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -294,12 +294,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DevOps 工具</h1>
+                    <h1 class="description center-align post-title">【读书】进化</h1>
                 </div>
             </div>
         </div>
@@ -416,8 +416,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/DevOps/">
-                                <span class="chip bg-color">DevOps</span>
+                            <a href="/tags/SRE/">
+                                <span class="chip bg-color">SRE</span>
                             </a>
                         
                     </div>
@@ -428,8 +428,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                工具
+                            <a href="/categories/%E8%AF%BB%E4%B9%A6/" class="post-category">
+                                读书
                             </a>
                         
                     </div>
@@ -441,7 +441,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-02
+                    2019-11-16
                 </div>
                 
 
@@ -455,14 +455,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    3.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    12 分
                 </div>
                 
 
@@ -477,107 +477,217 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20200928233152.png" alt="devops-tools"></p>
-<h2 id="版本控制-amp-协作开发"><a href="#版本控制-amp-协作开发" class="headerlink" title="版本控制&amp;协作开发"></a>版本控制&amp;协作开发</h2><ul>
-<li><p>版本控制系统 Git</p>
-<p>  Git 是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。开源中国 Git 代码托管平台：<a target="_blank" rel="noopener" href="http://git.oschina.net/">http://git.oschina.net/</a></p>
+                <h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>最近在看这本《进化-运维技术变革与实践探索》，结合自己的一些实践，有些心得体会，并且摘录了我认为重要的或者有同感的内容。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://time.geekbang.org/column/intro/63">https://time.geekbang.org/column/intro/63</a></li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>持续交付看似一个简单的工具链打通，却需要突破诸多障碍-组织上，工具上，文化上</p>
+<pre><code>- 组织上，必须打破部门墙，否则工具链肯定连不起来
+- 工具平台能力上，涉及多个方面：项目管理，需求管理，环境管理，配置管理，部署管理，测试管理，监控管理，服务治理</code></pre>
+<p><strong>IT及运维的成熟度分为几个阶段:</strong></p>
+<pre><code>1. 职能阶段: IT和运维作为独立的成本中心存在，其职能在于高效地交付一系列相对有限的核心运维能力
+
+2. 内部赋能阶段：IT 和运维专注于实现流畅的内部流程和操作规范，并持续改进，同时被动响应从业务线来的各种需求。这个阶段的运维团队追求的是以IT为中心的由内到外、自下而上的价值趋向，表现和结果
+
+3. 贡献阶段：IT 和运维团队在完成自身的营运常态化之后，可以致力于解决业务问题，积极引导IT和运维资源及服务朝着业务目标前进，成为专注于业务的运维团队。这个阶段的运维视角也发生了根本的转变，变成了以业务为导向的由外到内，自上而下的视角
+
+4. 差异化阶段：IT和运维团队同其他不同领域的业务团队积极合作，相互融合来持续交付新的产品，服务以及差异化的运营，团队能够敏捷完成产品和服务创新。这这个阶段，IT 和运维已经成为业务本身
+
+5. 转型阶段：IT 和运维团队成为持续业务改造的核心，甚至可以被用来重新定义市场和竞争规则。在这个阶段，IT和运维将成为企业的核心竞争优势</code></pre>
+<p>运维能力是整体技术架构能力的体现，运维层面爆发的问题或故障一定是因为整体技术架构中存在问题，割裂两者，单纯看技术架构或运维都是毫无意义的</p>
+<p>跳出运维看运维，从架构角度看运维，这种运维思路上的转变，远比单纯提升运维技术更有价值。从全局角度来看运维，考虑如何打造和体现整个技术架构的运维能力，而不是”运维”的运维能力</p>
+<p>软件架构的目的，是将构建和维护所需的人力资源见到最低    - From 《架构整洁之道》</p>
+<p><strong>运维接触更多的是软件生命周期中的运行维护阶段:</strong></p>
+<ul>
+<li><p>持续交付</p>
+<ul>
+<li>持续集成</li>
+<li>持续部署</li>
+<li>持续发布</li>
+</ul>
 </li>
-<li><p>代码托管平台 GitLab</p>
-<p>  GitLab 是一个利用 Ruby on Rails 开发的开源应用程序，实现一个自托管的Git项目仓库，可通过Web界面进行访问公开的或者私人项目。开源中国代码托管平台 git.oschina.net 就是基于 GitLab 项目搭建。</p>
+<li><p>持续运维</p>
+<ul>
+<li>运行数据分析</li>
+<li>体验数据分析</li>
+<li>预案演练</li>
+<li>故障复查</li>
+</ul>
 </li>
-<li><p>代码评审工具 Gerrit</p>
-<p>  Gerrit 是一个免费、开放源代码的代码审查软件，使用网页界面。利用网页浏览器，同一个团队的软件程序员，可以相互审阅彼此修改后的程序代码，决定是否能够提交，退回或者继续修改。它使用 Git 作为底层版本控制系统。</p>
+<li><p>持续反馈和改进</p>
+<ul>
+<li>效率提升</li>
+<li>性能优化</li>
+<li>稳定性提升</li>
+<li>体验提升</li>
+<li>成本控制</li>
+</ul>
 </li>
-<li><p>版本控制系统 Mercurial</p>
-<p>  Mercurial 是一种轻量级分布式版本控制系统，采用 Python 语言实现，易于学习和使用，扩展性强。</p>
-</li>
-<li><p>版本控制系统 Subversion</p>
-<p>  Subversion 是一个版本控制系统，相对于的 RCS、CVS，采用了分支管理系统，它的设计目标就是取代CVS。互联网上免费的版本控制服务多基于Subversion。</p>
-</li>
-<li><p>版本控制系统 Bazaar</p>
-<p>  Bazaar 是一个分布式的版本控制系统，它发布在 GPL 许可协议之下，并可用于 Windows、GNU/Linux、UNIX 以及 Mac OS 系统。</p>
+<li><p>架构优化</p>
+<ul>
+<li>更加高效稳定地支持业务快速发展</li>
+</ul>
 </li>
 </ul>
-<h2 id="包-amp-产品管理工具"><a href="#包-amp-产品管理工具" class="headerlink" title="包&amp;产品管理工具"></a>包&amp;产品管理工具</h2><ul>
-<li><p>Chocolatey：Chocolatey是Windows下一款开源的命令行包管理软件 ，简单说这就是Windows的apt-get；</p>
-</li>
-<li><p>WiX Toolset：提供一组最强大的工具集来帮助你创建Windows安装包。该工具集从XML源代码构建你的Windows安装程序包，可以无缝集成到构建过程；</p>
-</li>
+<h2 id="1-运维的本质"><a href="#1-运维的本质" class="headerlink" title="1. 运维的本质"></a>1. 运维的本质</h2><p>规划以<strong>应用</strong>为核心的运维体系</p>
+<pre><code>1. 应用业务模型  -从运维角度，属于业务范畴，不用关注太多
+2. 应用管理模型
+- 应用自身属性：应用名，功能信息，责任人，Git地址，部署结构（代码路径，日志路径，以及各类配置文件路径），启停方式，健康检测方式
+
+3. 应用运行时所依赖的基础设施和组件
+- 资源层面： 物理机，虚拟机，容器，HTTP服务（IP,DNS服务）
+- 基础组件：数据库，缓存，消息队列，存储</code></pre>
+<p>1） 建立各个基础设施和组件的数据模型，同时识别出它们的唯一标识  （以缓存为例，namespace，容量，分区）</p>
+<p>2） 设别出基础设施及组件可以与应用名AppName建立关联关系的属性</p>
+<ul>
+<li>场景1： 资源没有生命周期管理，没有建立和应用之间的关系</li>
+<li>场景2：没有同意应用名，使得各个平台之间形成孤岛</li>
 </ul>
-<h2 id="自动化构建和测试"><a href="#自动化构建和测试" class="headerlink" title="自动化构建和测试"></a>自动化构建和测试</h2><ul>
-<li><p>Apache Ant<br>  Apache Ant是一个将软件编译、测试、部署等步骤联系在一起加以自动化的一个工具，大多用于Java环境中的软件开发。</p>
-</li>
-<li><p>Maven<br>  Maven 除了以程序构建能力为特色之外，还提供 Ant 所缺少的高级项目管理工具。由于 Maven 的缺省构建规则有较高的可重用性，所以常常用两三行 Maven 构建脚本就可以构建简单的项目，而使用 Ant 则需要十几行。<br>  事实上，由于 Maven 的面向项目的方法，许多 Apache Jakarta 项目现在使用 Maven，而且公司项目采用 Maven 的比例在持续增长。开源中国的<a target="_blank" rel="noopener" href="http://maven.oschina.net/">Maven 库</a></p>
-</li>
-<li><p>Selenium<br>Selenium (SeleniumHQ) 是 thoughtworks公司的一个集成测试的强大工具。</p>
-</li>
-<li><p>PyUnit<br>Python单元测试框架（The Python unit testing framework），简称为PyUnit， 是Kent Beck和Erich Gamma这两位聪明的家伙所设计的 JUnit 的Python版本。</p>
-</li>
-<li><p>QUnit<br>QUnit 是 jQuery 的单元测试框架。</p>
-</li>
-<li><p>JMeter<br>JMeter 是 Apache 组织的开放源代码项目，它是功能和性能测试的工具，100% 的用 java 实现。</p>
-</li>
-<li><p>Gradle<br>Gradle 就是可以使用 Groovy 来书写构建脚本的构建系统，支持依赖管理和多项目，类似 Maven，但比之简单轻便。</p>
-</li>
-<li><p>PHPUnit<br>PHPUnit 是一个轻量级的PHP测试框架。它是在PHP5下面对JUnit3系列版本的完整移植，是xUnit测试框架家族的一员(它们都基于模式先锋Kent Beck的设计)。</p>
-</li>
-</ul>
-<h2 id="持续集成-amp-交付"><a href="#持续集成-amp-交付" class="headerlink" title="持续集成&amp;交付"></a>持续集成&amp;交付</h2><ul>
-<li><p>Jenkins<br>  Jenkins 是一个开源的持续集成工具，使用 Java 编程语言编写的。它有助于实时检测和报告较大代码库中的单一更改。该软件可帮助开发人员快速查找和解决代码库中的问题并自动测试其构建。</p>
-</li>
-<li><p>Travis CI<br>  Travis 是一款流行的 CI 工具，可免费用于开源项目。在托管时，不必依赖任何平台。此 CI 工具为许多构建配置和语言提供支持，如 Node，PHP，Python，Java，Perl 等。</p>
-</li>
-<li><p>GoCD<br>  GoCD 是一个开源的持续集成服务器。它可轻松模拟和可视化复杂的工作流程。此 CI 工具允许持续交付，并为构建 CD Pipeline 提供直观的界面。</p>
-</li>
-<li><p>Bamboo<br>  Bamboo 是一个持续集成的构建服务器，可以自动构建、测试和发布，并可与 JIRA 和 Bitbucket 无缝协作。Bamboo 支持多语言和平台，如 CodeDeply、Ducker、Git，SVN、Mercurial、AWS 及 Amazon S3 bucket</p>
-</li>
-<li><p>GitLab CI<br>  GitLab CI 是 GitLab 的一部分。它是一个提供 API 的 Web 应用程序，可将其状态存储在数据库中。GitLab CI 可以管理项目并提供友好的用户界面，并充分利用 GitLab 所有功能</p>
-</li>
-</ul>
-<h2 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h2><ul>
-<li><p>Chef<br>  Chef 是一个系统集成框架，为整个架构提供配置管理功能。</p>
-</li>
-<li><p>Puppet<br>  Puppet，您可以集中管理每一个重要方面，您的系统使用的是跨平台的规范语言，管理所有的单独的元素通常聚集在不同的文件，如用户， CRON作业，和主机一起显然离散元素，如包装，服务和文件。</p>
-</li>
-<li><p>RunDeck<br>  RunDeck 是用 Java/Grails 写的开源工具，帮助用户在数据中心或者云环境中自动化各种操作和流程。通过命令行或者web界面，用户可以对任意数量的服务器进行操作，大大降低了对服务器自动化的门槛。</p>
-</li>
-<li><p>Saltstack<br>  Saltstack 可以看做是func的增强版+Puppet的弱化版。使用Python编写。非常好用,快速可以基于EPEL部署。Salt 是一个开源的工具用来管理你的基础架构，可轻松管理成千上万台服务器。</p>
-</li>
-<li><p>Ansible<br>  Ansible 提供一种最简单的方式用于发布、管理和编排计算机系统的工具，你可在数分钟内搞定。Ansible 是一个模型驱动的配置管理器，支持多节点发布、远程任务执行。默认使用 SSH 进行远程连接。无需在被管理节点上安装附加软件，可使用各种编程语言进行扩展。</p>
-</li>
-</ul>
-<h2 id="日志监控"><a href="#日志监控" class="headerlink" title="日志监控"></a>日志监控</h2><ul>
-<li><p>Logstash<br>Logstash 是一个应用程序日志、事件的传输、处理、管理和搜索的平台。你可以用它来统一对应用程序日志进行收集管理，提供 Web 接口用于查询和统计。</p>
-</li>
-<li><p>CollectD<br>Collectd 是一个守护(daemon)进程，用来收集系统性能和提供各种存储方式来存储不同值的机制。比如以RRD 文件形式。</p>
-</li>
-<li><p>StatsD<br>StatsD 是一个简单的网络守护进程，基于 Node.js 平台，通过 UDP 或者 TCP 方式侦听各种统计信息，包括计数器和定时器，并发送聚合信息到后端服务，例如 Graphite。</p>
-</li>
-<li><p>Nagios<br>Nagios 是一个监视系统运行状态和网络信息的监视系统。Nagios能监视所指定的本地或远程主机以及服务，同时提供异常通知功能等。</p>
-</li>
-<li><p>Ganglia<br>Ganglia 是一个跨平台可扩展的，高 性能计算系统下的分布式监控系统，如集群和网格。它是基于分层设计，它使用广泛的技术，如XML数据代表，便携数据传输，RRDtool用于数据存储和可视化。</p>
-</li>
-<li><p>Sensu<br>Sensu 是开源的监控框架。主要特性：高度可组合；提供一个监控代理，一个事件处理器和文档 APIs；为云而设计；Sensu 的现代化架构允许监控大规模的动态基础设施，能够通过复杂的公共网络监控几千个全球分布式的机器和服务；热情的社区。</p>
-</li>
-<li><p>Zabbix<br>Zabbix 是一个基于WEB界面的提供分布式系统监视以及网络监视功能的企业级的开源解决方案。</p>
-</li>
-<li><p>ICINGA<br>ICINGA 项目是 由Michael Luebben、HendrikB?cker和JoergLinge等人发起的，他们都是现有的Nagios项目社区委员会的成员，他们承诺，新的开源项 目将完全兼容以前的Nagios应用程序及扩展功能。</p>
-</li>
-<li><p>Graphite<br>Graphite 是一个用于采集网站实时信息并进行统计的开源项目，可用于采集多种网站服务运行状态信息。Graphite服务平均每分钟有4800次更新操作。</p>
-</li>
-<li><p>Kibana<br>Kibana 是一个为 Logstash 和 ElasticSearch 提供的日志分析的 Web 接口。可使用它对日志进行高效的搜索、可视化、分析等各种操作</p>
-</li>
-</ul>
-<h2 id="微服务-容器平台"><a href="#微服务-容器平台" class="headerlink" title="微服务/容器平台"></a>微服务/容器平台</h2><ul>
-<li><p>OpenShift<br>OpenShift 是由红帽推出的一款面向开源开发人员开放的平台即服务(PaaS)。 OpenShift通过为开发人员提供在语言、框架和云上的更多的选择，使开发人员可以构建、测试、运行和管理他们的应用。</p>
-</li>
-<li><p>Cloud Foundry<br>Cloud Foundry 是VMware于2011年4月12日推出的业界第一个开源PaaS云平台，它支持多种框架、语言、运行时环境、云平台及应用服务，使开发 人员能够在几秒钟内进行应用程序的部署和扩展，无需担心任何基础架构的问题。</p>
-</li>
-<li><p>Kubernetes<br>Kubernetes 是来自 Google 云平台的开源容器集群管理系统。基于 Docker 构建一个容器的调度服务。该系统可以自动在一个容器集群中选择一个工作容器供使用。其核心概念是 Container Pod。</p>
-</li>
-<li><p>Mesosphere<br>Apache Mesos 是一个集群管理器，提供了有效的、跨分布式应用或框架的资源隔离和共享，可以运行Hadoop、MPI、Hypertable、Spark。</p>
-</li>
-</ul>
+<h2 id="2-运维体系建设"><a href="#2-运维体系建设" class="headerlink" title="2. 运维体系建设"></a>2. 运维体系建设</h2><p><strong>标准先行！！！</strong></p>
+<p>标准化的过程实际山就是对象的识别和建模过程。形成统一的对象模型之后，各方在统一的认识下展开有效协同，然后针对不同的运维对象，抽取出它们对应的运维场景，接下来才是运维场景的自动化实现。</p>
+<p>运维脱离对象，就没有任何意义。同样，没有理清楚对象，运维自然不得章法。</p>
+<p><strong>标准化步骤：</strong></p>
+<pre><code>1) 识别对象
+2) 识别对象属性
+3) 识别对象关系
+4) 识别对象场景
+
+a) 基础设施标准化
+    1) 识别对象：服务器，网络，IDC，机柜，存储，配件等
+    2) 识别对象属性：服务器（SN序列号，IP,厂商）；硬件配置（CPU,内存，硬盘，网卡，PCIE, BIOS）; 网络设备(厂商，型号，参数等)
+    3) 识别对象关系：服务器所在机柜； 虚拟机所在宿主机；机柜所在IDC 等。。拓扑结构
+    4) 识别对象场景： 服务器为例，日常操作：采购，入库，安装，配置，上线，下线，维修。。可视化/查询/拓扑/动态展示/级联关系/健康状态
+
+b) 应用层面的标准化
+    1) 识别对象：微服务在“设计阶段”被识别和确认
+    2) 识别对象属性：一个应用是业务逻辑的抽象
+    ○ 业务属性
+    ○ 运维属性
+        i. 应用元数据属性：应用名，Owner，所属业务，功能说明等
+        ii. 应用代码属性：语言，版本，GitLab地址
+        iii. 应用的部署模式： 软件包/容器
+        iv. 应用的目录信息，日志目录/运维脚本目录/安装目录等
+        v. 应用的运行脚本，如启停，监控检测脚本
+        vi. 应用运行时的配置参数，如端口，JVM 参数等
+
+    3) 识别对象关系
+        i. 应用与基础设施
+        ii. 应用与应用之间关系 -e.g. API依赖
+        iii. 应用与中间件关系
+
+    4) 识别应用场景：持续集成，持续发布，扩容，缩容，监控，容量评估，压测，限流降级  </code></pre>
+<p><strong>运维职责：</strong></p>
+<pre><code>- 基础架构标准化    --&gt;-选型
+
+- 基础架构服务标准化   
+    - 基于基础架构工具原生能力进行“封装”，e.g. 创建/申请容量，扩容/缩容，服务发现/访问路由配置，监控指标，主备切换能力
+
+1. 参与制定基础架构标准并对标准进行强制约束
+2. 基础架构的服务化平台开发
+    - 平台自主化，让开发人员依赖平台能力自助完成对基础组件的需求，二不是依赖运维人员
+    - 如果不朝着“服务化”方向发展，运维将始终被拖累在基础组件的运维操作上</code></pre>
+<p>应用运维体系建设： 从应用的生命周期的视角看</p>
+<pre><code>1. 应用的创建阶段：应用需要用到哪些基础服务，在架构设计和编码阶段就要确定下来
+
+2. 应用的研发阶段：应用的持续集成体系
+
+3. 应用的上线阶段：申请应用所需服务器资源，发布软件包使其上线
+
+4. 应用的运行阶段（最核心，最重要）： 各项运行指标 -监控/报警体系
+      - 业务需求不断变化，需要不断“迭代更新”线上应用，依然依赖研发阶段的持续集成，并最终与线上发布形成持续交付这样的闭环体系
+      - 应用之间的依赖管理和链路追踪的场景
+      - 外部业务量的各种异常变化 （双11， 热点事件，服务器/IDC/数据库 故障） -线上稳定性保障
+
+5. 应用的销毁阶段： 清理资源，取决于最前面应用与基础服务关系模型分析和建设是否到位</code></pre>
+<h2 id="3-配置管理数据库（CMDB）"><a href="#3-配置管理数据库（CMDB）" class="headerlink" title="3. 配置管理数据库（CMDB）"></a>3. 配置管理数据库（CMDB）</h2><p>当识别出运维对象之间的关系，并形成了统一的标准之后，就需要通过某个信息管理平台“固化”，这就是CMDB (Configuration Management DataBase).</p>
+<p>CMDB源于20世纪80年代末的ITIL，源于传统IT运维阶段，但发扬光大确实新兴的互联网行业。</p>
+<p>CMDB 是一个”高度定制化”的体系, 没有统一的标准。</p>
+<p>传统运维阶段，更多是以“设备”为核心进行管理；但是到了互联网技术阶段，核心变成了“应用”</p>
+<pre><code>- 应用名---应用配置信息
+
+- IP--资源信息 </code></pre>
+<p>二者通过“应用名-IP”的对应关系联系在一起</p>
+<p>CMDB是运维的基石，但是需要把精力放在运维的核心“应用”上来 - CMDB是面向“资源”的管理，应用配置是面向“应用”的管理</p>
+<p>CMDB中如何落地应用，以及如何建立应用集群分组<br>    - 产品线 -业务团队-应用<br>    - 多环境/多IDC/多服务分组</p>
+<p>应用-集群服务分组-资源</p>
+<h2 id="4-运维组织架构与模式"><a href="#4-运维组织架构与模式" class="headerlink" title="4. 运维组织架构与模式"></a>4. 运维组织架构与模式</h2><pre><code>1. 运维基础平台体系建设 -CMDB,DNS管理，资源管理，偏运维自身体系建设
+2. 分布式中间件的服务化建设
+3. 持续交付体系建设 -依赖于上面两个基础体系的建设
+4. 稳定性体系建设 -快速定位/快付故障恢复/评估扩容
+5. 技术运营体系建设 -标准，指标，规则和流程  -意识</code></pre>
+<p>跨团队协作 -1. 运维团队主动出击，沟通推进； 2. 上层支持`</p>
+<p>Google SRE 运维模式</p>
+<p>对SRE职责定义-负责可用性，时延，性能，效率，变更管理，监控，应急响应和容量管理等相关工作。—-&gt;”效率” 和“稳定”</p>
+<p>CRE/云计算/AI -新的挑战 -应用运维的转型</p>
+<h2 id="5-持续交付"><a href="#5-持续交付" class="headerlink" title="5. 持续交付"></a>5. 持续交付</h2><p>配置管理</p>
+<pre><code>- 版本控制
+- 依赖管理
+    ○ Mavn/Ant/Gradle  建立本地Maven 源，构建时候优先从本地获取依赖包，本地源没有对应依赖时，从公网下载，同时缓存到本地
+- 软件配置
+    ○ 代码配置 -与代码运行时业务逻辑有关
+    ○ 应用配置 -与环境有关 （部署环境/不同机房：平台类为主；私有部署到不同客户）
+        § 构建配置：编程语言，构建方式。。
+        § 部署配置：日志目录，脚本目录。。
+        § 运行配置：应用启停，服务上下线，健康监测方式等
+        § 应用运行时与基础组件关系：依赖的数据库，缓存，消息队列等。
+
+- 环境配置 -持续交付的重中之重，最复杂的部分</code></pre>
+<p>多环境配置管理</p>
+<pre><code>- 开发环境
+- 集成环境
+- 预发环境
+- Beta环境（灰度，金丝雀）
+- 线上环境</code></pre>
+<p>环境配置管理主要时针对应用对于基础设施和基础服务依赖关系的配置管理</p>
+<p>解决方案</p>
+<pre><code>1. 多个配置文件，构建时替换
+    a. 开发环境： dev_config.properties
+    b. 预发环境：pre_config.properties
+    c. 线上环境：online_cofnig.properties
+    这三个配置文件里的“配置项”时相同的，根据不同环境，值时不同的。 构建时，根据选定的环境对配置文件进行替换
+
+- 优点：简单直接，适合配置项变化不大情况
+- 缺点：没多出一个环境，就要加一个配置文件，如果配置项不断变化，管理很麻烦； 不同环境单独构建，多次打包
+
+2. 占位符（Placeholder）模板模式
+
+- 配置项的值用“变量”替换
+- 只保留一个config.properties；但是变量的值可能要多份
+- 没有解决只打包一次问题
+
+3. AutoConfig 方案
+- 阿里巴巴开发的Webx框架中的一个工具包，继承了Maven的配置管理方式，同时可以作为插件直接与Maven配合工作
+    ○ 配置校验：对与替换的值做校验，提前发现问题
+    ○ 只打包一次
+    ○ 需要基于AutroConfig 做二次开发</code></pre>
+<p>比较敏感的配置信息（如用户名，Token，密码等）不允许放在配置文件，跟不允许明文方式</p>
+<p>多环境建设</p>
+<pre><code>- 1. 线下环境分类建设
+    ○ 不必建设多个相同的，尽量最小化
+    ○ 开发/测试使用环境冲突，同一应用不同版本/项目团队冲突
+
+集成测试环境- 最大程度与线上版本同步，也为开发测试环境和项目环境提供部分依赖服务
+
+开发测试环境- 偏向日常的需求开发，联调和功能验证，以最小化原则进行建设
+
+项目环境- 适用于多团队多个项目，遵循最小化原则，项目启动分配资源，结束时回收资源
+
+技术点： 网段规划（每个环境独立网段）；服务化框架的单元化调用；DNS访问策略；自动化管理
+
+- 2. 线上环境建设
+    ○ 生产环境- 无法百分之百模拟真实的用户场景
+    ○ Beta环境
+    ○ 预发环境
+    ○ 办公室生产环境</code></pre>
+<p>持续交付流水线</p>
+<pre><code>- 持续交付建立在上面多环节以及配置管理的基础上
+
+1. 项目需求分解- 确定多个应用的联调，测试和最终发布的计划和协同，依赖关系
+2. 代码提交方式 -分支策略选择
+3. 应用的构建  - 静态语言/动态语言
+    ○ 配置文件如何打包？构建时，确认部署的环境
+    ○ 使用docker作为编译环境</code></pre>
+<p>发布策略- 蓝绿发布，灰度发布（金丝雀），滚动发布</p>
 
             </div>
             <hr/>
@@ -603,7 +713,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.devopsing.site/2019/10/02/devops-tools/">http://blog.devopsing.site/2019/10/02/devops-tools/</a>
+                    <a href="http://blog.devopsing.site/2019/11/16/dushu-jinhua/">http://blog.devopsing.site/2019/11/16/dushu-jinhua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -641,8 +751,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/DevOps/">
-                                    <span class="chip bg-color">DevOps</span>
+                                <a href="/tags/SRE/">
+                                    <span class="chip bg-color">SRE</span>
                                 </a>
                             
                         </div>
@@ -814,32 +924,36 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/11/15/hello-devops/">
+                <a href="/2020/02/20/devops-practices-thinking/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="DevOps 我们都在路上">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="持续集成实践中的思考">
                         
-                        <span class="card-title">DevOps 我们都在路上</span>
+                        <span class="card-title">持续集成实践中的思考</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-为什么会有这个博客工作很多年了，一直从事与持续交付，版本上线发布相关的工作，从最初连什么是“daily build”都不知道，到慢慢接触到持续集成，devops等，随着经验的积累，对devops有了一定的理解，也确定了自己今后的专注的方向
+最近在看到ThoughtWorks的一篇技术文章提到“几项与持续集成相关的反模式”, 结合自己的实践体会特别有深切体会，所以记录下来
+
+持续集成的反模式最需要被点名批评的现象莫过于“持续集成剧场”了：
+
+很多开发者只是简单的搭建了持续集成
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-15
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
+                            <a href="/categories/%E8%AF%BB%E4%B9%A6/" class="post-category">
+                                    读书
                                 </a>
                             
                             
@@ -864,37 +978,32 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/02/markdown-guide/">
+                <a href="/2019/11/15/hello-devops/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Markdown 教程">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="DevOps 我们都在路上">
                         
-                        <span class="card-title">Markdown 教程</span>
+                        <span class="card-title">DevOps 我们都在路上</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-
-Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。
-Markdown具有很多优点：
-
-写作中添加简单符号即完成排版，所见即所得。让你专注于文字而不是排版。
-
+为什么会有这个博客工作很多年了，一直从事与持续交付，版本上线发布相关的工作，从最初连什么是“daily build”都不知道，到慢慢接触到持续集成，devops等，随着经验的积累，对devops有了一定的理解，也确定了自己今后的专注的方向
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
                                 </a>
                             
                             
@@ -904,8 +1013,8 @@ Markdown具有很多优点：
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/DevOps/">
+                        <span class="chip bg-color">DevOps</span>
                     </a>
                     
                 </div>

@@ -1,9 +1,8 @@
+http://blog.devopsing.site/2020/03/27/agile-cicd-devops/
+http://blog.devopsing.site/2020/02/27/what-is-devops/
+http://blog.devopsing.site/2020/02/27/what-is-devops-copy/
 http://blog.devopsing.site/2020/02/20/devops-practices-thinking/
-http://blog.devopsing.site/2019/11/16/jin-hua-du-hou-gan-1/
-http://blog.devopsing.site/2019/11/16/hello-devops/
+http://blog.devopsing.site/2019/11/16/dushu-jinhua/
+http://blog.devopsing.site/2019/11/15/hello-devops/
 http://blog.devopsing.site/2019/10/02/devops-tools/
-http://blog.devopsing.site/2015/07/09/js-module-7day/
-http://blog.devopsing.site/2015/04/14/unix-linux-note/
-http://blog.devopsing.site/2014/09/22/js-version/
-http://blog.devopsing.site/2014/01/29/hello-2015/
-http://blog.devopsing.site/2013/05/25/js-module-loader/
+http://blog.devopsing.site/2019/07/02/markdown-guide/

@@ -6,7 +6,7 @@
   <link href="http://blog.devopsing.site/atom.xml" rel="self"/>
   
   <link href="http://blog.devopsing.site/"/>
-  <updated>2020-09-24T14:47:09.199Z</updated>
+  <updated>2020-09-28T15:14:22.131Z</updated>
   <id>http://blog.devopsing.site/</id>
   
   <author>
@@ -17,11 +17,89 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【漫话DevOps】-Agile, CI/CD, DevOps</title>
+    <link href="http://blog.devopsing.site/2020/03/27/agile-cicd-devops/"/>
+    <id>http://blog.devopsing.site/2020/03/27/agile-cicd-devops/</id>
+    <published>2020-03-27T14:51:05.000Z</published>
+    <updated>2020-09-28T15:14:22.131Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;随着DevOps理念的普及与扩散，可能会被一大堆名字概念搞的莫名其妙，理清它们之间的关系可以帮助团队知道DevOps如何落地，改善工作流程。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Here’s a quick and easy way to differentiate</summary>
+        
+      
+    
+    
+    
+    <category term="DevOps" scheme="http://blog.devopsing.site/categories/DevOps/"/>
+    
+    
+    <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【漫话DevOps】-What is DevOps</title>
+    <link href="http://blog.devopsing.site/2020/02/27/what-is-devops/"/>
+    <id>http://blog.devopsing.site/2020/02/27/what-is-devops/</id>
+    <published>2020-02-27T14:51:05.000Z</published>
+    <updated>2020-09-28T15:14:42.582Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最近几年”DevOps”这个关键词经常出现在项目开发当中，特别是随着微服务/容器/cloud在项目中的大范围应用，你不想知道都很难。作为一个伴随CI/CD到DevOps一路走来的工程师，我将分几个部分漫话DevOps以及相关的概念，作为软件开发工程</summary>
+        
+      
+    
+    
+    
+    <category term="DevOps" scheme="http://blog.devopsing.site/categories/DevOps/"/>
+    
+    
+    <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【漫话DevOps】-What is DevOps</title>
+    <link href="http://blog.devopsing.site/2020/02/27/what-is-devops-copy/"/>
+    <id>http://blog.devopsing.site/2020/02/27/what-is-devops-copy/</id>
+    <published>2020-02-27T14:51:05.000Z</published>
+    <updated>2020-09-28T15:14:49.926Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最近几年”DevOps”这个关键词经常出现在项目开发当中，特别是随着微服务/容器/cloud在项目中的大范围应用，你不想知道都很难。作为一个伴随CI/CD到DevOps一路走来的工程师，我将分几个部分漫话DevOps以及相关的概念，作为软件开发工程</summary>
+        
+      
+    
+    
+    
+    <category term="DevOps" scheme="http://blog.devopsing.site/categories/DevOps/"/>
+    
+    
+    <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
+    
+  </entry>
+  
+  <entry>
     <title>持续集成实践中的思考</title>
     <link href="http://blog.devopsing.site/2020/02/20/devops-practices-thinking/"/>
     <id>http://blog.devopsing.site/2020/02/20/devops-practices-thinking/</id>
-    <published>2020-02-19T16:00:00.000Z</published>
-    <updated>2020-09-24T14:47:09.199Z</updated>
+    <published>2020-02-20T14:51:05.000Z</published>
+    <updated>2020-09-28T14:18:40.531Z</updated>
     
     
       
@@ -37,17 +115,19 @@
     
     
     
+    <category term="读书" scheme="http://blog.devopsing.site/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
     
     <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
     
   </entry>
   
   <entry>
-    <title>进化-读后感-1</title>
-    <link href="http://blog.devopsing.site/2019/11/16/jin-hua-du-hou-gan-1/"/>
-    <id>http://blog.devopsing.site/2019/11/16/jin-hua-du-hou-gan-1/</id>
+    <title>【读书】进化</title>
+    <link href="http://blog.devopsing.site/2019/11/16/dushu-jinhua/"/>
+    <id>http://blog.devopsing.site/2019/11/16/dushu-jinhua/</id>
     <published>2019-11-16T07:09:23.000Z</published>
-    <updated>2020-09-26T11:52:59.740Z</updated>
+    <updated>2020-09-28T14:21:16.436Z</updated>
     
     
       
@@ -68,22 +148,25 @@
   </entry>
   
   <entry>
-    <title>Hello DevOps</title>
-    <link href="http://blog.devopsing.site/2019/11/16/hello-devops/"/>
-    <id>http://blog.devopsing.site/2019/11/16/hello-devops/</id>
-    <published>2019-11-15T16:00:00.000Z</published>
-    <updated>2020-09-24T14:50:39.752Z</updated>
+    <title>DevOps 我们都在路上</title>
+    <link href="http://blog.devopsing.site/2019/11/15/hello-devops/"/>
+    <id>http://blog.devopsing.site/2019/11/15/hello-devops/</id>
+    <published>2019-11-15T07:09:23.000Z</published>
+    <updated>2020-09-28T15:02:41.575Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;为什么会有这个博客&quot;&gt;&lt;a href=&quot;#为什么会有这个博客&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/owen2016/pic-hub/raw/master/pics/20200928223309.jpg&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;为什么会有这个博客&quot;&gt;&lt;a href=&quot;#为什么会有这个博客&quot;</summary>
         
       
     
     
+    
+    <category term="随笔" scheme="http://blog.devopsing.site/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
     <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
@@ -91,22 +174,25 @@
   </entry>
   
   <entry>
-    <title>DevOps-Tools</title>
+    <title>DevOps 工具</title>
     <link href="http://blog.devopsing.site/2019/10/02/devops-tools/"/>
     <id>http://blog.devopsing.site/2019/10/02/devops-tools/</id>
-    <published>2019-10-01T16:00:00.000Z</published>
-    <updated>2020-09-24T14:47:09.198Z</updated>
+    <published>2019-10-02T14:51:05.000Z</published>
+    <updated>2020-09-28T15:32:47.319Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/owen2016/pic-hub/raw/master/pics/20200928233152.png&quot; alt=&quot;devops-tools&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;版本控制-amp-协作开发&quot;&gt;&lt;a</summary>
         
       
     
     
+    
+    <category term="工具" scheme="http://blog.devopsing.site/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
@@ -114,140 +200,29 @@
   </entry>
   
   <entry>
-    <title>Example Post using Keynote Layout</title>
-    <link href="http://blog.devopsing.site/2015/07/09/js-module-7day/"/>
-    <id>http://blog.devopsing.site/2015/07/09/js-module-7day/</id>
-    <published>2015-07-08T16:00:00.000Z</published>
-    <updated>2020-09-23T23:12:24.675Z</updated>
+    <title>Markdown 教程</title>
+    <link href="http://blog.devopsing.site/2019/07/02/markdown-guide/"/>
+    <id>http://blog.devopsing.site/2019/07/02/markdown-guide/</id>
+    <published>2019-07-02T14:51:05.000Z</published>
+    <updated>2020-09-28T15:22:07.932Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;下滑这里查看更多内容&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;7月9日，我在公司内部进行了名为「JavaScript 模块化七日谈」分享，并将该 Slides 分享到了微博上。出乎意料地，这篇微博先后被 @JS小组 @尤小右 @寸志 等近</summary>
+    <summary type="html">&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * #</summary>
         
       
     
     
     
-    
-    <category term="前端开发" scheme="http://blog.devopsing.site/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="JavaScript" scheme="http://blog.devopsing.site/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Example Post With Default Header Image</title>
-    <link href="http://blog.devopsing.site/2015/04/14/unix-linux-note/"/>
-    <id>http://blog.devopsing.site/2015/04/14/unix-linux-note/</id>
-    <published>2015-04-13T16:00:00.000Z</published>
-    <updated>2020-09-23T23:12:24.679Z</updated>
+    <category term="工具" scheme="http://blog.devopsing.site/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;This document is not completed and will be updated anytime.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;Catagory&quot;&gt;&lt;a href=&quot;#Catagory&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="OS" scheme="http://blog.devopsing.site/tags/OS/"/>
-    
-    <category term="Unix" scheme="http://blog.devopsing.site/tags/Unix/"/>
-    
-    <category term="Linux" scheme="http://blog.devopsing.site/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Example Post</title>
-    <link href="http://blog.devopsing.site/2014/09/22/js-version/"/>
-    <id>http://blog.devopsing.site/2014/09/22/js-version/</id>
-    <published>2014-09-21T16:00:00.000Z</published>
-    <updated>2020-09-23T23:12:24.677Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;JavaScript 有着很奇怪的命名史。&lt;/p&gt;
-&lt;p&gt;1995 年，它作为网景浏览器（Netscape Navigator）的一部分首次发布，网景给这个新语言命名为 LiveScript。一年后，为了搭上当时媒体热炒 Java 的顺风车，临时改名为了</summary>
-        
-      
-    
-    
-    
-    
-    <category term="前端开发" scheme="http://blog.devopsing.site/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="JavaScript" scheme="http://blog.devopsing.site/tags/JavaScript/"/>
-    
-    <category term="翻译" scheme="http://blog.devopsing.site/tags/%E7%BF%BB%E8%AF%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Welcome to Hux Blog</title>
-    <link href="http://blog.devopsing.site/2014/01/29/hello-2015/"/>
-    <id>http://blog.devopsing.site/2014/01/29/hello-2015/</id>
-    <published>2014-01-29T04:00:00.000Z</published>
-    <updated>2020-09-23T23:12:24.673Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;“Yeah It’s on. ”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Hux 的 Blog</summary>
-        
-      
-    
-    
-    
-    
-    <category term="生活" scheme="http://blog.devopsing.site/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Example Post with Code Highlight</title>
-    <link href="http://blog.devopsing.site/2013/05/25/js-module-loader/"/>
-    <id>http://blog.devopsing.site/2013/05/25/js-module-loader/</id>
-    <published>2013-05-24T16:00:00.000Z</published>
-    <updated>2020-09-23T23:12:24.676Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Foreword&quot;&gt;&lt;a href=&quot;#Foreword&quot; class=&quot;headerlink&quot; title=&quot;Foreword&quot;&gt;&lt;/a&gt;Foreword&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Here comes</summary>
-        
-      
-    
-    
-    
-    
-    <category term="前端开发" scheme="http://blog.devopsing.site/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="JavaScript" scheme="http://blog.devopsing.site/tags/JavaScript/"/>
+    <category term="Markdown" scheme="http://blog.devopsing.site/tags/Markdown/"/>
     
   </entry>
   
