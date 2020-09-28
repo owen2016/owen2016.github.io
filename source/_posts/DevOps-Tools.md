@@ -1,16 +1,19 @@
 ---
-layout:     post
-title:      DevOps-Tools
-subtitle:    
-date:       2019-10-2
-author:     Owen
-header-img: 
-catalog: true
+title: DevOps 工具
+top: false
+cover: false
+toc: true
+mathjax: false
+date: 2019-10-2 22:51:05
+password:
+summary:
 tags:  
-    - DevOps
+- DevOps
+categories:
+- 工具
 ---
 
-![devops-tools.jpg](https://upload-images.jianshu.io/upload_images/2504773-796984a907e0a8f1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![devops-tools](https://gitee.com/owen2016/pic-hub/raw/master/pics/20200928233152.png)
 
 ## 版本控制&协作开发
 
@@ -51,7 +54,7 @@ tags:
 
 - Maven
     Maven 除了以程序构建能力为特色之外，还提供 Ant 所缺少的高级项目管理工具。由于 Maven 的缺省构建规则有较高的可重用性，所以常常用两三行 Maven 构建脚本就可以构建简单的项目，而使用 Ant 则需要十几行。
-    事实上，由于 Maven 的面向项目的方法，许多 Apache Jakarta 项目现在使用 Maven，而且公司项目采用 Maven 的比例在持续增长。开源中国的 Maven 库 http://maven.oschina.net
+    事实上，由于 Maven 的面向项目的方法，许多 Apache Jakarta 项目现在使用 Maven，而且公司项目采用 Maven 的比例在持续增长。开源中国的[Maven 库](http://maven.oschina.net)
 
 - Selenium
 Selenium (SeleniumHQ) 是 thoughtworks公司的一个集成测试的强大工具。

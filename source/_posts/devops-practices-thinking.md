@@ -1,15 +1,17 @@
 ---
-layout:     post
-title:      持续集成实践中的思考
-subtitle:    
-date:       2020-02-20
-author:     Owen
-header-img: 
-catalog: true
-tags:  
-    - DevOps
+title: 持续集成实践中的思考
+top: false
+cover: false
+toc: true
+mathjax: true
+date: 2020-02-20 22:51:05
+password:
+summary:
+tags:
+- DevOps
+categories:
+- 读书
 ---
-
 
 > 最近在看到ThoughtWorks的一篇技术文章提到“几项与持续集成相关的反模式”, 结合自己的实践体会特别有深切体会，所以记录下来
 

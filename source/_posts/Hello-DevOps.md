@@ -1,14 +1,19 @@
 ---
-layout:     post
-title:      Hello DevOps
-subtitle:   
-date:       2019-11-16
-author:     Owen
-header-img: img/post-bg-2019.jpg
-catalog: true
-tags:    
-    - DevOps
+title: DevOps 我们都在路上
+top: true
+cover: false
+toc: true
+mathjax: false
+date: 2019-11-15 15:09:23
+password:
+summary: 
+tags:
+- DevOps
+categories:
+- 随笔
 ---
+
+![](https://gitee.com/owen2016/pic-hub/raw/master/pics/20200928223309.jpg)
 
 ## 为什么会有这个博客
 
@@ -16,8 +21,10 @@ tags:
 
 所以希望对过去的经验和知识进行总结，分享出来，这些都来自于平时在OneNote，有道笔记的积累，算是对过去知识体系的重新梳理。
 
-搭建这个博客- [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案
-
 ## 后面会写点什么
 
-主要会围绕devops/运维相关话题展开，也会涉及其他技术栈，毕竟运维和业务不是割裂的，好的运维需要知道业务的技术栈
+主要会围绕DevOps/Cloud相关话题展开，也会涉及其他技术栈、工具。同时也会同步分享到公众号【DevOps在路上】
+
+**微信公众号【DevOps在路上】**
+
+![](https://gitee.com/owen2016/pic-hub/raw/master/pics/20200928230236.jpeg)
