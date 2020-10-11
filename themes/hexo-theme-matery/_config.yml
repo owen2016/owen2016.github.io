@@ -560,7 +560,7 @@ banner:
 
 #ICP备案信息尾部显示
 icp:
-  enable: false
+  enable: true
   url: https://www.beian.miit.gov.cn/
   text: 鄂ICP备2020017249号-1
 
