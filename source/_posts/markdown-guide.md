@@ -20,7 +20,7 @@ categories:
 >
 > - 写作中添加简单符号即完成排版，所见即所得。让你专注于文字而不是排版。
 > - 格式转换方便，Markdown 的文本你可以轻松转换为 html、pdf等。
-> - 可以保存称纯文本
+> - 可以保存成纯文本
 
 ## 1. 标题
 
@@ -313,15 +313,4 @@ I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].
 | 手机        |   \$12   |   12   |
 | 管线        |    \$1    |  234  |
 ```
-
-## 工具
-
-[Markdownpad](http://markdownpad.com/)
-
-<https://www.zybuluo.com/mdeditor>
-
-[1]: <http://google.com/> ,     "Google"
-[2]: <http://search.yahoo.com/> ,  "Yahoo Search"
-[3]: <http://search.msn.com/> ,   "MSN Search"
-
 
