@@ -6,3 +6,4 @@ git push github master -f
 hexo clean
 hexo g
 hexo d
+sleep 600
