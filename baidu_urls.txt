@@ -1,6 +1,6 @@
 http://blog.devopsing.site/2020/03/27/agile-cicd-devops/
-http://blog.devopsing.site/2020/02/27/what-is-devops/
 http://blog.devopsing.site/2020/02/27/what-is-devops-copy/
+http://blog.devopsing.site/2020/02/27/what-is-devops/
 http://blog.devopsing.site/2020/02/20/devops-practices-thinking/
 http://blog.devopsing.site/2019/11/16/dushu-jinhua/
 http://blog.devopsing.site/2019/11/15/hello-devops/
