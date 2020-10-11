@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.devopsing.site/2019/07/02/markdown-guide/</loc>
+    
+    <lastmod>2020-09-28T15:56:03.591Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.devopsing.site/2019/11/15/hello-devops/</loc>
     
     <lastmod>2020-09-28T15:37:39.788Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://blog.devopsing.site/2019/10/02/devops-tools/</loc>
     
     <lastmod>2020-09-28T15:32:47.319Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.devopsing.site/2019/07/02/markdown-guide/</loc>
-    
-    <lastmod>2020-09-28T15:22:07.932Z</lastmod>
     
   </url>
   
