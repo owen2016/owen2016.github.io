@@ -1,8 +1,7 @@
-http://blog.devopsing.site/2020/03/27/agile-cicd-devops/
-http://blog.devopsing.site/2020/02/27/what-is-devops-copy/
-http://blog.devopsing.site/2020/02/27/what-is-devops/
-http://blog.devopsing.site/2020/02/20/devops-practices-thinking/
-http://blog.devopsing.site/2019/11/16/dushu-jinhua/
-http://blog.devopsing.site/2019/11/15/hello-devops/
-http://blog.devopsing.site/2019/10/02/devops-tools/
-http://blog.devopsing.site/2019/07/02/markdown-guide/
+http://www.devopsing.site/2020/03/27/agile-cicd-devops/
+http://www.devopsing.site/2020/02/27/what-is-devops/
+http://www.devopsing.site/2020/02/20/devops-practices-thinking/
+http://www.devopsing.site/2019/11/16/dushu-jinhua/
+http://www.devopsing.site/2019/11/15/hello-devops/
+http://www.devopsing.site/2019/10/02/devops-tools/
+http://www.devopsing.site/2019/07/02/markdown-guide/

@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://blog.devopsing.site/2019/07/02/markdown-guide/</loc>
+    <loc>http://www.devopsing.site/2019/07/02/markdown-guide/</loc>
     <lastmod>2020-09-28</lastmod>
   </url>
   <url>
-    <loc>http://blog.devopsing.site/2019/11/15/hello-devops/</loc>
+    <loc>http://www.devopsing.site/2019/11/15/hello-devops/</loc>
     <lastmod>2020-09-28</lastmod>
   </url>
   <url>
-    <loc>http://blog.devopsing.site/2019/10/02/devops-tools/</loc>
+    <loc>http://www.devopsing.site/2019/10/02/devops-tools/</loc>
     <lastmod>2020-09-28</lastmod>
   </url>
   <url>
-    <loc>http://blog.devopsing.site/2020/02/27/what-is-devops-copy/</loc>
+    <loc>http://www.devopsing.site/2020/02/27/what-is-devops/</loc>
     <lastmod>2020-09-28</lastmod>
   </url>
   <url>
-    <loc>http://blog.devopsing.site/2020/02/27/what-is-devops/</loc>
+    <loc>http://www.devopsing.site/2020/03/27/agile-cicd-devops/</loc>
     <lastmod>2020-09-28</lastmod>
   </url>
   <url>
-    <loc>http://blog.devopsing.site/2020/03/27/agile-cicd-devops/</loc>
+    <loc>http://www.devopsing.site/2019/11/16/dushu-jinhua/</loc>
     <lastmod>2020-09-28</lastmod>
   </url>
   <url>
-    <loc>http://blog.devopsing.site/2019/11/16/dushu-jinhua/</loc>
-    <lastmod>2020-09-28</lastmod>
-  </url>
-  <url>
-    <loc>http://blog.devopsing.site/2020/02/20/devops-practices-thinking/</loc>
+    <loc>http://www.devopsing.site/2020/02/20/devops-practices-thinking/</loc>
     <lastmod>2020-09-28</lastmod>
   </url>
 </urlset> 
