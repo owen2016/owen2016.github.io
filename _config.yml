@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://blog.devopsing.site
+url: http://www.devopsing.site
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -180,6 +180,6 @@ deploy:
 # 百度推送SEO
 baidu_url_submit:
   count: 100
-  host: blog.devopsing.site
+  host: www.devopsing.site
   token:  # 填写你的百度统计token，不写也没事
   path: baidu_urls.txt

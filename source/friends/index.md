@@ -16,6 +16,6 @@ layout: "friends"
 例如我的博客友链，大家可以加到自己博客里哦：
 
 * **名称：**DevOps在路上
-* **地址：**<https://blog.devopsing.site>
+* **地址：**<https://www.devopsing.site>
 * **简介：**公众号【DevOps在路上】，专注于DevOps学习实践
 * **头像：**https://godweiyang.com/medias/avatars/avatar.jpg
