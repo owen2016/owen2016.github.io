@@ -5,3 +5,4 @@ http://www.devopsing.site/2019/11/16/dushu-jinhua/
 http://www.devopsing.site/2019/11/15/hello-devops/
 http://www.devopsing.site/2019/10/02/devops-tools/
 http://www.devopsing.site/2019/07/02/markdown-guide/
+http://www.devopsing.site/2019/02/27/vscode-usage/
