@@ -616,7 +616,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["DevOps","gitbook, gitlab","SRE","Markdown","VsCode"]
+                data: ["DevOps","SRE","gitbook, gitlab","Markdown","VsCode"]
             }
         ],
         yAxis: [
@@ -805,14 +805,14 @@
             
             
             
-            <a href="/tags/gitbook-gitlab/">
-                <span class="chip center-align waves-effect waves-light chip-default">gitbook, gitlab</span>
+            <a href="/tags/SRE/">
+                <span class="chip center-align waves-effect waves-light chip-default">SRE</span>
             </a>
             
             
             
-            <a href="/tags/SRE/">
-                <span class="chip center-align waves-effect waves-light chip-default">SRE</span>
+            <a href="/tags/gitbook-gitlab/">
+                <span class="chip center-align waves-effect waves-light chip-default">gitbook, gitlab</span>
             </a>
             
             
@@ -891,7 +891,7 @@
                         </div>
                         <div id="articleContent" data-aos="fade-up">
                             <h2 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h2><h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul>
-<li><p>电子邮箱： <a href="mailto:&#x6c;&#x69;&#98;&#105;&#x6e;&#x39;&#53;&#x31;&#x38;&#x38;&#x40;&#49;&#x32;&#54;&#46;&#99;&#111;&#109;">&#x6c;&#x69;&#98;&#105;&#x6e;&#x39;&#53;&#x31;&#x38;&#x38;&#x40;&#49;&#x32;&#54;&#46;&#99;&#111;&#109;</a></p>
+<li><p>电子邮箱： <a href="mailto:&#x6c;&#x69;&#x62;&#105;&#x6e;&#57;&#x35;&#x31;&#x38;&#56;&#64;&#x31;&#50;&#54;&#x2e;&#99;&#x6f;&#109;">&#x6c;&#x69;&#x62;&#105;&#x6e;&#57;&#x35;&#x31;&#x38;&#56;&#64;&#x31;&#50;&#54;&#x2e;&#99;&#x6f;&#109;</a></p>
 </li>
 <li><p>微信公众号: 【DevOps在路上】</p>
 </li>
@@ -961,7 +961,7 @@
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
             
-                <div class="container row center-align" style="margin-bottom: 0px !important;">
+                <div class="container row center-align" style="margin-bottom: 15px !important;">
                     <div class="col s12 m8 l8 copy-right">
                         Copyright&nbsp;&copy;
                         <span id="year">2019</span>
@@ -992,6 +992,50 @@
                                                             
                                                                 <br>
                                                                 
+                                                                    <span id="sitetime">载入运行时间...</span>
+                                                                    <script>
+                                                                        function siteTime() {
+                                                                            var seconds = 1000;
+                                                                            var minutes = seconds * 60;
+                                                                            var hours = minutes * 60;
+                                                                            var days = hours * 24;
+                                                                            var years = days * 365;
+                                                                            var today = new Date();
+                                                                            var startYear = "2019";
+                                                                            var startMonth = "6";
+                                                                            var startDate = "28";
+                                                                            var startHour = "0";
+                                                                            var startMinute = "0";
+                                                                            var startSecond = "0";
+                                                                            var todayYear = today.getFullYear();
+                                                                            var todayMonth = today.getMonth() + 1;
+                                                                            var todayDate = today.getDate();
+                                                                            var todayHour = today.getHours();
+                                                                            var todayMinute = today.getMinutes();
+                                                                            var todaySecond = today.getSeconds();
+                                                                            var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                                                                            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                                                                            var diff = t2 - t1;
+                                                                            var diffYears = Math.floor(diff / years);
+                                                                            var diffDays = Math.floor((diff / days) - diffYears * 365);
+                                                                            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                                                                            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                                                                                minutes);
+                                                                            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                                                                                diffMinutes * minutes) / seconds);
+                                                                            if (startYear == todayYear) {
+                                                                                document.getElementById("year").innerHTML = todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                                                                                    " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            } else {
+                                                                                document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                                                                                    " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            }
+                                                                        }
+                                                                        setInterval(siteTime, 1000);
+                                                                    </script>
+                                                                    
                                                                         <br>
                                                                         
                                                                             <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
