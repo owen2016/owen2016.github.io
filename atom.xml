@@ -177,7 +177,7 @@
     <link href="http://www.devopsing.site/2019/07/02/markdown-guide/"/>
     <id>http://www.devopsing.site/2019/07/02/markdown-guide/</id>
     <published>2019-07-02T14:51:05.000Z</published>
-    <updated>2020-09-28T15:56:03.591Z</updated>
+    <updated>2020-10-15T16:43:14.802Z</updated>
     
     
       
@@ -221,6 +221,32 @@
     
     
     <category term="VsCode" scheme="http://www.devopsing.site/tags/VsCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用私有gitlab搭建gitbook持续集成</title>
+    <link href="http://www.devopsing.site/2019/01/27/gitbook-gitlab/"/>
+    <id>http://www.devopsing.site/2019/01/27/gitbook-gitlab/</id>
+    <published>2019-01-27T04:51:05.000Z</published>
+    <updated>2020-10-16T16:06:48.047Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;在项目实践中，团队需要对用到的知识技术进行总结，即便于分享，也利于传承，而gitbook就是个不错的选择，使用gitbook-cli 对Markdown文档进行编译，生成静态文件，再通过web服务器（e.g.</summary>
+        
+      
+    
+    
+    
+    <category term="DevOps" scheme="http://www.devopsing.site/categories/DevOps/"/>
+    
+    
+    <category term="gitbook, gitlab" scheme="http://www.devopsing.site/tags/gitbook-gitlab/"/>
     
   </entry>
   
