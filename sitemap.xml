@@ -2,65 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.devopsing.site/2019/01/27/gitbook-gitlab/</loc>
+    <loc>http://www.devopsing.site/2020/02/20/devops-practices-thinking/</loc>
     
-    <lastmod>2020-10-16T16:06:48.047Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/2019/07/02/markdown-guide/</loc>
-    
-    <lastmod>2020-10-15T16:43:14.802Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/2019/02/27/vscode-usage/</loc>
-    
-    <lastmod>2020-10-15T16:37:01.248Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/friends/index.html</loc>
-    
-    <lastmod>2020-10-14T14:33:37.742Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/contact/index.html</loc>
-    
-    <lastmod>2020-10-14T14:33:30.402Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/2019/11/15/hello-devops/</loc>
-    
-    <lastmod>2020-09-28T15:37:39.788Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/2019/10/02/devops-tools/</loc>
-    
-    <lastmod>2020-09-28T15:32:47.319Z</lastmod>
+    <lastmod>2020-10-17T14:33:28.296Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.devopsing.site/2020/02/27/what-is-devops/</loc>
     
-    <lastmod>2020-09-28T15:14:42.582Z</lastmod>
+    <lastmod>2020-10-17T13:40:22.911Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/2019/02/27/vscode-usage/</loc>
+    
+    <lastmod>2020-10-17T13:39:40.513Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/2019/07/02/markdown-guide/</loc>
+    
+    <lastmod>2020-10-17T13:39:36.252Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/2019/01/27/gitbook-gitlab/</loc>
+    
+    <lastmod>2020-10-17T13:39:27.539Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/2019/11/16/dushu-jinhua/</loc>
+    
+    <lastmod>2020-10-17T13:39:22.079Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/2019/10/02/devops-tools/</loc>
+    
+    <lastmod>2020-10-17T13:39:13.128Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.devopsing.site/2020/03/27/agile-cicd-devops/</loc>
     
-    <lastmod>2020-09-28T15:14:22.131Z</lastmod>
+    <lastmod>2020-10-17T13:39:04.663Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/2019/11/15/hello-devops/</loc>
+    
+    <lastmod>2020-10-17T13:37:46.815Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/contact/index.html</loc>
+    
+    <lastmod>2020-10-17T13:19:36.454Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/friends/index.html</loc>
+    
+    <lastmod>2020-10-17T10:24:16.041Z</lastmod>
     
   </url>
   
@@ -68,20 +82,6 @@
     <loc>http://www.devopsing.site/about/index.html</loc>
     
     <lastmod>2020-09-28T15:04:07.518Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/2019/11/16/dushu-jinhua/</loc>
-    
-    <lastmod>2020-09-28T14:21:16.436Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/2020/02/20/devops-practices-thinking/</loc>
-    
-    <lastmod>2020-09-28T14:18:40.531Z</lastmod>
     
   </url>
   

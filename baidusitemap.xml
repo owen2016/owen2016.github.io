@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.devopsing.site/2019/01/27/gitbook-gitlab/</loc>
-    <lastmod>2020-10-16</lastmod>
-  </url>
-  <url>
-    <loc>http://www.devopsing.site/2019/07/02/markdown-guide/</loc>
-    <lastmod>2020-10-15</lastmod>
-  </url>
-  <url>
-    <loc>http://www.devopsing.site/2019/02/27/vscode-usage/</loc>
-    <lastmod>2020-10-15</lastmod>
-  </url>
-  <url>
-    <loc>http://www.devopsing.site/2019/11/15/hello-devops/</loc>
-    <lastmod>2020-09-28</lastmod>
-  </url>
-  <url>
-    <loc>http://www.devopsing.site/2019/10/02/devops-tools/</loc>
-    <lastmod>2020-09-28</lastmod>
+    <loc>http://www.devopsing.site/2020/02/20/devops-practices-thinking/</loc>
+    <lastmod>2020-10-17</lastmod>
   </url>
   <url>
     <loc>http://www.devopsing.site/2020/02/27/what-is-devops/</loc>
-    <lastmod>2020-09-28</lastmod>
+    <lastmod>2020-10-17</lastmod>
   </url>
   <url>
-    <loc>http://www.devopsing.site/2020/03/27/agile-cicd-devops/</loc>
-    <lastmod>2020-09-28</lastmod>
+    <loc>http://www.devopsing.site/2019/02/27/vscode-usage/</loc>
+    <lastmod>2020-10-17</lastmod>
+  </url>
+  <url>
+    <loc>http://www.devopsing.site/2019/07/02/markdown-guide/</loc>
+    <lastmod>2020-10-17</lastmod>
+  </url>
+  <url>
+    <loc>http://www.devopsing.site/2019/01/27/gitbook-gitlab/</loc>
+    <lastmod>2020-10-17</lastmod>
   </url>
   <url>
     <loc>http://www.devopsing.site/2019/11/16/dushu-jinhua/</loc>
-    <lastmod>2020-09-28</lastmod>
+    <lastmod>2020-10-17</lastmod>
   </url>
   <url>
-    <loc>http://www.devopsing.site/2020/02/20/devops-practices-thinking/</loc>
-    <lastmod>2020-09-28</lastmod>
+    <loc>http://www.devopsing.site/2019/10/02/devops-tools/</loc>
+    <lastmod>2020-10-17</lastmod>
+  </url>
+  <url>
+    <loc>http://www.devopsing.site/2020/03/27/agile-cicd-devops/</loc>
+    <lastmod>2020-10-17</lastmod>
+  </url>
+  <url>
+    <loc>http://www.devopsing.site/2019/11/15/hello-devops/</loc>
+    <lastmod>2020-10-17</lastmod>
   </url>
 </urlset> 

@@ -13,8 +13,9 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="baidu-site-verification" content="code-xYM7ZYcGPR" />
 
+        <!-- 添加百度统计和谷歌统计代码 -->
+        <meta name="baidu-site-verification" content="code-xYM7ZYcGPR" />
         <!-- <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
         <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
 
@@ -34,11 +35,14 @@
             <link rel="stylesheet" type="text/css" href="/css/matery.css">
             <link rel="stylesheet" type="text/css" href="/css/my.css">
 
+
             <script src="/libs/jquery/jquery.min.js"></script>
 
     <meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="DevOps在路上" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
 
 <body>
     <header class="navbar-fixed">
@@ -911,9 +915,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Tips 总结1. VSCode显示空格和tab符号1.打开setting,在搜索框中输入renderControlCharacters,选中勾选框,即可显示tab
-
-2.在搜索框中输入renderWhitespace,选择all,即可显示
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -962,8 +964,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            [TOC]
-在项目实践中，团队需要对用到的知识技术进行总结，即便于分享，也利于传承，而gitbook就是个不错的选择，使用gitbook-cli 对Markdown文档进行编译，生成静态文件，再通过web服务器（e.g. nginx）对外提
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -1066,7 +1067,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
+        <div class="toc-widget" style="background-color: white;">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
@@ -1203,7 +1204,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
                    type="playlist"
-                   id="503838841"
+                   id="486899256"
                    fixed='true'
                    autoplay='false'
                    theme='#42b983'
@@ -1239,13 +1240,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                                         
                                             
                                                 
-                                                    <span id="busuanzi_container_site_pv">
+                                                    <span id="busuanzi_container_site_pv" style='display:none'>
                 |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
                     class="white-color"></span>&nbsp;次
                                                     </span>
                                                     
                                                         
-                                                            <span id="busuanzi_container_site_uv">
+                                                            <span id="busuanzi_container_site_uv" style='display:none'>
                 |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
                     class="white-color"></span>&nbsp;人
                                                             </span>
@@ -1346,6 +1347,26 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 <div class="progress-bar"></div>
 
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 80000;
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script>
+
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1361,7 +1382,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <script src="/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/search.xml", 'searchInput', 'searchResult');
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
 });
 </script>
 
