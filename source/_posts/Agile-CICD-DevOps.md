@@ -1,10 +1,12 @@
 ---
-title: 【漫话DevOps】-Agile, CI/CD, DevOps
+title: Agile, CI/CD, DevOps
 top: false
-cover: false
+cover: true
 toc: true
 mathjax: true
 date: 2020-03-27 22:51:05
+img:
+coverImg:
 password:
 summary:
 tags:

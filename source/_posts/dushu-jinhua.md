@@ -5,6 +5,8 @@ cover: false
 toc: true
 mathjax: true
 date: 2019-11-16 15:09:23
+img:
+coverImg:
 password:
 summary: 最近在看这本《进化-运维技术变革与实践探索》，结合自己的一些实践，有些心得体会，并且摘录了我认为重要的或者有同感的内容。
 tags:

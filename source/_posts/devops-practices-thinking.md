@@ -1,10 +1,12 @@
 ---
 title: 持续集成实践中的思考
 top: false
-cover: false
+cover: true
 toc: true
 mathjax: true
 date: 2020-02-20 22:51:05
+img:
+coverImg:
 password:
 summary:
 tags:
