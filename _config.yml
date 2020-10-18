@@ -86,6 +86,14 @@ baidusitemap:
 sitemap:
     path: sitemap.xml
 
+# 百度推送SEO
+# 主动推送Hexo博客新链接至百度搜索引擎，解决百度爬虫被禁止访问的问题，提升网站收录质量和速度。
+baidu_url_submit:
+  count: 100
+  host: www.devopsing.site ### 在百度站长平台中注册的域名
+  token:  # 填写你的百度统计token，不写也没事 ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
 # 文章字数统计插件
 wordCount:
   enable: true # 将这个值设置为 true 即可.
@@ -175,17 +183,11 @@ theme: hexo-theme-matery
 ## Docs: https://hexo.io/docs/one-command-deployment
 # 同时部署到gh-pages分支，必须使用下列格式
 deploy:
-  type: git
+- type: git
   repo: 
     gitee: git@gitee.com:owen2016/owen2016.git,gh-pages
     github: git@github.com:owen2016/owen2016.github.io.git,gh-pages
     aliyun: git@39.101.200.65:/home/git/blog.git,gh-pages
   message: "commit by hexo-one-command-deployment"
-# type: baidu_url_submitter
+- type: baidu_url_submitter
 
-# 百度推送SEO
-baidu_url_submit:
-  count: 100
-  host: www.devopsing.site
-  token:  # 填写你的百度统计token，不写也没事
-  path: baidu_urls.txt
