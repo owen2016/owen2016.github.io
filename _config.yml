@@ -86,7 +86,7 @@ baidusitemap:
 sitemap:
     path: sitemap.xml
 
-# 百度推送SEO
+# 百度推送SEO (API)
 # 主动推送Hexo博客新链接至百度搜索引擎，解决百度爬虫被禁止访问的问题，提升网站收录质量和速度。
 baidu_url_submit:
   count: 1000 #提交最新的一个链接

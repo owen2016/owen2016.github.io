@@ -392,7 +392,7 @@ googleAnalytics:
   id:
 
 # Add baidu analytics configuration
-# 添加 baidu Analytics 配置
+# 添加 baidu Analytics 百度统计 配置
 baiduAnalytics:
   enable: true
   id: 8f645dd0ad3544dc3e8f2c53a192d342
