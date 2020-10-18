@@ -190,4 +190,13 @@ deploy:
     aliyun: git@39.101.200.65:/home/git/blog.git,gh-pages
   message: "commit by hexo-one-command-deployment"
 - type: baidu_url_submitter
+# - type: ali-oss
+#   region: <您的oss 区域代码>
+#   accessKeyId: <您的oss  accessKeyId>
+#   accessKeySecret: <您的oss accessKeySecret>
+#   bucket: <您的bucket name>
+#   remotePath: <您要部署的目录> #默认情况下，将文件上传到bucket的根目录下，如果需要部署到其他目录，请在deploy下添加remotePath选项进行指定
+
+#   http://zengwu.com.cn/p/dd7e8a7b.html
+
 
