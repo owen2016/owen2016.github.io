@@ -23,14 +23,15 @@ categories:
 - CI/CD focuses on software-defined life cycles highlighting tools that emphasize automation.
 - DevOps focuses on culture highlighting roles that emphasize responsiveness.
 
-![image.png](https://upload-images.jianshu.io/upload_images/2504773-d080c042303e3b84.png)
+![](https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020224951.png)
 
 ## Agile Development
 
 - 拥抱变化
 - 快速迭代
- ![image.png](https://upload-images.jianshu.io/upload_images/2504773-906788b9c2e462ef.png)
-  
+
+![](https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020225036.png)
+
 ## CI /CD
 
 CI/CD 都体现了如今快节奏市场中的文化和发展原则，旨在缩短开发周期、提高软件交付效率以及实现全流程的自动化。同时，两者都有着共同的目标：让软件开发更少地依赖于手动执行的任务，在此基础上使得软件的发布更加频繁、更加安全可靠。由于有着相同的目标，因此持续集成和持续交付并非相互排斥的, 只是它们的应用范围有所不同。
@@ -48,14 +49,14 @@ CI/CD 都体现了如今快节奏市场中的文化和发展原则，旨在缩�
 - 对项目而言，持续集成（CI）的目标是确保开发人员新提交的变更是好的， 不会发生break build; 并且最终的主干分支一直处于可发布的状态，
 
 - 对于开发人员而言，要求他们必须频繁地向主干提交代码，相应也可以即时得到问题的反馈。实时获取到相关错误的信息，以便快速地定位与解决问题
-  ![image.png](https://upload-images.jianshu.io/upload_images/2504773-064a281aa9596dca.png)
+![](https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020225142.png)
 
 显然这个过程可以大大地提高开发人员以及整个IT团队的工作效率，避免陷入好几天得不到好的“部署产出”，影响后续的测试和交付。
 
 ### 持续交付 （Continuous Delivery）
 
 持续交付在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境的「预发布环境」（production-like environments）中。交付给质量团队或者用户，以供评审。如果评审通过，代码就进入生产阶段 持续交付并不是指软件每一个改动都要尽快部署到产品环境中，它指的是任何的代码修改都可以在任何时候实时部署。
-![image.png](https://upload-images.jianshu.io/upload_images/2504773-4cb36753a452ee83.png)
+![](https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020225203.png)
 
 强调：
 1、手动部署
@@ -69,7 +70,8 @@ CI/CD 都体现了如今快节奏市场中的文化和发展原则，旨在缩�
 1、持续部署是自动的
 2、持续部署是持续交付的最高阶段 
 3、持续交付表示的是一种能力，持续部署则是一种方式
-![image.png](https://upload-images.jianshu.io/upload_images/2504773-c2437eaef9c367ba.png)
+
+![](https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020225227.png)
 
 - DEV Development environment -开发环境，用于开发者调试使用
 - FAT Feature Acceptance Test environment  -功能验收测试环境，用于软件测试者测试使用
@@ -83,7 +85,8 @@ CI/CD 都体现了如今快节奏市场中的文化和发展原则，旨在缩�
 - 持续交付适用于需要缩短开发周期，更快地为目标用户提供软件的企业。CD降低了部署新软件或升级已有软件的难度，且实现了全流程的自动化，因此您的团队无需手动执行复杂繁琐的任务，从而加快反馈速度，来确保您增加的功能真正地满足用户的需求。
 
 此外，也有不少人认为CI是CD的前提与基础，没有CI就不能实现CD。这种说法也是比较流行的，其思路如下图。因此，不管是哪种说法，CI与CD都是DevOps工具中不可或缺的理念与方法。
-![image.png](https://upload-images.jianshu.io/upload_images/2504773-74ab14bc8a196e6b.png)
+
+![](https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020225243.png)
 
 **持续交付与持续部署，到底谁应该包含谁 ?**
 
