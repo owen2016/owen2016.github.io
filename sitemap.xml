@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.devopsing.site/2019/10/02/devops-tools/</loc>
+    
+    <lastmod>2020-10-20T14:55:25.853Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.devopsing.site/2020/03/27/agile-cicd-devops/</loc>
     
-    <lastmod>2020-10-17T15:40:06.837Z</lastmod>
+    <lastmod>2020-10-20T14:53:44.377Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>http://www.devopsing.site/2019/11/16/dushu-jinhua/</loc>
     
     <lastmod>2020-10-17T13:39:22.079Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/2019/10/02/devops-tools/</loc>
-    
-    <lastmod>2020-10-17T13:39:13.128Z</lastmod>
     
   </url>
   
