@@ -162,8 +162,8 @@ code:
 reward:
   enable: true
   title: 你的鼓励是我前进的动力！
-  wechat: /medias/reward/wechat.jpg
-  alipay: /medias/reward/alipay.jpg
+  wechat: https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020234556.JPG
+  alipay: https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020234534.JPG
 
 # Whether to activate the copyright information of the blog and author when copying the post content.
 # minCharNumber: Approve copyright information by copying at least how many characters.
