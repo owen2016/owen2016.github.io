@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>DevOps在路上</title>
   
-  <subtitle>Keep DevOpsing</subtitle>
+  <subtitle>DevOpsing</subtitle>
   <link href="http://www.devopsing.site/atom.xml" rel="self"/>
   
   <link href="http://www.devopsing.site/"/>
