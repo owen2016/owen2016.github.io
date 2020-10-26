@@ -10,7 +10,7 @@ coverImg:
 password:
 summary:
 tags:
-- VsCode
+- VSCode
 categories:
 - 工具
 ---
