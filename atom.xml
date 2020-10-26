@@ -204,7 +204,7 @@
     <link href="http://www.devopsing.site/2019/02/27/vscode-usage/"/>
     <id>http://www.devopsing.site/2019/02/27/vscode-usage/</id>
     <published>2019-02-27T14:51:05.000Z</published>
-    <updated>2020-10-17T13:39:40.513Z</updated>
+    <updated>2020-10-26T14:14:03.693Z</updated>
     
     
       
@@ -220,7 +220,7 @@
     <category term="工具" scheme="http://www.devopsing.site/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="VsCode" scheme="http://www.devopsing.site/tags/VsCode/"/>
+    <category term="VSCode" scheme="http://www.devopsing.site/tags/VSCode/"/>
     
   </entry>
   
@@ -247,6 +247,32 @@
     
     
     <category term="gitbook, gitlab" scheme="http://www.devopsing.site/tags/gitbook-gitlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux 后台运行进程</title>
+    <link href="http://www.devopsing.site/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/"/>
+    <id>http://www.devopsing.site/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/</id>
+    <published>2018-02-27T05:11:05.000Z</published>
+    <updated>2020-10-26T14:14:44.630Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;当我们在终端或控制台工作时，可能不希望由于运行一个作业而占住了屏幕，因为可能还有更重要的事情要做，比如阅读电子邮件。对于密集访问磁盘的进程，我们更希望它能够在每天的非负荷高峰时间段运行(例如凌晨)。为了使这些进程能够在后台运行，也就是说不在终端屏幕</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="http://www.devopsing.site/categories/Linux/"/>
+    
+    
+    <category term="VSCode" scheme="http://www.devopsing.site/tags/VSCode/"/>
     
   </entry>
   

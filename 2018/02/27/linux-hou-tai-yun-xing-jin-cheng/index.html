@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="keywords" content="持续集成实践中的思考, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="keywords" content="linux 后台运行进程, DevOps在路上|DevOps|Docker|CICD|K8S">
         <meta name="description" content="Every failure is leading towards success.">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -25,7 +25,7 @@
 
 
             <title>
-                持续集成实践中的思考 | DevOps在路上
+                linux 后台运行进程 | DevOps在路上
             </title>
             <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -300,12 +300,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">持续集成实践中的思考</h1>
+                    <h1 class="description center-align post-title">linux 后台运行进程</h1>
                 </div>
             </div>
         </div>
@@ -422,8 +422,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/DevOps/">
-                                <span class="chip bg-color">DevOps</span>
+                            <a href="/tags/VSCode/">
+                                <span class="chip bg-color">VSCode</span>
                             </a>
                         
                     </div>
@@ -434,8 +434,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AF%BB%E4%B9%A6/" class="post-category">
-                                读书
+                            <a href="/categories/Linux/" class="post-category">
+                                Linux
                             </a>
                         
                     </div>
@@ -447,28 +447,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-20
+                    2018-02-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-17
+                    2020-10-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    9 分
                 </div>
                 
 
@@ -484,34 +484,95 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>最近在看到ThoughtWorks的一篇技术文章提到“几项与持续集成相关的反模式”, 结合自己的实践体会特别有深切体会，所以记录下来</p>
+<p>当我们在终端或控制台工作时，可能不希望由于运行一个作业而占住了屏幕，因为可能还有更重要的事情要做，比如阅读电子邮件。对于密集访问磁盘的进程，我们更希望它能够在每天的非负荷高峰时间段运行(例如凌晨)。为了使这些进程能够在后台运行，也就是说不在终端屏幕上运行，有几种选择方法可供使用。</p>
 </blockquote>
-<h2 id="持续集成的反模式"><a href="#持续集成的反模式" class="headerlink" title="持续集成的反模式"></a>持续集成的反模式</h2><p>最需要被点名批评的现象莫过于“持续集成剧场”了：</p>
-<blockquote>
-<p>很多开发者只是简单的搭建了持续集成服务器就以为在做“持续集成”，但他们实际上会遗失持续集成的关键优点而导致失败。常见的失败模式包括：虽然在一个共享的主分支上运行持续集成，但是代码提交不频繁，所以集成并没有真正的“持续”。以及在一个测试覆盖率不足，甚至是长期状态为红的情况下进行构建；或者在功能分支上运行持续集成，这会导致持续隔离。</p>
-</blockquote>
-<p>简而言之，这些团队并没有真正体会到持续集成的好处，而是为了完成上级的任务而演一场“我们在持续集成”的戏——这也正是这个反模式的名字由来。过去十年中，我们在众多刚开始实施持续集成的企业见过这一幕。领导认识到持续集成的好处，<strong>但是推行成了个大问题：推轻了，下面团队不愿动，技术问题解决不了；推重了，下面团队来个上有政策下有对策，领导想看什么就给你演什么——持续集成剧场就此落成。比如说你见过一个表面看起来一直是绿色但是背后连编译都不敢跑的持续集成吗？</strong> 我见过。真是一场好戏。</p>
-<p>为了解决持续集成演戏的问题，一些规模较大的企业开始建设持续集成中心。想法很符合直觉：既然团队自己做持续集成有技术困难、还有可能变成演戏，<strong>那么我就组建一支团队专门帮他们一个个把持续集成跑通、帮他们管理持续集成服务器，</strong>持续集成的运行和统计数据都在这个中央团队手里，下面的团队总没办法演戏了吧？于是，他们又遭遇了第二个持续集成反模式：“所有团队共用一个持续集成实例”。</p>
-<blockquote>
-<p>那些必须使用中心化持续集成服务器的交付团队，常常依赖中心的团队去完成小的配置任务，或者在共享的基础设置和工具中排查问题，这给他们在进度上带来长时间的滞后。</p>
-</blockquote>
-<p>这次是康威定律带来的困难：如果每个团队使用的技术栈配置不同、技术栈配置和管理的职责仍然在每个团队中，那么技术栈演进与持续集成的演进就难免出现节拍不一致。<strong>于是管理着持续集成中心的中央团队开始疲于奔命，帮一个个项目团队修持续集成，而项目团队还感到没有得到足够的支持。</strong></p>
-<p>第三个反模式是“企业级集成测试环境”，这也是很多组织建设持续集成中心的初衷之一：由于能执行完整端到端测试的环境稀缺，各个团队的集成测试无论如何也必须在一个瓶颈处统一调度，所以中心化管理持续集成也就顺理成章。然而，</p>
-<blockquote>
-<p>这些企业集成测试环境通常称为 SIT 或预生产环境）是当下持续交付常见的瓶颈。环境本身很脆弱而且维护成本很高，而这些环境通常存在一些需要由单独的环境管理团队手动配置的组件。在预生产环境的测试给出的反馈慢且不可靠，而且会重复测试那些在隔离的组件上已经测过的功能。</p>
-</blockquote>
-<h2 id="我的体会"><a href="#我的体会" class="headerlink" title="我的体会"></a>我的体会</h2><ol>
-<li><p>对于上面第一个情景，很多时候我们以为有了工具就是持续集成，但是往往那些持续集成并不是那么完美，至少在我看到都是“hardcode”, 可移植性差，不能复用，维护成本高，下一个接手的人需要花时间了解上一个人做的“CI/CD”；因为在一些团队里，并不是很重视这个，认为CI/CD仅仅是个辅助的东西，当然这样跟国内项目的开发周期有关，有时候项目很小，客户催的很急，哪有时间去优化那么好，能用起来再说。当下一个项目来的时候，同样的技术栈的项目还要重新来过一次。</p>
+<h2 id="后台执行"><a href="#后台执行" class="headerlink" title="后台执行"></a>后台执行</h2><p><strong>比较下 &amp; 与 nohup：</strong></p>
+<ul>
+<li>&amp; ：后台运行，但用户终端退出时（断连），命令结束</li>
+<li>nohup test.sh &amp; : 后台运行，用户终端退出时（断连）依然保持运行，可使用标准输入输出</li>
+</ul>
+<h3 id="amp"><a href="#amp" class="headerlink" title="&amp;"></a>&amp;</h3><p>当在前台运行某个作业时，终端被该作业占据；可以在命令后面加上&amp; 实现后台运行。e.g. <code>sh test.sh &amp;</code></p>
+<p>适合在后台运行的命令有f i n d、费时的排序及一些s h e l l脚本。在后台运行作业时要当心：需要用户交互的命令不要放在后台执行，因为这样你的机器就会在那里傻等。不过，作业在后台运行一样会将结果输出到屏幕上，干扰你的工作。如果放在后台运行的作业会产生大量的输出，最好使用下面的方法把它的输出重定向到某个文件中：</p>
+<p><code>command &gt; out.file 2&gt;&amp;1 &amp;</code><br>这样，所有的标准输出和错误输出都将被重定向到一个叫做out.file 的文件中。</p>
+<p>PS：当你成功地提交进程以后，就会显示出一个进程号，可以用它来监控该进程，或杀死它。(ps -ef | grep 进程号 或者 kill -9 进程号）</p>
+<h3 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h3><p>使用&amp;命令后，作业被提交到后台运行，当前控制台没有被占用，但是一但把当前控制台关掉(退出帐户时)，作业就会停止运行。nohup命令可以在你退出帐户之后继续运行相应的进程。nohup就是不挂起的意思( no hang up / ignoring hangup signals) 即 忽略挂起信号一直在后台执行。</p>
+<p><code>语法: nohup Command [ Arg … ] [&amp; ]</code></p>
+<p><code>e.g. $nohup python manage.py runserver &amp;</code></p>
+<p><strong>使用时注意:</strong></p>
+<p>在当shell中提示了nohup成功后，还需要按终端上键盘任意键退回到shell输入命令窗口，然后通过在shell中输入exit来退出终端；如果在nohup执行成功后直接点关闭程序按钮关闭终端的话，这时候会断掉该命令所对应的session，导致nohup对应的进程被通知需要一起shutdown，起不到关掉终端后调用程序继续后台运行的作用。</p>
+<p><code>nohup command &gt; myout.file 2&gt;&amp;1 &amp;</code></p>
+<p>无论是否将 nohup 命令的输出重定向到终端，输出都将附加到当前目录的nohup.out 文件中。如果当前目录的nohup.out文件不可写，输出重定向到$HOME/nohup.out文件中。如果没有文件能创建或打开以用于追加，那么 Command 参数指定的命令不可调用。</p>
+<p><strong>2&gt;&amp;1解析:</strong></p>
+<p><code>command &gt;out.file 2&gt;&amp;1 &amp;</code></p>
+<ul>
+<li><p>command&gt;out.file是将command的输出重定向到out.file文件，即输出内容不打印到屏幕上，而是输出到out.file文件中。</p>
 </li>
-<li><p>毕竟对于开发团队来说，CI/CD是另外一个领域的东西，虽然入门简单（按照网上的教程一个很简单demo就搞定了），但是里面的思想和业务场景需要一个个业务场景的积累，如何优化，如何标准化复用，这并不是简单的事情，其实这也是DevOps要解决的一个个痛点。</p>
+<li><p>2&gt;&amp;1 是将标准出错 重定向到标准输出，这里的标准输出已经重定向到了out.file文件，即将标准出错也输出到out.file文件中。最后一个&amp;， 是让该命令在后台执行。</p>
 </li>
-<li><p>那么我们建个专业的团队做这个事情吧，就是第二个场景提到的事情，其实这也是我目前正在进行中的场景，但是随着业务开展，严格意义上还没有人用，我们就发现你搞出来了，不见得有人会用，不同的业务，不同的技术栈，你需要和Dev团队密切沟通，需要DevOps团队有广阔的技术视野，如果服务众多个不同业务团队，你可能会发现自己被动的成为了“那个业务项目的一员”；另外沟通的成本其实也不低，想法是好的有个专业的团队，但是落地不是那么容易，这不是一个人，一个团队能解决的问题。</p>
+</ul>
+<p>试想2&gt;1代表什么，2与&gt;结合代表错误重定向，而1则代表错误重定向到一个文件1，而不代表标准输出；换成2&gt;&amp;1，&amp;与1结合就代表标准输出了，就变成错误重定向到标准输出.</p>
+<h2 id="查看后台运行的命令"><a href="#查看后台运行的命令" class="headerlink" title="查看后台运行的命令"></a>查看后台运行的命令</h2><p>有两个命令可以来查看，<code>ps</code> 和 <code>jobs</code>。区别在于 jobs 只能查看当前终端后台执行的任务，换了终端就看不见了。而ps命令适用于查看瞬时进程的动态，可以看到别的终端的任务</p>
+<h3 id="jobs"><a href="#jobs" class="headerlink" title="jobs"></a>jobs</h3><p>查看当前有多少在后台运行的命令</p>
+<p><img src="https://gitee.com/owen2016/pic-hub/raw/master/1603718157_20201026141913132_275681253.png"></p>
+<p>jobs -l选项可显示所有任务的PID，jobs的状态可以是running, stopped, Terminated。但是如果任务被终止了（kill），shell 从当前的shell环境已知的列表中删除任务的进程标识。</p>
+<p>“+”代表最近的一个任务（当前任务），“-”代表之前的任务。</p>
+<p><img src="https://gitee.com/owen2016/pic-hub/raw/master/1603718158_20201026143108907_1737208027.png"></p>
+<p>只有在当前命令行中使用 nohup和&amp; 时，jobs命令才能将它显示出来。如果将他们写到 .sh 脚本中，然后执行脚本，是显示不出来的</p>
+<p>比如执行下面这个脚本后，jobs 显示不出来：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">#!/bin/bash
+nohup java -Dfile.encoding=UTF-8 -Dname=Runtime-Name -server -Xms128M -Xmx512M -XX:MetaspaceSize=128M -XX:MaxMetaspaceSize=256M -XX:+HeapDumpOnOutOfMemoryError -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -jar test.jar $1 $2 $3 &<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h3><p>nohup命令可以在你退出帐户/关闭终端之后继续运行相应的进程。关闭中断后，在另一个终端<code>jobs</code>已无法看到后台跑得程序了，此时利用ps（进程查看命令）</p>
+<p><code>ps -aux | grep &quot;test.sh&quot;  #a:显示所有程序 u:以用户为主的格式来显示 x:显示所有程序，不以终端机来区分</code></p>
+<h2 id="关闭当前后台运行的程序"><a href="#关闭当前后台运行的程序" class="headerlink" title="关闭当前后台运行的程序"></a>关闭当前后台运行的程序</h2><h3 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h3><ol>
+<li><p>通过jobs命令查看job号（假设为num），然后执行kill %num</p>
 </li>
-<li><p>那么如何解决这个困境？ 我认为需要企业自上而下，推广这种文化，可以从一个项目开始做推广，小步快跑，将“标准化规则”慢慢建立起来，比如分支的管理，依赖管理，CI/CD与不同技术栈的集成标准化，环境问题（内部环境,线上环境），最后衍生出来一个标准化的CI/CD平台。最后的场景是，Dev团队只关注于业务，他们只需要基于一个CI/CD模板，填写必要的环境参数等，剩下的事情不需要他们管，对于他们是透明的，他们只需要产出是什么，比如仓库，邮件通知等等。</p>
-</li>
-<li><p>所有的”快速复用，持续交付”都是基于大家形成的一个标准流程，没有标准，就没有”复用”，就没有快速的迭代，最后还是”半人工”的低效工作。</p>
+<li><p>通过ps命令查看job的进程号（PID，假设为pid），然后执行kill pid</p>
 </li>
 </ol>
+<p>前台进程的终止：ctrl+c</p>
+<h2 id="前后台进程的切换与控制"><a href="#前后台进程的切换与控制" class="headerlink" title="前后台进程的切换与控制"></a>前后台进程的切换与控制</h2><h3 id="ctrl-z-命令"><a href="#ctrl-z-命令" class="headerlink" title="ctrl + z 命令"></a>ctrl + z 命令</h3><p>将一个正在前台执行的命令放到后台，并且处于暂停状态。</p>
+<h3 id="fg-命令"><a href="#fg-命令" class="headerlink" title="fg 命令"></a>fg 命令</h3><p>将后台中的命令 <code>调至 前台继续运行</code>。如果后台中有多个命令，可以用 <code>fg %jobnumber</code>（是命令编号，不是进程号）将选中的命令调出</p>
+<h3 id="bg-命令"><a href="#bg-命令" class="headerlink" title="bg 命令"></a>bg 命令</h3><p>将一个在后台暂停的命令，<code>变成在后台继续执行</code>。如果后台中有多个命令，可以用<code>bg %jobnumber</code>将选中的命令调出。</p>
+<p><img src="https://gitee.com/owen2016/pic-hub/raw/master/1603718158_20201026142920042_1829517779.png"></p>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><h3 id="问题1-为什么ssh一关闭，程序就不再运行了"><a href="#问题1-为什么ssh一关闭，程序就不再运行了" class="headerlink" title="问题1-为什么ssh一关闭，程序就不再运行了"></a>问题1-为什么ssh一关闭，程序就不再运行了</h3><p>元凶：SIGHUP 信号</p>
+<p>让我们来看看为什么关掉窗口/断开连接会使得正在运行的程序死掉。</p>
+<p>在Linux/Unix中，有这样几个概念：</p>
+<ul>
+<li><p>进程组（process group）：<code>一个或多个进程的集合</code>，每一个进程组有唯一一个进程组ID，即进程组长进程的ID。</p>
+</li>
+<li><p>会话期（session）：<code>一个或多个进程组的集合</code>，有唯一一个会话期首进程（session leader）。会话期ID为首进程的ID。<br>会话期可以有一个单独的控制终端（controlling terminal）。与控制终端连接的会话期首进程叫做控制进程（controlling process）。当前与终端交互的进程称为前台进程组。其余进程组称为后台进程组。</p>
+</li>
+</ul>
+<p>根据POSIX.1定义：</p>
+<ul>
+<li>挂断信号（SIGHUP）默认的动作是终止程序。</li>
+<li>当终端接口检测到网络连接断开，将挂断信号发送给控制进程（会话期首进程）。</li>
+<li>如果会话期首进程终止，则该信号发送到该会话期前台进程组。</li>
+</ul>
+<p>一个进程退出导致一个孤儿进程组中产生时，如果任意一个孤儿进程组进程处于STOP状态，发送SIGHUP和SIGCONT信号到该进程组中所有进程。（关于孤儿进程参照：<a target="_blank" rel="noopener" href="http://blog.csdn.net/hmsiwtv/article/details/7901711">http://blog.csdn.net/hmsiwtv/article/details/7901711</a> ）</p>
+<p>结论：因此当网络断开或终端窗口关闭后，也就是SSH断开以后，控制进程收到SIGHUP信号退出，会导致该会话期内其他进程退出。</p>
+<p>简而言之：就是ssh 打开以后，bash等都是他的子程序，一旦ssh关闭，系统将所有相关进程杀掉！！ 导致一旦ssh关闭，执行中的任务就取消了</p>
+<p><strong>示例：</strong></p>
+<p>打开两个SSH终端窗口，在其中一个运行top命令。</p>
+<p><code>owen@swarm-manager-105:~$ top</code></p>
+<p>在另一个终端窗口，找到top的进程ID为 38779，其父进程ID为38751，即登录shell。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">owen@swarm-manager-105:~$ ps -ef|grep top
+owen      24007  23571  0 16:58 tty2     00:00:01 nautilus-desktop
+owen      38779  38751  0 20:22 pts/1    00:00:00 top<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>使用pstree命令可以更清楚地看到这个关系：</p>
+<pre class="line-numbers language-shell"><code class="language-shell">owen@swarm-manager-105:~$ pstree -H 38779|grep top
+        |-sshd-+-sshd---sshd---bash---top<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>使用<code>ps -xj</code>命令可以看到，登录shell（PID 38751）和top在同一个会话期，shell为会话期首进程，所在进程组PGID为38751，top所在进程组PGID为38779，为前台进程组。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">owen@swarm-manager-105:~$ ps -xj|grep 38751
+ 38750  38751  38751  38751 pts/1     38779 Ss    1000   0:00 -bash
+ 38751  38779  38779  38751 pts/1     38779 S+    1000   0:03 top<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>关闭第一个SSH窗口，在另一个窗口中可以看到top也被杀掉了。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">owen@swarm-manager-105:~$ ps -ef|grep 38751
+owen      40412  38966  0 20:52 pts/4    00:00:00 grep --color=auto 38751<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="问题2-为什么守护程序就算ssh-打开的，就算关闭ssh也不会影响其运行？"><a href="#问题2-为什么守护程序就算ssh-打开的，就算关闭ssh也不会影响其运行？" class="headerlink" title="问题2- 为什么守护程序就算ssh 打开的，就算关闭ssh也不会影响其运行？"></a>问题2- 为什么守护程序就算ssh 打开的，就算关闭ssh也不会影响其运行？</h3><p>因为他们的程序特殊，比如httpd –k start运行这个以后，他不属于sshd这个进程组  而是单独的进程组，所以就算关闭了ssh，和他也没有任何关系！</p>
+<pre class="line-numbers language-shell"><code class="language-shell">[owen@centos-1 ~]$ pstree |grep http
+        |-httpd---8*[httpd]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>结论：守护进程的启动命令本身就是特殊的，和一般命令不同的，比如mysqld_safe 这样的命令 一旦使用了  就是守护进程运行。所以想把一般程序改造为守护程序是不可能，</p>
 
             </div>
             <hr/>
@@ -537,7 +598,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.devopsing.site/2020/02/20/devops-practices-thinking/">http://www.devopsing.site/2020/02/20/devops-practices-thinking/</a>
+                    <a href="http://www.devopsing.site/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/">http://www.devopsing.site/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -575,8 +636,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/DevOps/">
-                                    <span class="chip bg-color">DevOps</span>
+                                <a href="/tags/VSCode/">
+                                    <span class="chip bg-color">VSCode</span>
                                 </a>
                             
                         </div>
@@ -748,13 +809,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/27/what-is-devops/">
+                <a href="/2019/01/27/gitbook-gitlab/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="What is DevOps ?">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="使用私有gitlab搭建gitbook持续集成">
                         
-                        <span class="card-title">What is DevOps ?</span>
+                        <span class="card-title">使用私有gitlab搭建gitbook持续集成</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -765,7 +826,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-27
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-01-27
                         </span>
                         <span class="publish-author">
                             
@@ -782,8 +843,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/DevOps/">
-                        <span class="chip bg-color">DevOps</span>
+                    <a href="/tags/gitbook-gitlab/">
+                        <span class="chip bg-color">gitbook, gitlab</span>
                     </a>
                     
                 </div>
@@ -794,45 +855,46 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/16/dushu-jinhua/">
+                <a href="/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="【读书】进化">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="linux 后台运行进程">
                         
-                        <span class="card-title">【读书】进化</span>
+                        <span class="card-title">linux 后台运行进程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最近在看这本《进化-运维技术变革与实践探索》，结合自己的一些实践，有些心得体会，并且摘录了我认为重要的或者有同感的内容。
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-02-27
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AF%BB%E4%B9%A6/" class="post-category">
-                                    读书
+                            <a href="/categories/Linux/" class="post-category">
+                                    Linux
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SRE/">
-                        <span class="chip bg-color">SRE</span>
+                    <a href="/tags/VSCode/">
+                        <span class="chip bg-color">VSCode</span>
                     </a>
                     
                 </div>

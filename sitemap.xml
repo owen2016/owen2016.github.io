@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.devopsing.site/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/</loc>
+    
+    <lastmod>2020-10-26T14:14:44.630Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/2019/02/27/vscode-usage/</loc>
+    
+    <lastmod>2020-10-26T14:14:03.693Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.devopsing.site/2020/02/27/what-is-devops/</loc>
     
     <lastmod>2020-10-20T15:29:43.426Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>http://www.devopsing.site/2020/02/20/devops-practices-thinking/</loc>
     
     <lastmod>2020-10-17T14:33:28.296Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/2019/02/27/vscode-usage/</loc>
-    
-    <lastmod>2020-10-17T13:39:40.513Z</lastmod>
     
   </url>
   
