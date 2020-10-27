@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="keywords" content="持续集成实践中的思考, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="keywords" content="Jenkins 凭证管理, 看着一篇就够了~, DevOps在路上|DevOps|Docker|CICD|K8S">
         <meta name="description" content="Every failure is leading towards success.">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -25,7 +25,7 @@
 
 
             <title>
-                持续集成实践中的思考 | DevOps在路上
+                Jenkins 凭证管理, 看着一篇就够了~ | DevOps在路上
             </title>
             <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -300,12 +300,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/30.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">持续集成实践中的思考</h1>
+                    <h1 class="description center-align post-title">Jenkins 凭证管理, 看着一篇就够了~</h1>
                 </div>
             </div>
         </div>
@@ -422,8 +422,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/DevOps/">
-                                <span class="chip bg-color">DevOps</span>
+                            <a href="/tags/Jenkins-CI-CD/">
+                                <span class="chip bg-color">Jenkins, CI/CD</span>
                             </a>
                         
                     </div>
@@ -434,8 +434,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AF%BB%E4%B9%A6/" class="post-category">
-                                读书
+                            <a href="/categories/DevOps/" class="post-category">
+                                DevOps
                             </a>
                         
                     </div>
@@ -447,28 +447,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-20
+                    2020-05-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-17
+                    2020-10-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    886
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    3 分
                 </div>
                 
 
@@ -483,35 +483,118 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>最近在看到ThoughtWorks的一篇技术文章提到“几项与持续集成相关的反模式”, 结合自己的实践体会特别有深切体会，所以记录下来</p>
-</blockquote>
-<h2 id="持续集成的反模式"><a href="#持续集成的反模式" class="headerlink" title="持续集成的反模式"></a>持续集成的反模式</h2><p>最需要被点名批评的现象莫过于“持续集成剧场”了：</p>
-<blockquote>
-<p>很多开发者只是简单的搭建了持续集成服务器就以为在做“持续集成”，但他们实际上会遗失持续集成的关键优点而导致失败。常见的失败模式包括：虽然在一个共享的主分支上运行持续集成，但是代码提交不频繁，所以集成并没有真正的“持续”。以及在一个测试覆盖率不足，甚至是长期状态为红的情况下进行构建；或者在功能分支上运行持续集成，这会导致持续隔离。</p>
-</blockquote>
-<p>简而言之，这些团队并没有真正体会到持续集成的好处，而是为了完成上级的任务而演一场“我们在持续集成”的戏——这也正是这个反模式的名字由来。过去十年中，我们在众多刚开始实施持续集成的企业见过这一幕。领导认识到持续集成的好处，<strong>但是推行成了个大问题：推轻了，下面团队不愿动，技术问题解决不了；推重了，下面团队来个上有政策下有对策，领导想看什么就给你演什么——持续集成剧场就此落成。比如说你见过一个表面看起来一直是绿色但是背后连编译都不敢跑的持续集成吗？</strong> 我见过。真是一场好戏。</p>
-<p>为了解决持续集成演戏的问题，一些规模较大的企业开始建设持续集成中心。想法很符合直觉：既然团队自己做持续集成有技术困难、还有可能变成演戏，<strong>那么我就组建一支团队专门帮他们一个个把持续集成跑通、帮他们管理持续集成服务器，</strong>持续集成的运行和统计数据都在这个中央团队手里，下面的团队总没办法演戏了吧？于是，他们又遭遇了第二个持续集成反模式：“所有团队共用一个持续集成实例”。</p>
-<blockquote>
-<p>那些必须使用中心化持续集成服务器的交付团队，常常依赖中心的团队去完成小的配置任务，或者在共享的基础设置和工具中排查问题，这给他们在进度上带来长时间的滞后。</p>
-</blockquote>
-<p>这次是康威定律带来的困难：如果每个团队使用的技术栈配置不同、技术栈配置和管理的职责仍然在每个团队中，那么技术栈演进与持续集成的演进就难免出现节拍不一致。<strong>于是管理着持续集成中心的中央团队开始疲于奔命，帮一个个项目团队修持续集成，而项目团队还感到没有得到足够的支持。</strong></p>
-<p>第三个反模式是“企业级集成测试环境”，这也是很多组织建设持续集成中心的初衷之一：由于能执行完整端到端测试的环境稀缺，各个团队的集成测试无论如何也必须在一个瓶颈处统一调度，所以中心化管理持续集成也就顺理成章。然而，</p>
-<blockquote>
-<p>这些企业集成测试环境通常称为 SIT 或预生产环境）是当下持续交付常见的瓶颈。环境本身很脆弱而且维护成本很高，而这些环境通常存在一些需要由单独的环境管理团队手动配置的组件。在预生产环境的测试给出的反馈慢且不可靠，而且会重复测试那些在隔离的组件上已经测过的功能。</p>
-</blockquote>
-<h2 id="我的体会"><a href="#我的体会" class="headerlink" title="我的体会"></a>我的体会</h2><ol>
-<li><p>对于上面第一个情景，很多时候我们以为有了工具就是持续集成，但是往往那些持续集成并不是那么完美，至少在我看到都是“hardcode”, 可移植性差，不能复用，维护成本高，下一个接手的人需要花时间了解上一个人做的“CI/CD”；因为在一些团队里，并不是很重视这个，认为CI/CD仅仅是个辅助的东西，当然这样跟国内项目的开发周期有关，有时候项目很小，客户催的很急，哪有时间去优化那么好，能用起来再说。当下一个项目来的时候，同样的技术栈的项目还要重新来过一次。</p>
+                <p>[TOC]</p>
+<p>许多三方网站和应用可以与Jenkins交互，如Artifact仓库，基于云的存储系统和服务等. 在Jenkins中添加/配置credentials，Pipeline项目就可以使用 credentials 与三方应用交互</p>
+<h2 id="Credential-类型"><a href="#Credential-类型" class="headerlink" title="Credential 类型"></a>Credential 类型</h2><p>参考： <a target="_blank" rel="noopener" href="https://jenkins.io/zh/doc/book/using/using-credentials/">https://jenkins.io/zh/doc/book/using/using-credentials/</a></p>
+<p><strong>Jenkins可以存储以下类型的credentials:</strong></p>
+<ul>
+<li><p>Secret text - API token之类的token (如GitHub个人访问token)</p>
 </li>
-<li><p>毕竟对于开发团队来说，CI/CD是另外一个领域的东西，虽然入门简单（按照网上的教程一个很简单demo就搞定了），但是里面的思想和业务场景需要一个个业务场景的积累，如何优化，如何标准化复用，这并不是简单的事情，其实这也是DevOps要解决的一个个痛点。</p>
+<li><p>Username and password - 可以为独立的字段，也可以为冒号分隔的字符串：username:password(更多信息请参照 处理 credentials)</p>
 </li>
-<li><p>那么我们建个专业的团队做这个事情吧，就是第二个场景提到的事情，其实这也是我目前正在进行中的场景，但是随着业务开展，严格意义上还没有人用，我们就发现你搞出来了，不见得有人会用，不同的业务，不同的技术栈，你需要和Dev团队密切沟通，需要DevOps团队有广阔的技术视野，如果服务众多个不同业务团队，你可能会发现自己被动的成为了“那个业务项目的一员”；另外沟通的成本其实也不低，想法是好的有个专业的团队，但是落地不是那么容易，这不是一个人，一个团队能解决的问题。</p>
+<li><p>Secret file - 保存在文件中的加密内容</p>
 </li>
-<li><p>那么如何解决这个困境？ 我认为需要企业自上而下，推广这种文化，可以从一个项目开始做推广，小步快跑，将“标准化规则”慢慢建立起来，比如分支的管理，依赖管理，CI/CD与不同技术栈的集成标准化，环境问题（内部环境,线上环境），最后衍生出来一个标准化的CI/CD平台。最后的场景是，Dev团队只关注于业务，他们只需要基于一个CI/CD模板，填写必要的环境参数等，剩下的事情不需要他们管，对于他们是透明的，他们只需要产出是什么，比如仓库，邮件通知等等。</p>
+<li><p>SSH Username with private key - SSH 公钥/私钥对</p>
 </li>
-<li><p>所有的”快速复用，持续交付”都是基于大家形成的一个标准流程，没有标准，就没有”复用”，就没有快速的迭代，最后还是”半人工”的低效工作。</p>
+<li><p>Certificate - a PKCS#12 证书文件 和可选密码</p>
+</li>
+<li><p>Docker Host Certificate Authentication credentials.</p>
+</li>
+</ul>
+<h2 id="Credential-安全"><a href="#Credential-安全" class="headerlink" title="Credential 安全"></a>Credential 安全</h2><p>为了最大限度地提高安全性，在Jenins中配置的 credentials 以加密形式存储在Jenkins 主节点上（用Jenkins ID加密），并且 <code>只能通过 credentials ID</code> 在Pipeline项目中获取</p>
+<p>这最大限度地减少了向Jenkins用户公开credentials真实内容的可能性，并且阻止了将credentials复制到另一台Jenkins实例</p>
+<h2 id="Credential-创建"><a href="#Credential-创建" class="headerlink" title="Credential 创建"></a>Credential 创建</h2><ul>
+<li><p>选择适合的凭证类型</p>
+<p>  <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201027222335.png"></p>
+</li>
+<li><p>创建 “Username and password” 凭证<br>  <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201027223010.png"></p>
+</li>
+<li><p>创建 “SSH Username with private key” 凭证</p>
+<p>  <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201027222917.png"></p>
+</li>
+</ul>
+<h3 id="Credential-ID-定义"><a href="#Credential-ID-定义" class="headerlink" title="Credential ID 定义"></a>Credential ID 定义</h3><ul>
+<li><p>在 ID 字段中，必须指定一个有意义的<code>Credential ID</code>- 例如 jenkins-user-for-xyz-artifact-repository。注意: 该字段是可选的。 如果您没有指定值, Jenkins 则Jenkins会分配一个全局唯一ID（GUID）值。</p>
+</li>
+<li><p><strong>请记住：</strong> 一旦设置了credential ID，就不能再进行更改。</p>
+</li>
+</ul>
+<h2 id="Credential-使用"><a href="#Credential-使用" class="headerlink" title="Credential 使用"></a>Credential 使用</h2><p>参考： <a target="_blank" rel="noopener" href="https://www.jenkins.io/doc/book/pipeline/jenkinsfile/#handling-credentials">https://www.jenkins.io/doc/book/pipeline/jenkinsfile/#handling-credentials</a></p>
+<p>存储在Jenkins中的credentials可以被使用：</p>
+<ol>
+<li><p>适用于Jenkins的任何地方 (即全局 credentials),</p>
+</li>
+<li><p>通过特定的Pipeline项目/项目 (在 处理 credentials 和 使用Jenkinsfile部分了解更多信息),</p>
+</li>
+<li><p>由特定的Jenkins用户 (如 Pipeline 项目中<a target="_blank" rel="noopener" href="https://jenkins.io/zh/doc/book/blueocean/creating-pipelines/">创建 Blue Ocean</a>的情况).</p>
+<ul>
+<li>Blue Ocean 自动生成一个 SSH 公共/私有密钥对, 确保 SSH 公共/私有秘钥对在继续之前已经被注册到你的Git服务器</li>
+</ul>
 </li>
 </ol>
+<p>实际使用中，下面几个场景会用到creential</p>
+<ul>
+<li>gitlab 访问、API调用</li>
+<li>jenkins slave 创建</li>
+</ul>
+<h3 id="Credential-相关插件"><a href="#Credential-相关插件" class="headerlink" title="Credential 相关插件"></a>Credential 相关插件</h3><p><strong>注意：</strong> 上述 Credential 类型都依赖于 jenkins插件，同样jenkins pipeline 也需要这些插件的安装以支持代码片段</p>
+<ul>
+<li><p>Credentials Binding： <a target="_blank" rel="noopener" href="https://plugins.jenkins.io/credentials-binding/">https://plugins.jenkins.io/credentials-binding/</a></p>
+<ul>
+<li><p><strong>For secret text, usernames and passwords, and secret files</strong></p>
+<pre class="line-numbers language-bash"><code class="language-bash">environment <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+MAGE_REPO_CREDENTIALS <span class="token operator">=</span> credentials<span class="token punctuation">(</span><span class="token string">'COMPOSER_REPO_MAGENTO'</span><span class="token punctuation">)</span>
+COMPOSER_AUTH <span class="token operator">=</span> <span class="token string">""</span><span class="token string">"&amp;#123;
+"</span>http-basic<span class="token string">": &amp;#123;
+   "</span>repo.magento.com<span class="token string">": &amp;#123;
+       "</span>username<span class="token string">": "</span>$<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;env.MAGE_REPO_CREDENTIALS_USR&amp;#125;",</span>
+       <span class="token string">"password"</span><span class="token keyword">:</span> <span class="token string">"$&amp;#123;env.MAGE_REPO_CREDENTIALS_PSW&amp;#125;"</span>
+   <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; &amp;#125;"""</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>For other credential types</strong></p>
+<pre class="line-numbers language-bash"><code class="language-bash">withCredentials<span class="token punctuation">(</span><span class="token punctuation">[</span>usernamePassword<span class="token punctuation">(</span>credentialsId: <span class="token string">'amazon'</span>, usernameVariable: <span class="token string">'USERNAME'</span>, passwordVariable: <span class="token string">'PASSWORD'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+// available as an <span class="token function">env</span> variable, but will be masked <span class="token keyword">if</span> you try to print it out any <span class="token function">which</span> way
+// note: single quotes prevent Groovy interpolation<span class="token punctuation">;</span> expansion is by Bourne Shell, <span class="token function">which</span> is what you want
+sh <span class="token string">'echo <span class="token variable">$PASSWORD</span>'</span>
+// also available as a Groovy variable
+<span class="token keyword">echo</span> USERNAME
+// or inside double quotes <span class="token keyword">for</span> string interpolation
+<span class="token keyword">echo</span> <span class="token string">"username is <span class="token variable">$USERNAME</span>"</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>Jenkins Plain Credentials Plugin: <a target="_blank" rel="noopener" href="https://plugins.jenkins.io/plain-credentials/">https://plugins.jenkins.io/plain-credentials/</a></p>
+<p>  <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201027224420.png"></p>
+</li>
+<li><p>SSH Credentials: <a target="_blank" rel="noopener" href="https://plugins.jenkins.io/ssh-credentials/">https://plugins.jenkins.io/ssh-credentials/</a></p>
+</li>
+</ul>
+<h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><ul>
+<li><p>为了便于管理和使用， 强烈建议使用统一的约定来指定credential ID</p>
+</li>
+<li><p>建议使用类似下面的format做为credential ID， 便于jenkinsfile开发时直接使用，同时在”描述“里写清楚credential的作用</p>
+<p>  <code>gitlab-api-token、gitlab-private-key、gitlab-userpwd-pair、harbor-xxx-xxx</code></p>
+<p>  <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201027221956.png"></p>
+</li>
+</ul>
+<p><strong>实践：</strong></p>
+<ul>
+<li><p>如下所示，将凭证使用统一的ID命名之后，便于复用，凭证定义一次，可多次，多个地方统一使用，无论是后期维护，复用都非常方便！</p>
+<pre class="line-numbers language-shell"><code class="language-shell">    environment &#123;
+        // HARBOR="harbor.devopsing.site"
+        HARBOR_ACCESS_KEY = credentials('harbor-userpwd-pair')
+        SERVER_ACCESS_KEY = credentials('deploy-userpwd-pair')
+            &#125;
+    .....
+
+    docker login --username=$&#123;HARBOR_ACCESS_KEY_USR&#125; --password=$&#123;HARBOR_ACCESS_KEY_PSW&#125; $&#123;HARBOR&#125;
+
+    sshpass -p "$&#123;SERVER_ACCESS_KEY_PSW&#125;" ssh -o StrictHostKeyChecking=no $&#123;SERVER_ACCESS_KEY_USR&#125;@$&#123;DEPLOY_SERVER&#125; "$runCmd"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -537,7 +620,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.devopsing.site/2020/02/20/devops-practices-thinking/">http://www.devopsing.site/2020/02/20/devops-practices-thinking/</a>
+                    <a href="http://www.devopsing.site/2020/05/15/jenkins-ping-zheng-guan-li/">http://www.devopsing.site/2020/05/15/jenkins-ping-zheng-guan-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -575,8 +658,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/DevOps/">
-                                    <span class="chip bg-color">DevOps</span>
+                                <a href="/tags/Jenkins-CI-CD/">
+                                    <span class="chip bg-color">Jenkins, CI/CD</span>
                                 </a>
                             
                         </div>
@@ -744,17 +827,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/27/what-is-devops/">
+                <a href="/2020/05/15/jenkins-ping-zheng-guan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="What is DevOps ?">
+                        <img src="/medias/featureimages/30.jpg" class="responsive-img" alt="Jenkins 凭证管理, 看着一篇就够了~">
                         
-                        <span class="card-title">What is DevOps ?</span>
+                        <span class="card-title">Jenkins 凭证管理, 看着一篇就够了~</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -764,9 +848,59 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-27
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/DevOps/" class="post-category">
+                                    DevOps
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Jenkins-CI-CD/">
+                        <span class="chip bg-color">Jenkins, CI/CD</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/27/agile-cicd-devops/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/30.jpg" class="responsive-img" alt="Agile, CI/CD, DevOps">
+                        
+                        <span class="card-title">Agile, CI/CD, DevOps</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -784,55 +918,6 @@
                     
                     <a href="/tags/DevOps/">
                         <span class="chip bg-color">DevOps</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/11/16/dushu-jinhua/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="【读书】进化">
-                        
-                        <span class="card-title">【读书】进化</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            最近在看这本《进化-运维技术变革与实践探索》，结合自己的一些实践，有些心得体会，并且摘录了我认为重要的或者有同感的内容。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-16
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AF%BB%E4%B9%A6/" class="post-category">
-                                    读书
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/SRE/">
-                        <span class="chip bg-color">SRE</span>
                     </a>
                     
                 </div>
