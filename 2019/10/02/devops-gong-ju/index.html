@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="keywords" content="Linux 后台运行进程, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="keywords" content="DevOps 工具, DevOps在路上|DevOps|Docker|CICD|K8S">
         <meta name="description" content="Every failure is leading towards success.">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -25,7 +25,7 @@
 
 
             <title>
-                Linux 后台运行进程 | DevOps在路上
+                DevOps 工具 | DevOps在路上
             </title>
             <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -300,12 +300,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux 后台运行进程</h1>
+                    <h1 class="description center-align post-title">DevOps 工具</h1>
                 </div>
             </div>
         </div>
@@ -422,8 +422,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/VSCode/">
-                                <span class="chip bg-color">VSCode</span>
+                            <a href="/tags/DevOps/">
+                                <span class="chip bg-color">DevOps</span>
                             </a>
                         
                     </div>
@@ -434,8 +434,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Linux/" class="post-category">
-                                Linux
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
                             </a>
                         
                     </div>
@@ -447,14 +447,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-02-27
+                    2019-10-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-26
+                    2020-11-17
                 </div>
                 
 
@@ -468,7 +468,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    8 分
                 </div>
                 
 
@@ -483,96 +483,107 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>当我们在终端或控制台工作时，可能不希望由于运行一个作业而占住了屏幕，因为可能还有更重要的事情要做，比如阅读电子邮件。对于密集访问磁盘的进程，我们更希望它能够在每天的非负荷高峰时间段运行(例如凌晨)。为了使这些进程能够在后台运行，也就是说不在终端屏幕上运行，有几种选择方法可供使用。</p>
-</blockquote>
-<h2 id="后台执行"><a href="#后台执行" class="headerlink" title="后台执行"></a>后台执行</h2><p><strong>比较下 &amp; 与 nohup：</strong></p>
-<ul>
-<li>&amp; ：后台运行，但用户终端退出时（断连），命令结束</li>
-<li>nohup test.sh &amp; : 后台运行，用户终端退出时（断连）依然保持运行，可使用标准输入输出</li>
-</ul>
-<h3 id="amp"><a href="#amp" class="headerlink" title="&amp;"></a>&amp;</h3><p>当在前台运行某个作业时，终端被该作业占据；可以在命令后面加上&amp; 实现后台运行。e.g. <code>sh test.sh &amp;</code></p>
-<p>适合在后台运行的命令有f i n d、费时的排序及一些s h e l l脚本。在后台运行作业时要当心：需要用户交互的命令不要放在后台执行，因为这样你的机器就会在那里傻等。不过，作业在后台运行一样会将结果输出到屏幕上，干扰你的工作。如果放在后台运行的作业会产生大量的输出，最好使用下面的方法把它的输出重定向到某个文件中：</p>
-<p><code>command &gt; out.file 2&gt;&amp;1 &amp;</code><br>这样，所有的标准输出和错误输出都将被重定向到一个叫做out.file 的文件中。</p>
-<p>PS：当你成功地提交进程以后，就会显示出一个进程号，可以用它来监控该进程，或杀死它。(ps -ef | grep 进程号 或者 kill -9 进程号）</p>
-<h3 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h3><p>使用&amp;命令后，作业被提交到后台运行，当前控制台没有被占用，但是一但把当前控制台关掉(退出帐户时)，作业就会停止运行。nohup命令可以在你退出帐户之后继续运行相应的进程。nohup就是不挂起的意思( no hang up / ignoring hangup signals) 即 忽略挂起信号一直在后台执行。</p>
-<p><code>语法: nohup Command [ Arg … ] [&amp; ]</code></p>
-<p><code>e.g. $nohup python manage.py runserver &amp;</code></p>
-<p><strong>使用时注意:</strong></p>
-<p>在当shell中提示了nohup成功后，还需要按终端上键盘任意键退回到shell输入命令窗口，然后通过在shell中输入exit来退出终端；如果在nohup执行成功后直接点关闭程序按钮关闭终端的话，这时候会断掉该命令所对应的session，导致nohup对应的进程被通知需要一起shutdown，起不到关掉终端后调用程序继续后台运行的作用。</p>
-<p><code>nohup command &gt; myout.file 2&gt;&amp;1 &amp;</code></p>
-<p>无论是否将 nohup 命令的输出重定向到终端，输出都将附加到当前目录的nohup.out 文件中。如果当前目录的nohup.out文件不可写，输出重定向到$HOME/nohup.out文件中。如果没有文件能创建或打开以用于追加，那么 Command 参数指定的命令不可调用。</p>
-<p><strong>2&gt;&amp;1解析:</strong></p>
-<p><code>command &gt;out.file 2&gt;&amp;1 &amp;</code></p>
-<ul>
-<li><p>command&gt;out.file是将command的输出重定向到out.file文件，即输出内容不打印到屏幕上，而是输出到out.file文件中。</p>
+                <p><img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20200928233152.png" alt="devops-tools"></p>
+<h2 id="版本控制-amp-协作开发"><a href="#版本控制-amp-协作开发" class="headerlink" title="版本控制&amp;协作开发"></a>版本控制&amp;协作开发</h2><ul>
+<li><p>版本控制系统 Git</p>
+<p>  Git 是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。</p>
 </li>
-<li><p>2&gt;&amp;1 是将标准出错 重定向到标准输出，这里的标准输出已经重定向到了out.file文件，即将标准出错也输出到out.file文件中。最后一个&amp;， 是让该命令在后台执行。</p>
+<li><p>代码托管平台 GitLab</p>
+<p>  GitLab 是一个利用 Ruby on Rails 开发的开源应用程序，实现一个自托管的Git项目仓库，可通过Web界面进行访问公开的或者私人项目。开源中国代码托管平台 git.oschina.net 就是基于 GitLab 项目搭建。</p>
+</li>
+<li><p>代码评审工具 Gerrit</p>
+<p>  Gerrit 是一个免费、开放源代码的代码审查软件，使用网页界面。利用网页浏览器，同一个团队的软件程序员，可以相互审阅彼此修改后的程序代码，决定是否能够提交，退回或者继续修改。它使用 Git 作为底层版本控制系统。</p>
+</li>
+<li><p>版本控制系统 Mercurial</p>
+<p>  Mercurial 是一种轻量级分布式版本控制系统，采用 Python 语言实现，易于学习和使用，扩展性强。</p>
+</li>
+<li><p>版本控制系统 Subversion</p>
+<p>  Subversion 是一个版本控制系统，相对于的 RCS、CVS，采用了分支管理系统，它的设计目标就是取代CVS。互联网上免费的版本控制服务多基于Subversion。</p>
+</li>
+<li><p>版本控制系统 Bazaar</p>
+<p>  Bazaar 是一个分布式的版本控制系统，它发布在 GPL 许可协议之下，并可用于 Windows、GNU/Linux、UNIX 以及 Mac OS 系统。</p>
 </li>
 </ul>
-<p>试想2&gt;1代表什么，2与&gt;结合代表错误重定向，而1则代表错误重定向到一个文件1，而不代表标准输出；换成2&gt;&amp;1，&amp;与1结合就代表标准输出了，就变成错误重定向到标准输出.</p>
-<h2 id="查看后台运行的命令"><a href="#查看后台运行的命令" class="headerlink" title="查看后台运行的命令"></a>查看后台运行的命令</h2><p>有两个命令可以来查看，<code>ps</code> 和 <code>jobs</code>。区别在于 jobs 只能查看当前终端后台执行的任务，换了终端就看不见了。而ps命令适用于查看瞬时进程的动态，可以看到别的终端的任务</p>
-<h3 id="jobs"><a href="#jobs" class="headerlink" title="jobs"></a>jobs</h3><p>查看当前有多少在后台运行的命令</p>
-<p><img src="https://gitee.com/owen2016/pic-hub/raw/master/1603718157_20201026141913132_275681253.png"></p>
-<p>jobs -l选项可显示所有任务的PID，jobs的状态可以是running, stopped, Terminated。但是如果任务被终止了（kill），shell 从当前的shell环境已知的列表中删除任务的进程标识。</p>
-<p>“+”代表最近的一个任务（当前任务），“-”代表之前的任务。</p>
-<p><img src="https://gitee.com/owen2016/pic-hub/raw/master/1603718158_20201026143108907_1737208027.png"></p>
-<p>只有在当前命令行中使用 nohup和&amp; 时，jobs命令才能将它显示出来。如果将他们写到 .sh 脚本中，然后执行脚本，是显示不出来的</p>
-<p>比如执行下面这个脚本后，jobs 显示不出来：</p>
-<pre class="line-numbers language-shell"><code class="language-shell">#!/bin/bash
-nohup java -Dfile.encoding=UTF-8 -Dname=Runtime-Name -server -Xms128M -Xmx512M -XX:MetaspaceSize=128M -XX:MaxMetaspaceSize=256M -XX:+HeapDumpOnOutOfMemoryError -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -jar test.jar $1 $2 $3 &<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h3><p>nohup命令可以在你退出帐户/关闭终端之后继续运行相应的进程。关闭中断后，在另一个终端<code>jobs</code>已无法看到后台跑得程序了，此时利用ps（进程查看命令）</p>
-<p><code>ps -aux | grep &quot;test.sh&quot;  #a:显示所有程序 u:以用户为主的格式来显示 x:显示所有程序，不以终端机来区分</code></p>
-<h2 id="关闭当前后台运行的程序"><a href="#关闭当前后台运行的程序" class="headerlink" title="关闭当前后台运行的程序"></a>关闭当前后台运行的程序</h2><h3 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h3><ol>
-<li><p>通过jobs命令查看job号（假设为num），然后执行kill %num</p>
+<h2 id="包-amp-产品管理工具"><a href="#包-amp-产品管理工具" class="headerlink" title="包&amp;产品管理工具"></a>包&amp;产品管理工具</h2><ul>
+<li><p>Chocolatey：Chocolatey是Windows下一款开源的命令行包管理软件 ，简单说这就是Windows的apt-get；</p>
 </li>
-<li><p>通过ps命令查看job的进程号（PID，假设为pid），然后执行kill pid</p>
-</li>
-</ol>
-<p>前台进程的终止：ctrl+c</p>
-<h2 id="前后台进程的切换与控制"><a href="#前后台进程的切换与控制" class="headerlink" title="前后台进程的切换与控制"></a>前后台进程的切换与控制</h2><h3 id="ctrl-z-命令"><a href="#ctrl-z-命令" class="headerlink" title="ctrl + z 命令"></a>ctrl + z 命令</h3><p>将一个正在前台执行的命令放到后台，并且处于暂停状态。</p>
-<h3 id="fg-命令"><a href="#fg-命令" class="headerlink" title="fg 命令"></a>fg 命令</h3><p>将后台中的命令 <code>调至 前台继续运行</code>。如果后台中有多个命令，可以用 <code>fg %jobnumber</code>（是命令编号，不是进程号）将选中的命令调出</p>
-<h3 id="bg-命令"><a href="#bg-命令" class="headerlink" title="bg 命令"></a>bg 命令</h3><p>将一个在后台暂停的命令，<code>变成在后台继续执行</code>。如果后台中有多个命令，可以用<code>bg %jobnumber</code>将选中的命令调出。</p>
-<p><img src="https://gitee.com/owen2016/pic-hub/raw/master/1603718158_20201026142920042_1829517779.png"></p>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><h3 id="问题1-为什么ssh一关闭，程序就不再运行了"><a href="#问题1-为什么ssh一关闭，程序就不再运行了" class="headerlink" title="问题1-为什么ssh一关闭，程序就不再运行了"></a>问题1-为什么ssh一关闭，程序就不再运行了</h3><p>元凶：SIGHUP 信号</p>
-<p>让我们来看看为什么关掉窗口/断开连接会使得正在运行的程序死掉。</p>
-<p>在Linux/Unix中，有这样几个概念：</p>
-<ul>
-<li><p>进程组（process group）：<code>一个或多个进程的集合</code>，每一个进程组有唯一一个进程组ID，即进程组长进程的ID。</p>
-</li>
-<li><p>会话期（session）：<code>一个或多个进程组的集合</code>，有唯一一个会话期首进程（session leader）。会话期ID为首进程的ID。<br>会话期可以有一个单独的控制终端（controlling terminal）。与控制终端连接的会话期首进程叫做控制进程（controlling process）。当前与终端交互的进程称为前台进程组。其余进程组称为后台进程组。</p>
+<li><p>WiX Toolset：提供一组最强大的工具集来帮助你创建Windows安装包。该工具集从XML源代码构建你的Windows安装程序包，可以无缝集成到构建过程；</p>
 </li>
 </ul>
-<p>根据POSIX.1定义：</p>
-<ul>
-<li>挂断信号（SIGHUP）默认的动作是终止程序。</li>
-<li>当终端接口检测到网络连接断开，将挂断信号发送给控制进程（会话期首进程）。</li>
-<li>如果会话期首进程终止，则该信号发送到该会话期前台进程组。</li>
+<h2 id="自动化构建和测试"><a href="#自动化构建和测试" class="headerlink" title="自动化构建和测试"></a>自动化构建和测试</h2><ul>
+<li><p>Apache Ant<br>  Apache Ant是一个将软件编译、测试、部署等步骤联系在一起加以自动化的一个工具，大多用于Java环境中的软件开发。</p>
+</li>
+<li><p>Maven<br>  Maven 除了以程序构建能力为特色之外，还提供 Ant 所缺少的高级项目管理工具。由于 Maven 的缺省构建规则有较高的可重用性，所以常常用两三行 Maven 构建脚本就可以构建简单的项目，而使用 Ant 则需要十几行。<br>  事实上，由于 Maven 的面向项目的方法，许多 Apache Jakarta 项目现在使用 Maven，而且公司项目采用 Maven 的比例在持续增长。开源中国的<a target="_blank" rel="noopener" href="http://maven.oschina.net/">Maven 库</a></p>
+</li>
+<li><p>Selenium<br>Selenium (SeleniumHQ) 是 thoughtworks公司的一个集成测试的强大工具。</p>
+</li>
+<li><p>PyUnit<br>Python单元测试框架（The Python unit testing framework），简称为PyUnit， 是Kent Beck和Erich Gamma这两位聪明的家伙所设计的 JUnit 的Python版本。</p>
+</li>
+<li><p>QUnit<br>QUnit 是 jQuery 的单元测试框架。</p>
+</li>
+<li><p>JMeter<br>JMeter 是 Apache 组织的开放源代码项目，它是功能和性能测试的工具，100% 的用 java 实现。</p>
+</li>
+<li><p>Gradle<br>Gradle 就是可以使用 Groovy 来书写构建脚本的构建系统，支持依赖管理和多项目，类似 Maven，但比之简单轻便。</p>
+</li>
+<li><p>PHPUnit<br>PHPUnit 是一个轻量级的PHP测试框架。它是在PHP5下面对JUnit3系列版本的完整移植，是xUnit测试框架家族的一员(它们都基于模式先锋Kent Beck的设计)。</p>
+</li>
 </ul>
-<p>一个进程退出导致一个孤儿进程组中产生时，如果任意一个孤儿进程组进程处于STOP状态，发送SIGHUP和SIGCONT信号到该进程组中所有进程。（关于孤儿进程参照：<a target="_blank" rel="noopener" href="http://blog.csdn.net/hmsiwtv/article/details/7901711">http://blog.csdn.net/hmsiwtv/article/details/7901711</a> ）</p>
-<p>结论：因此当网络断开或终端窗口关闭后，也就是SSH断开以后，控制进程收到SIGHUP信号退出，会导致该会话期内其他进程退出。</p>
-<p>简而言之：就是ssh 打开以后，bash等都是他的子程序，一旦ssh关闭，系统将所有相关进程杀掉！！ 导致一旦ssh关闭，执行中的任务就取消了</p>
-<p><strong>示例：</strong></p>
-<p>打开两个SSH终端窗口，在其中一个运行top命令。</p>
-<p><code>owen@swarm-manager-105:~$ top</code></p>
-<p>在另一个终端窗口，找到top的进程ID为 38779，其父进程ID为38751，即登录shell。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">owen@swarm-manager-105:~$ ps -ef|grep top
-owen      24007  23571  0 16:58 tty2     00:00:01 nautilus-desktop
-owen      38779  38751  0 20:22 pts/1    00:00:00 top<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>使用pstree命令可以更清楚地看到这个关系：</p>
-<pre class="line-numbers language-shell"><code class="language-shell">owen@swarm-manager-105:~$ pstree -H 38779|grep top
-        |-sshd-+-sshd---sshd---bash---top<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>使用<code>ps -xj</code>命令可以看到，登录shell（PID 38751）和top在同一个会话期，shell为会话期首进程，所在进程组PGID为38751，top所在进程组PGID为38779，为前台进程组。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">owen@swarm-manager-105:~$ ps -xj|grep 38751
- 38750  38751  38751  38751 pts/1     38779 Ss    1000   0:00 -bash
- 38751  38779  38779  38751 pts/1     38779 S+    1000   0:03 top<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>关闭第一个SSH窗口，在另一个窗口中可以看到top也被杀掉了。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">owen@swarm-manager-105:~$ ps -ef|grep 38751
-owen      40412  38966  0 20:52 pts/4    00:00:00 grep --color=auto 38751<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="问题2-为什么守护程序就算ssh-打开的，就算关闭ssh也不会影响其运行？"><a href="#问题2-为什么守护程序就算ssh-打开的，就算关闭ssh也不会影响其运行？" class="headerlink" title="问题2- 为什么守护程序就算ssh 打开的，就算关闭ssh也不会影响其运行？"></a>问题2- 为什么守护程序就算ssh 打开的，就算关闭ssh也不会影响其运行？</h3><p>因为他们的程序特殊，比如httpd –k start运行这个以后，他不属于sshd这个进程组  而是单独的进程组，所以就算关闭了ssh，和他也没有任何关系！</p>
-<pre class="line-numbers language-shell"><code class="language-shell">[owen@centos-1 ~]$ pstree |grep http
-        |-httpd---8*[httpd]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>结论：守护进程的启动命令本身就是特殊的，和一般命令不同的，比如mysqld_safe 这样的命令 一旦使用了  就是守护进程运行。所以想把一般程序改造为守护程序是不可能，</p>
+<h2 id="持续集成-amp-交付"><a href="#持续集成-amp-交付" class="headerlink" title="持续集成&amp;交付"></a>持续集成&amp;交付</h2><ul>
+<li><p>Jenkins<br>  Jenkins 是一个开源的持续集成工具，使用 Java 编程语言编写的。它有助于实时检测和报告较大代码库中的单一更改。该软件可帮助开发人员快速查找和解决代码库中的问题并自动测试其构建。</p>
+</li>
+<li><p>Travis CI<br>  Travis 是一款流行的 CI 工具，可免费用于开源项目。在托管时，不必依赖任何平台。此 CI 工具为许多构建配置和语言提供支持，如 Node，PHP，Python，Java，Perl 等。</p>
+</li>
+<li><p>GoCD<br>  GoCD 是一个开源的持续集成服务器。它可轻松模拟和可视化复杂的工作流程。此 CI 工具允许持续交付，并为构建 CD Pipeline 提供直观的界面。</p>
+</li>
+<li><p>Bamboo<br>  Bamboo 是一个持续集成的构建服务器，可以自动构建、测试和发布，并可与 JIRA 和 Bitbucket 无缝协作。Bamboo 支持多语言和平台，如 CodeDeply、Ducker、Git，SVN、Mercurial、AWS 及 Amazon S3 bucket</p>
+</li>
+<li><p>GitLab CI<br>  GitLab CI 是 GitLab 的一部分。它是一个提供 API 的 Web 应用程序，可将其状态存储在数据库中。GitLab CI 可以管理项目并提供友好的用户界面，并充分利用 GitLab 所有功能</p>
+</li>
+</ul>
+<h2 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h2><ul>
+<li><p>Chef<br>  Chef 是一个系统集成框架，为整个架构提供配置管理功能。</p>
+</li>
+<li><p>Puppet<br>  Puppet，您可以集中管理每一个重要方面，您的系统使用的是跨平台的规范语言，管理所有的单独的元素通常聚集在不同的文件，如用户， CRON作业，和主机一起显然离散元素，如包装，服务和文件。</p>
+</li>
+<li><p>RunDeck<br>  RunDeck 是用 Java/Grails 写的开源工具，帮助用户在数据中心或者云环境中自动化各种操作和流程。通过命令行或者web界面，用户可以对任意数量的服务器进行操作，大大降低了对服务器自动化的门槛。</p>
+</li>
+<li><p>Saltstack<br>  Saltstack 可以看做是func的增强版+Puppet的弱化版。使用Python编写。非常好用,快速可以基于EPEL部署。Salt 是一个开源的工具用来管理你的基础架构，可轻松管理成千上万台服务器。</p>
+</li>
+<li><p>Ansible<br>  Ansible 提供一种最简单的方式用于发布、管理和编排计算机系统的工具，你可在数分钟内搞定。Ansible 是一个模型驱动的配置管理器，支持多节点发布、远程任务执行。默认使用 SSH 进行远程连接。无需在被管理节点上安装附加软件，可使用各种编程语言进行扩展。</p>
+</li>
+</ul>
+<h2 id="日志监控"><a href="#日志监控" class="headerlink" title="日志监控"></a>日志监控</h2><ul>
+<li><p>Logstash<br>Logstash 是一个应用程序日志、事件的传输、处理、管理和搜索的平台。你可以用它来统一对应用程序日志进行收集管理，提供 Web 接口用于查询和统计。</p>
+</li>
+<li><p>CollectD<br>Collectd 是一个守护(daemon)进程，用来收集系统性能和提供各种存储方式来存储不同值的机制。比如以RRD 文件形式。</p>
+</li>
+<li><p>StatsD<br>StatsD 是一个简单的网络守护进程，基于 Node.js 平台，通过 UDP 或者 TCP 方式侦听各种统计信息，包括计数器和定时器，并发送聚合信息到后端服务，例如 Graphite。</p>
+</li>
+<li><p>Nagios<br>Nagios 是一个监视系统运行状态和网络信息的监视系统。Nagios能监视所指定的本地或远程主机以及服务，同时提供异常通知功能等。</p>
+</li>
+<li><p>Ganglia<br>Ganglia 是一个跨平台可扩展的，高 性能计算系统下的分布式监控系统，如集群和网格。它是基于分层设计，它使用广泛的技术，如XML数据代表，便携数据传输，RRDtool用于数据存储和可视化。</p>
+</li>
+<li><p>Sensu<br>Sensu 是开源的监控框架。主要特性：高度可组合；提供一个监控代理，一个事件处理器和文档 APIs；为云而设计；Sensu 的现代化架构允许监控大规模的动态基础设施，能够通过复杂的公共网络监控几千个全球分布式的机器和服务；热情的社区。</p>
+</li>
+<li><p>Zabbix<br>Zabbix 是一个基于WEB界面的提供分布式系统监视以及网络监视功能的企业级的开源解决方案。</p>
+</li>
+<li><p>ICINGA<br>ICINGA 项目是 由Michael Luebben、HendrikB?cker和JoergLinge等人发起的，他们都是现有的Nagios项目社区委员会的成员，他们承诺，新的开源项 目将完全兼容以前的Nagios应用程序及扩展功能。</p>
+</li>
+<li><p>Graphite<br>Graphite 是一个用于采集网站实时信息并进行统计的开源项目，可用于采集多种网站服务运行状态信息。Graphite服务平均每分钟有4800次更新操作。</p>
+</li>
+<li><p>Kibana<br>Kibana 是一个为 Logstash 和 ElasticSearch 提供的日志分析的 Web 接口。可使用它对日志进行高效的搜索、可视化、分析等各种操作</p>
+</li>
+</ul>
+<h2 id="微服务-容器平台"><a href="#微服务-容器平台" class="headerlink" title="微服务/容器平台"></a>微服务/容器平台</h2><ul>
+<li><p>OpenShift<br>OpenShift 是由红帽推出的一款面向开源开发人员开放的平台即服务(PaaS)。 OpenShift通过为开发人员提供在语言、框架和云上的更多的选择，使开发人员可以构建、测试、运行和管理他们的应用。</p>
+</li>
+<li><p>Cloud Foundry<br>Cloud Foundry 是VMware于2011年4月12日推出的业界第一个开源PaaS云平台，它支持多种框架、语言、运行时环境、云平台及应用服务，使开发 人员能够在几秒钟内进行应用程序的部署和扩展，无需担心任何基础架构的问题。</p>
+</li>
+<li><p>Kubernetes<br>Kubernetes 是来自 Google 云平台的开源容器集群管理系统。基于 Docker 构建一个容器的调度服务。该系统可以自动在一个容器集群中选择一个工作容器供使用。其核心概念是 Container Pod。</p>
+</li>
+<li><p>Mesosphere<br>Apache Mesos 是一个集群管理器，提供了有效的、跨分布式应用或框架的资源隔离和共享，可以运行Hadoop、MPI、Hypertable、Spark。</p>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -598,7 +609,7 @@ owen      40412  38966  0 20:52 pts/4    00:00:00 grep --color=auto 38751<span a
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.devopsing.site/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/">http://www.devopsing.site/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/</a>
+                    <a href="http://www.devopsing.site/2019/10/02/devops-gong-ju/">http://www.devopsing.site/2019/10/02/devops-gong-ju/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -636,8 +647,8 @@ owen      40412  38966  0 20:52 pts/4    00:00:00 grep --color=auto 38751<span a
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/VSCode/">
-                                    <span class="chip bg-color">VSCode</span>
+                                <a href="/tags/DevOps/">
+                                    <span class="chip bg-color">DevOps</span>
                                 </a>
                             
                         </div>
@@ -809,13 +820,13 @@ owen      40412  38966  0 20:52 pts/4    00:00:00 grep --color=auto 38751<span a
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/01/27/gitbook-gitlab/">
+                <a href="/2019/11/15/hello-devops/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="使用私有gitlab搭建gitbook持续集成">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="DevOps 我们都在路上">
                         
-                        <span class="card-title">使用私有gitlab搭建gitbook持续集成</span>
+                        <span class="card-title">DevOps 我们都在路上</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -826,14 +837,14 @@ owen      40412  38966  0 20:52 pts/4    00:00:00 grep --color=auto 38751<span a
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-01-27
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-15
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/DevOps/" class="post-category">
-                                    DevOps
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
                                 </a>
                             
                             
@@ -843,8 +854,8 @@ owen      40412  38966  0 20:52 pts/4    00:00:00 grep --color=auto 38751<span a
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/gitbook-gitlab/">
-                        <span class="chip bg-color">gitbook, gitlab</span>
+                    <a href="/tags/DevOps/">
+                        <span class="chip bg-color">DevOps</span>
                     </a>
                     
                 </div>
@@ -855,16 +866,16 @@ owen      40412  38966  0 20:52 pts/4    00:00:00 grep --color=auto 38751<span a
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/">
+                <a href="/2019/08/16/jumpserver-jia-gou/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Linux 后台运行进程">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="JumpServer 架构浅解">
                         
-                        <span class="card-title">Linux 后台运行进程</span>
+                        <span class="card-title">JumpServer 架构浅解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -875,26 +886,25 @@ owen      40412  38966  0 20:52 pts/4    00:00:00 grep --color=auto 38751<span a
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-02-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/SRE%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    SRE运维
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/VSCode/">
-                        <span class="chip bg-color">VSCode</span>
+                    <a href="/tags/JumpServer/">
+                        <span class="chip bg-color">JumpServer</span>
                     </a>
                     
                 </div>

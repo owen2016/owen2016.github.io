@@ -1,10 +1,11 @@
 http://www.devopsing.site/2020/05/15/jenkins-ping-zheng-guan-li/
 http://www.devopsing.site/2020/03/27/agile-cicd-devops/
 http://www.devopsing.site/2020/02/27/what-is-devops/
-http://www.devopsing.site/2020/02/20/devops-practices-thinking/
+http://www.devopsing.site/2020/02/20/chi-xu-ji-cheng-shi-jian-zhong-de-si-kao/
 http://www.devopsing.site/2019/11/16/dushu-jinhua/
 http://www.devopsing.site/2019/11/15/hello-devops/
-http://www.devopsing.site/2019/10/02/devops-tools/
+http://www.devopsing.site/2019/10/02/devops-gong-ju/
+http://www.devopsing.site/2019/08/16/jumpserver-jia-gou/
 http://www.devopsing.site/2019/07/02/markdown-guide/
 http://www.devopsing.site/2019/02/27/vscode-usage/
 http://www.devopsing.site/2019/01/27/gitbook-gitlab/

@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.devopsing.site/2019/08/16/jumpserver-jia-gou/</loc>
+    
+    <lastmod>2020-11-17T14:31:50.986Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/2019/10/02/devops-gong-ju/</loc>
+    
+    <lastmod>2020-11-17T14:30:15.798Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.devopsing.site/2020/02/20/chi-xu-ji-cheng-shi-jian-zhong-de-si-kao/</loc>
+    
+    <lastmod>2020-11-17T14:29:56.815Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.devopsing.site/2020/05/15/jenkins-ping-zheng-guan-li/</loc>
     
     <lastmod>2020-10-27T15:19:35.353Z</lastmod>
@@ -30,23 +51,9 @@
   </url>
   
   <url>
-    <loc>http://www.devopsing.site/2019/10/02/devops-tools/</loc>
-    
-    <lastmod>2020-10-20T14:55:25.853Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.devopsing.site/2020/03/27/agile-cicd-devops/</loc>
     
     <lastmod>2020-10-20T14:53:44.377Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.devopsing.site/2020/02/20/devops-practices-thinking/</loc>
-    
-    <lastmod>2020-10-17T14:33:28.296Z</lastmod>
     
   </url>
   

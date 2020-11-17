@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="keywords" content="DevOps 工具, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="keywords" content="JumpServer 架构浅解, DevOps在路上|DevOps|Docker|CICD|K8S">
         <meta name="description" content="Every failure is leading towards success.">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -25,7 +25,7 @@
 
 
             <title>
-                DevOps 工具 | DevOps在路上
+                JumpServer 架构浅解 | DevOps在路上
             </title>
             <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -300,12 +300,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DevOps 工具</h1>
+                    <h1 class="description center-align post-title">JumpServer 架构浅解</h1>
                 </div>
             </div>
         </div>
@@ -422,8 +422,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/DevOps/">
-                                <span class="chip bg-color">DevOps</span>
+                            <a href="/tags/JumpServer/">
+                                <span class="chip bg-color">JumpServer</span>
                             </a>
                         
                     </div>
@@ -434,8 +434,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                工具
+                            <a href="/categories/SRE%E8%BF%90%E7%BB%B4/" class="post-category">
+                                SRE运维
                             </a>
                         
                     </div>
@@ -447,28 +447,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-02
+                    2019-08-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-20
+                    2020-11-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    6 分
                 </div>
                 
 
@@ -483,105 +483,140 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20200928233152.png" alt="devops-tools"></p>
-<h2 id="版本控制-amp-协作开发"><a href="#版本控制-amp-协作开发" class="headerlink" title="版本控制&amp;协作开发"></a>版本控制&amp;协作开发</h2><ul>
-<li><p>版本控制系统 Git</p>
-<p>  Git 是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。</p>
+                <p>Jumpserver 是一款由python编写开源的跳板机(堡垒机)系统，实现了跳板机应有的功能。基于ssh协议来管理，客户端无需安装agent。完全开源，GPL授权 </p>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><ul>
+<li><p>设计一个跳转网关，所有登录操作都从网关通过<br>网关具有模拟终端的功能，透明的中转ssh命令，以支持Tab,Ctrl+A,Ctrl-E等快捷键，网关既可以记录操作日志，又可以审计操作命令。</p>
 </li>
-<li><p>代码托管平台 GitLab</p>
-<p>  GitLab 是一个利用 Ruby on Rails 开发的开源应用程序，实现一个自托管的Git项目仓库，可通过Web界面进行访问公开的或者私人项目。开源中国代码托管平台 git.oschina.net 就是基于 GitLab 项目搭建。</p>
+<li><p>设计一个认证模块<br>为了实现认证功能，需要有个认证模块，认证信息存到数据库，用户使用跳板机首先需要认证。</p>
 </li>
-<li><p>代码评审工具 Gerrit</p>
-<p>  Gerrit 是一个免费、开放源代码的代码审查软件，使用网页界面。利用网页浏览器，同一个团队的软件程序员，可以相互审阅彼此修改后的程序代码，决定是否能够提交，退回或者继续修改。它使用 Git 作为底层版本控制系统。</p>
+<li><p>设计一个授权框架<br>授权是跳板机不可缺少的部分，授权就是用户和资产的关系，将关系保存的数据库，用户登录主机需要先查授权。</p>
 </li>
-<li><p>版本控制系统 Mercurial</p>
-<p>  Mercurial 是一种轻量级分布式版本控制系统，采用 Python 语言实现，易于学习和使用，扩展性强。</p>
+<li><p>设计审计模块<br>审计是为了追踪，我们支持了在线监控，命令统计，录像回放功能，供管理员审查。</p>
 </li>
-<li><p>版本控制系统 Subversion</p>
-<p>  Subversion 是一个版本控制系统，相对于的 RCS、CVS，采用了分支管理系统，它的设计目标就是取代CVS。互联网上免费的版本控制服务多基于Subversion。</p>
+<li><p>用户和主机模块<br>跳板机脱离不了用户和主机，所以这两个部分是基本的模块，另外我们将主机模块扩展，实现基本CMDB功能。</p>
 </li>
-<li><p>版本控制系统 Bazaar</p>
-<p>  Bazaar 是一个分布式的版本控制系统，它发布在 GPL 许可协议之下，并可用于 Windows、GNU/Linux、UNIX 以及 Mac OS 系统。</p>
+<li><p>Web Terminal<br>现在都流行Web操作一切，于是我们又实现了Web Terminal，供用户直接在线链接服务器，这里实现是用了Tornado来完成的，Tornado实现WebSocket特别简单。</p>
 </li>
 </ul>
-<h2 id="包-amp-产品管理工具"><a href="#包-amp-产品管理工具" class="headerlink" title="包&amp;产品管理工具"></a>包&amp;产品管理工具</h2><ul>
-<li><p>Chocolatey：Chocolatey是Windows下一款开源的命令行包管理软件 ，简单说这就是Windows的apt-get；</p>
+<h2 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h2><p><img src="https://upload-images.jianshu.io/upload_images/2504773-75dee68102104552.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="20200526180743745_415773244.png"></p>
+<h2 id="组件说明"><a href="#组件说明" class="headerlink" title="组件说明"></a>组件说明</h2><ul>
+<li><p><strong>Jumpserver</strong> 为管理后台, 管理员可以通过 Web 页面进行资产管理、用户管理、资产授权等操作, 用户可以通过 Web 页面进行资产登录, 文件管理等操作是核心组件（Core）, 使用 Django Class Based View 风格开发，支持 Restful API</p>
 </li>
-<li><p>WiX Toolset：提供一组最强大的工具集来帮助你创建Windows安装包。该工具集从XML源代码构建你的Windows安装程序包，可以无缝集成到构建过程；</p>
+<li><p><strong>Luna</strong> 为 Web Terminal Server 前端页面, 用户使用 Web Terminal 方式登录所需要的组件 （ WebTerminalView ）<br>该组件由团队自己通过Angular 实现，Jumpserver 只提供 API，不再负责后台渲染html等。</p>
+</li>
+<li><p><strong>Koko(CoCo)</strong> 为 SSH Server 和 Web Terminal Server 。用户可以使用自己的账户通过 SSH 或者 Web Terminal 访问 SSH 协议和 Telnet 协议资产。KoKo(最新版)是go版本的coco，新的Jumpserver ssh/ws server, 重构了 coco 的 SSH/SFTP 服务和 Web Terminal 服务 （ WebSFTPView ）</p>
+<p>SSH/SFTP/web terminal/web文件管理 （ WebSFTPView ）<br>实现了 SSH Server 和 Web Terminal Server 的组件，提供 SSH 和 WebSocket 接口, 使用 Paramiko 和 Flask 开发</p>
+</li>
+<li><p><strong>Guacamole</strong> 为 RDP 协议和 VNC 协议资产组件, 用户可以通过 Web Terminal 来连接 RDP 协议和 VNC 协议资产 (暂时只能通过 Web Terminal 来访问)<br><a target="_blank" rel="noopener" href="http://guacamole.apache.org/">Guacamole</a> Apache 跳板机项目，Jumpserver 使用其组件实现 RDP 功能，Jumpserver 并没有修改其代码而是添加了额外的插件，支持 Jumpserver 调用。</p>
+</li>
+<li><p>Jumpserver-Python-SDK<br><a target="_blank" rel="noopener" href="https://github.com/jumpserver/jumpserver-python-sdk">Jumpserver Python SDK</a>，(KoKo)Coco 目前使用该 SDK 与 Jumpserver API 交互。</p>
+<p>为 Jumpserver ssh terminal 和 web terminal封装了一个sdk, 完成和Jumpserver 交互的一些功能</p>
+<ul>
+<li>Service 通用RestApi 接口类</li>
+<li>AppService 增加了app注册等</li>
+<li>UserService 用户使用该类</li>
+</ul>
+</li>
+<li><p><strong>jms-storage-sdk</strong><br>主要作为录像存储的工具类，支持本地或其他cloud存储（e.g. oss）</p>
 </li>
 </ul>
-<h2 id="自动化构建和测试"><a href="#自动化构建和测试" class="headerlink" title="自动化构建和测试"></a>自动化构建和测试</h2><ul>
-<li><p>Apache Ant<br>  Apache Ant是一个将软件编译、测试、部署等步骤联系在一起加以自动化的一个工具，大多用于Java环境中的软件开发。</p>
+<h3 id="端口说明"><a href="#端口说明" class="headerlink" title="端口说明"></a>端口说明</h3><ul>
+<li><p>Jumpserver 默认端口为 8080/tcp 配置文件 jumpserver/config.yml</p>
 </li>
-<li><p>Maven<br>  Maven 除了以程序构建能力为特色之外，还提供 Ant 所缺少的高级项目管理工具。由于 Maven 的缺省构建规则有较高的可重用性，所以常常用两三行 Maven 构建脚本就可以构建简单的项目，而使用 Ant 则需要十几行。<br>  事实上，由于 Maven 的面向项目的方法，许多 Apache Jakarta 项目现在使用 Maven，而且公司项目采用 Maven 的比例在持续增长。开源中国的<a target="_blank" rel="noopener" href="http://maven.oschina.net/">Maven 库</a></p>
+<li><p>KoKo(Coco) 默认 SSH 端口为 2222/tcp, 默认 Web Terminal 端口为 5000/tcp 配置文件在 KoKo(CoCo)/config.yml</p>
 </li>
-<li><p>Selenium<br>Selenium (SeleniumHQ) 是 thoughtworks公司的一个集成测试的强大工具。</p>
+<li><p>Guacamole 默认端口为 8081/tcp, 配置文件 /config/tomcat9/conf/server.xml</p>
 </li>
-<li><p>PyUnit<br>Python单元测试框架（The Python unit testing framework），简称为PyUnit， 是Kent Beck和Erich Gamma这两位聪明的家伙所设计的 JUnit 的Python版本。</p>
+<li><p>Nginx 默认端口为 80/tcp</p>
 </li>
-<li><p>QUnit<br>QUnit 是 jQuery 的单元测试框架。</p>
+<li><p>Redis 默认端口为 6379/tcp</p>
 </li>
-<li><p>JMeter<br>JMeter 是 Apache 组织的开放源代码项目，它是功能和性能测试的工具，100% 的用 java 实现。</p>
-</li>
-<li><p>Gradle<br>Gradle 就是可以使用 Groovy 来书写构建脚本的构建系统，支持依赖管理和多项目，类似 Maven，但比之简单轻便。</p>
-</li>
-<li><p>PHPUnit<br>PHPUnit 是一个轻量级的PHP测试框架。它是在PHP5下面对JUnit3系列版本的完整移植，是xUnit测试框架家族的一员(它们都基于模式先锋Kent Beck的设计)。</p>
+<li><p>Mysql 默认端口为 3306/tcp</p>
 </li>
 </ul>
-<h2 id="持续集成-amp-交付"><a href="#持续集成-amp-交付" class="headerlink" title="持续集成&amp;交付"></a>持续集成&amp;交付</h2><ul>
-<li><p>Jenkins<br>  Jenkins 是一个开源的持续集成工具，使用 Java 编程语言编写的。它有助于实时检测和报告较大代码库中的单一更改。该软件可帮助开发人员快速查找和解决代码库中的问题并自动测试其构建。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2504773-34fe231919ab8bd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="20200526180806315_1173897932.png"></p>
+<h2 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h2><h3 id="使用技术"><a href="#使用技术" class="headerlink" title="使用技术"></a>使用技术</h3><ul>
+<li>Python 3.6.1</li>
+<li>Django</li>
+<li>Angular (Luna)</li>
+<li>go （koko）</li>
+<li>Celery  <a target="_blank" rel="noopener" href="http://www.celeryproject.org/">http://www.celeryproject.org/</a></li>
+<li>Redis   cache 和 celery broke</li>
+<li>Flower - Celery monitoring tool</li>
+<li>Guacamole (webterminal -RDP)</li>
+<li>websoket 框架 （<a target="_blank" rel="noopener" href="https://github.com/kataras/neffos%EF%BC%89">https://github.com/kataras/neffos）</a></li>
+</ul>
+<h3 id="服务启动"><a href="#服务启动" class="headerlink" title="服务启动"></a>服务启动</h3><p><code>./jms start</code> 命令将会下面服务</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2504773-baf73e869ebd006a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="20200528102354700_861856403.png"></p>
+<ul>
+<li><p>gunicorn  - unix系统的wsgi http服务器，负责jsm-core的http请求</p>
 </li>
-<li><p>Travis CI<br>  Travis 是一款流行的 CI 工具，可免费用于开源项目。在托管时，不必依赖任何平台。此 CI 工具为许多构建配置和语言提供支持，如 Node，PHP，Python，Java，Perl 等。</p>
+<li><p>Daphne  - 支持HTTP, HTTP2 和 WebSocket 的asgi的服务器，主要处理WebSocket请求</p>
 </li>
-<li><p>GoCD<br>  GoCD 是一个开源的持续集成服务器。它可轻松模拟和可视化复杂的工作流程。此 CI 工具允许持续交付，并为构建 CD Pipeline 提供直观的界面。</p>
+<li><p>celery - 后台异步任务分发处理 -celery_ansible/celery_default<br>简单、灵活且可靠的，处理大量消息的分布式系统；专注于实时处理的异步任务队列，同时也支持任务调度</p>
 </li>
-<li><p>Bamboo<br>  Bamboo 是一个持续集成的构建服务器，可以自动构建、测试和发布，并可与 JIRA 和 Bitbucket 无缝协作。Bamboo 支持多语言和平台，如 CodeDeply、Ducker、Git，SVN、Mercurial、AWS 及 Amazon S3 bucket</p>
-</li>
-<li><p>GitLab CI<br>  GitLab CI 是 GitLab 的一部分。它是一个提供 API 的 Web 应用程序，可将其状态存储在数据库中。GitLab CI 可以管理项目并提供友好的用户界面，并充分利用 GitLab 所有功能</p>
+<li><p>flower - 负责监控 celery worker执行情况</p>
 </li>
 </ul>
-<h2 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h2><ul>
-<li><p>Chef<br>  Chef 是一个系统集成框架，为整个架构提供配置管理功能。</p>
+<h2 id="Web-Terminal"><a href="#Web-Terminal" class="headerlink" title="Web Terminal"></a>Web Terminal</h2><ul>
+<li>主要通过Luna，koko 和Guacamole实现</li>
+</ul>
+<h3 id="Luna"><a href="#Luna" class="headerlink" title="Luna"></a>Luna</h3><ul>
+<li><p>打开web terminal link 后，进入luna, luna 会通过api请求jms 的资源列表，进行树状展示</p>
 </li>
-<li><p>Puppet<br>  Puppet，您可以集中管理每一个重要方面，您的系统使用的是跨平台的规范语言，管理所有的单独的元素通常聚集在不同的文件，如用户， CRON作业，和主机一起显然离散元素，如包装，服务和文件。</p>
+<li><p>当需要进行RDP访问时，会向guacamole进行post请求 <code>/guacamole/api/session/ext/jumpserver/asset/add</code></p>
 </li>
-<li><p>RunDeck<br>  RunDeck 是用 Java/Grails 写的开源工具，帮助用户在数据中心或者云环境中自动化各种操作和流程。通过命令行或者web界面，用户可以对任意数量的服务器进行操作，大大降低了对服务器自动化的门槛。</p>
+<li><p>使用 mstsc.js 实现web版的javascript RDP client  -<a target="_blank" rel="noopener" href="https://github.com/citronneur/mstsc.js">https://github.com/citronneur/mstsc.js</a> (很老的框架)<br>使用 socket.io 和画布来绑定 mstsc.js 后端。 前端通过 rle.js 文件完成位图的解压缩</p>
 </li>
-<li><p>Saltstack<br>  Saltstack 可以看做是func的增强版+Puppet的弱化版。使用Python编写。非常好用,快速可以基于EPEL部署。Salt 是一个开源的工具用来管理你的基础架构，可轻松管理成千上万台服务器。</p>
+<li><p>webterminal 前端由luna 里的html5 canvas 和js 渲染出来</p>
 </li>
-<li><p>Ansible<br>  Ansible 提供一种最简单的方式用于发布、管理和编排计算机系统的工具，你可在数分钟内搞定。Ansible 是一个模型驱动的配置管理器，支持多节点发布、远程任务执行。默认使用 SSH 进行远程连接。无需在被管理节点上安装附加软件，可使用各种编程语言进行扩展。</p>
+<li><p>Luna 使用了 “guacamole-common-js”: “1.1.0”， 提供了 Guacamole client的实现<br>  <a target="_blank" rel="noopener" href="http://guacamole.apache.org/doc/guacamole-common-js/">http://guacamole.apache.org/doc/guacamole-common-js/</a></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>window<span class="token punctuation">"</span></span> <span class="token attr-name">[ngClass]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&amp;#123;<span class="token punctuation">'</span>active<span class="token punctuation">'</span>:view.active&amp;#125;<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>elements-ssh-term</span>
+    <span class="token attr-name">[view]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view<span class="token punctuation">"</span></span>
+    <span class="token attr-name">[host]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view.host<span class="token punctuation">"</span></span>
+    <span class="token attr-name">[sysUser]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view.user<span class="token punctuation">"</span></span>
+    <span class="token attr-name">*ngIf</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view.type<span class="token punctuation">=</span><span class="token punctuation">=</span><span class="token punctuation">'</span>ssh<span class="token punctuation">'</span><span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>elements-ssh-term</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>elements-guacamole</span>
+    <span class="token attr-name">[view]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view<span class="token punctuation">"</span></span>
+    <span class="token attr-name">[host]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view.host<span class="token punctuation">"</span></span>
+    <span class="token attr-name">[sysUser]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view.user<span class="token punctuation">"</span></span>
+    <span class="token attr-name">[remoteAppId]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view.remoteApp<span class="token punctuation">"</span></span>
+    <span class="token attr-name">*ngIf</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view.type<span class="token punctuation">=</span><span class="token punctuation">=</span><span class="token punctuation">'</span>rdp<span class="token punctuation">'</span><span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>elements-guacamole</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-sftp</span> <span class="token attr-name">*ngIf</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view.type<span class="token punctuation">=</span><span class="token punctuation">=</span><span class="token punctuation">'</span>sftp<span class="token punctuation">'</span><span class="token punctuation">"</span></span> <span class="token attr-name">[host]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>view.host<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-sftp</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
-<h2 id="日志监控"><a href="#日志监控" class="headerlink" title="日志监控"></a>日志监控</h2><ul>
-<li><p>Logstash<br>Logstash 是一个应用程序日志、事件的传输、处理、管理和搜索的平台。你可以用它来统一对应用程序日志进行收集管理，提供 Web 接口用于查询和统计。</p>
+<h3 id="koko-ssh）"><a href="#koko-ssh）" class="headerlink" title="koko(ssh）"></a>koko(ssh）</h3><ul>
+<li><p>老版本coco使用ssh python 库- Paramiko</p>
 </li>
-<li><p>CollectD<br>Collectd 是一个守护(daemon)进程，用来收集系统性能和提供各种存储方式来存储不同值的机制。比如以RRD 文件形式。</p>
+<li><p>koko 启动时候会注册到jms, 需要配置中 “BOOTSTRAP_TOKEN” 与jump server保持一致, 用于身份认证</p>
 </li>
-<li><p>StatsD<br>StatsD 是一个简单的网络守护进程，基于 Node.js 平台，通过 UDP 或者 TCP 方式侦听各种统计信息，包括计数器和定时器，并发送聚合信息到后端服务，例如 Graphite。</p>
+<li><p>启动之后将会监听，当有新的ssh terminal窗口打开，就会尝通过websocket 建立ssh 连接 (依赖于Daphne），基于<a target="_blank" rel="noopener" href="https://github.com/gorilla/websocket">go的websocket实现</a></p>
 </li>
-<li><p>Nagios<br>Nagios 是一个监视系统运行状态和网络信息的监视系统。Nagios能监视所指定的本地或远程主机以及服务，同时提供异常通知功能等。</p>
+<li><p>用户在web terminal 窗口操作时，koko 会对命令解析，和jms里的过滤规则匹配</p>
 </li>
-<li><p>Ganglia<br>Ganglia 是一个跨平台可扩展的，高 性能计算系统下的分布式监控系统，如集群和网格。它是基于分层设计，它使用广泛的技术，如XML数据代表，便携数据传输，RRDtool用于数据存储和可视化。</p>
+<li><p>连接中断后，开始上传录像(其实是json文件，记录了时序log)到jumpserver(/data/media)</p>
 </li>
-<li><p>Sensu<br>Sensu 是开源的监控框架。主要特性：高度可组合；提供一个监控代理，一个事件处理器和文档 APIs；为云而设计；Sensu 的现代化架构允许监控大规模的动态基础设施，能够通过复杂的公共网络监控几千个全球分布式的机器和服务；热情的社区。</p>
-</li>
-<li><p>Zabbix<br>Zabbix 是一个基于WEB界面的提供分布式系统监视以及网络监视功能的企业级的开源解决方案。</p>
-</li>
-<li><p>ICINGA<br>ICINGA 项目是 由Michael Luebben、HendrikB?cker和JoergLinge等人发起的，他们都是现有的Nagios项目社区委员会的成员，他们承诺，新的开源项 目将完全兼容以前的Nagios应用程序及扩展功能。</p>
-</li>
-<li><p>Graphite<br>Graphite 是一个用于采集网站实时信息并进行统计的开源项目，可用于采集多种网站服务运行状态信息。Graphite服务平均每分钟有4800次更新操作。</p>
-</li>
-<li><p>Kibana<br>Kibana 是一个为 Logstash 和 ElasticSearch 提供的日志分析的 Web 接口。可使用它对日志进行高效的搜索、可视化、分析等各种操作</p>
+<li><p>使用了websoket 框架 - <a target="_blank" rel="noopener" href="https://github.com/kataras/neffos">https://github.com/kataras/neffos</a></p>
+<p>   <img src="https://upload-images.jianshu.io/upload_images/2504773-a244bfa8cd68b787.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="20200527094248561_866134588.png"></p>
 </li>
 </ul>
-<h2 id="微服务-容器平台"><a href="#微服务-容器平台" class="headerlink" title="微服务/容器平台"></a>微服务/容器平台</h2><ul>
-<li><p>OpenShift<br>OpenShift 是由红帽推出的一款面向开源开发人员开放的平台即服务(PaaS)。 OpenShift通过为开发人员提供在语言、框架和云上的更多的选择，使开发人员可以构建、测试、运行和管理他们的应用。</p>
+<h3 id="Guacamole-rdp"><a href="#Guacamole-rdp" class="headerlink" title="Guacamole(rdp)"></a>Guacamole(rdp)</h3><ul>
+<li>对Apache Guacamole 进行了改造，主要是Guacamole client/server war包，看不到源码改造</li>
+<li>原生的Guacamole 本身可以单独提供 web terminal 服务，但是部署相对复杂，有单独的postgresql存储机器连接信息</li>
+<li>改造后的Guacamole ()，也需要通过 BOOTSTRAP_TOKEN 注册到 jms</li>
+</ul>
+<h3 id="操作录像回放"><a href="#操作录像回放" class="headerlink" title="操作录像回放"></a>操作录像回放</h3><ul>
+<li><p>操作的录制:   ssh 是由koko基于websocket data完成; rdp 是由Guacamole API 完成</p>
 </li>
-<li><p>Cloud Foundry<br>Cloud Foundry 是VMware于2011年4月12日推出的业界第一个开源PaaS云平台，它支持多种框架、语言、运行时环境、云平台及应用服务，使开发 人员能够在几秒钟内进行应用程序的部署和扩展，无需担心任何基础架构的问题。</p>
-</li>
-<li><p>Kubernetes<br>Kubernetes 是来自 Google 云平台的开源容器集群管理系统。基于 Docker 构建一个容器的调度服务。该系统可以自动在一个容器集群中选择一个工作容器供使用。其核心概念是 Container Pod。</p>
-</li>
-<li><p>Mesosphere<br>Apache Mesos 是一个集群管理器，提供了有效的、跨分布式应用或框架的资源隔离和共享，可以运行Hadoop、MPI、Hypertable、Spark。</p>
+<li><p>操作的回放：由 luna进行 replay 展示的，对ssh 录像(.json) 进行分割处理,使用js渲染成动画;</p>
+<pre><code>&lt;elements-replay-json [replay]=&quot;replay&quot; *ngIf=&quot;replay.type==&#39;json&#39;&quot;&gt;&lt;/elements-replay-json&gt;
+&lt;elements-replay-guacamole [replay]=&quot;replay&quot; *ngIf=&quot;replay.type==&#39;guacamole&#39;&quot;&gt;&lt;/elements-replay-guacamole&gt;</code></pre>
 </li>
 </ul>
 
@@ -609,7 +644,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.devopsing.site/2019/10/02/devops-tools/">http://www.devopsing.site/2019/10/02/devops-tools/</a>
+                    <a href="http://www.devopsing.site/2019/08/16/jumpserver-jia-gou/">http://www.devopsing.site/2019/08/16/jumpserver-jia-gou/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -647,8 +682,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/DevOps/">
-                                    <span class="chip bg-color">DevOps</span>
+                                <a href="/tags/JumpServer/">
+                                    <span class="chip bg-color">JumpServer</span>
                                 </a>
                             
                         </div>
@@ -820,13 +855,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/11/15/hello-devops/">
+                <a href="/2019/10/02/devops-gong-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="DevOps 我们都在路上">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="DevOps 工具">
                         
-                        <span class="card-title">DevOps 我们都在路上</span>
+                        <span class="card-title">DevOps 工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -837,14 +872,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-15
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-02
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
                                 </a>
                             
                             
@@ -1149,7 +1184,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                         <a href="https://github.com/owen2016/owen2016.github.io" target="_blank">Matery</a>
                         <br>
                         
-                            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">18k</span>&nbsp;字
+                            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">19.6k</span>&nbsp;字
                             
                                 
                                     
@@ -1347,8 +1382,6 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
