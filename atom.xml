@@ -6,7 +6,7 @@
   <link href="http://blog.devopsing.site/atom.xml" rel="self"/>
   
   <link href="http://blog.devopsing.site/"/>
-  <updated>2020-10-27T15:19:35.353Z</updated>
+  <updated>2021-05-31T16:09:10.361Z</updated>
   <id>http://blog.devopsing.site/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DevOps 实战</title>
+    <link href="http://blog.devopsing.site/2020/09/05/devops/"/>
+    <id>http://blog.devopsing.site/2020/09/05/devops/</id>
+    <published>2020-09-05T10:10:00.000Z</published>
+    <updated>2021-05-31T16:09:10.361Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;content&lt;br&gt;{:toc}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;DevOps&quot;&gt;&lt;a href=&quot;#DevOps&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="运维" scheme="http://blog.devopsing.site/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+    <category term="运维" scheme="http://blog.devopsing.site/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>Jenkins 凭证管理, 看着一篇就够了~</title>
