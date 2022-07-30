@@ -552,8 +552,8 @@ subtitle:
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
-  sub1: DevOps = 敏捷+流程+工具+文化
-  sub2: DevOps = Agile + Process + Tools + Culture
+  sub1: DevOps = 敏捷精益+流程+工具+文化
+  sub2: DevOps = Agile/Lean + Process + Tools + Culture
 
 # 手机二级菜单.
 navMenu:
