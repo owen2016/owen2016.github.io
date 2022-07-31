@@ -6,7 +6,7 @@
   <link href="https://owen2016.github.io/atom.xml" rel="self"/>
   
   <link href="https://owen2016.github.io/"/>
-  <updated>2022-07-31T09:51:42.391Z</updated>
+  <updated>2022-07-31T10:06:21.697Z</updated>
   <id>https://owen2016.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>语雀文档同步到Hexo博客</title>
+    <link href="https://owen2016.github.io/2022/07/31/yuque/uoewdh/"/>
+    <id>https://owen2016.github.io/2022/07/31/yuque/uoewdh/</id>
+    <published>2022-07-31T05:59:33.000Z</published>
+    <updated>2022-07-31T10:06:21.697Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;对此程序员，都喜欢使用 Markdown 来工作、学习笔记，主要是简洁方便 （本人一直秉持“Everthing is Code”的原则，一次编写，多处复用）。过去一直使用 VS Code + Markdown All in One +PIcGo 的方式发布文章， 也用过</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Markdown快速入门</title>
     <link href="https://owen2016.github.io/2022/07/30/yuque/dgegwt/"/>
     <id>https://owen2016.github.io/2022/07/30/yuque/dgegwt/</id>
     <published>2022-07-30T14:10:26.000Z</published>
-    <updated>2022-07-31T09:51:42.391Z</updated>
+    <updated>2022-07-31T10:06:21.697Z</updated>
     
     
       
@@ -44,7 +65,7 @@
     <link href="https://owen2016.github.io/2022/07/30/yuque/ig16if/"/>
     <id>https://owen2016.github.io/2022/07/30/yuque/ig16if/</id>
     <published>2022-07-30T11:19:22.000Z</published>
-    <updated>2022-07-31T09:51:42.391Z</updated>
+    <updated>2022-07-31T10:06:21.698Z</updated>
     
     
       
@@ -67,7 +88,7 @@
     <link href="https://owen2016.github.io/2022/07/26/yuque/ay63w4/"/>
     <id>https://owen2016.github.io/2022/07/26/yuque/ay63w4/</id>
     <published>2022-07-26T15:12:05.000Z</published>
-    <updated>2022-07-31T09:51:42.392Z</updated>
+    <updated>2022-07-31T10:06:21.698Z</updated>
     
     
       
@@ -88,7 +109,7 @@
     <link href="https://owen2016.github.io/2022/07/15/yuque/gy7cen/"/>
     <id>https://owen2016.github.io/2022/07/15/yuque/gy7cen/</id>
     <published>2022-07-15T03:58:36.000Z</published>
-    <updated>2022-07-31T09:51:42.392Z</updated>
+    <updated>2022-07-31T10:06:21.699Z</updated>
     
     
       
@@ -109,7 +130,7 @@
     <link href="https://owen2016.github.io/2022/07/08/yuque/sowiwi/"/>
     <id>https://owen2016.github.io/2022/07/08/yuque/sowiwi/</id>
     <published>2022-07-08T15:29:17.000Z</published>
-    <updated>2022-07-31T09:51:42.392Z</updated>
+    <updated>2022-07-31T10:06:21.699Z</updated>
     
     
       
@@ -130,7 +151,7 @@
     <link href="https://owen2016.github.io/2022/06/20/yuque/ikzr14/"/>
     <id>https://owen2016.github.io/2022/06/20/yuque/ikzr14/</id>
     <published>2022-06-20T15:37:34.000Z</published>
-    <updated>2022-07-31T09:51:42.393Z</updated>
+    <updated>2022-07-31T10:06:21.700Z</updated>
     
     
       
@@ -152,7 +173,7 @@
     <link href="https://owen2016.github.io/2022/03/17/yuque/aeqg7c/"/>
     <id>https://owen2016.github.io/2022/03/17/yuque/aeqg7c/</id>
     <published>2022-03-17T14:14:29.000Z</published>
-    <updated>2022-07-31T09:51:42.393Z</updated>
+    <updated>2022-07-31T10:06:21.700Z</updated>
     
     
       
@@ -173,7 +194,7 @@
     <link href="https://owen2016.github.io/2022/01/14/yuque/rqeiq5/"/>
     <id>https://owen2016.github.io/2022/01/14/yuque/rqeiq5/</id>
     <published>2022-01-14T13:31:42.000Z</published>
-    <updated>2022-07-31T09:51:42.394Z</updated>
+    <updated>2022-07-31T10:06:21.701Z</updated>
     
     
       
@@ -194,7 +215,7 @@
     <link href="https://owen2016.github.io/2021/12/20/yuque/aq3rz4/"/>
     <id>https://owen2016.github.io/2021/12/20/yuque/aq3rz4/</id>
     <published>2021-12-20T15:53:18.000Z</published>
-    <updated>2022-07-31T09:51:42.394Z</updated>
+    <updated>2022-07-31T10:06:21.701Z</updated>
     
     
       
@@ -215,7 +236,7 @@
     <link href="https://owen2016.github.io/2021/12/15/yuque/yra64e/"/>
     <id>https://owen2016.github.io/2021/12/15/yuque/yra64e/</id>
     <published>2021-12-15T15:00:47.000Z</published>
-    <updated>2022-07-31T09:51:42.394Z</updated>
+    <updated>2022-07-31T10:06:21.701Z</updated>
     
     
       
@@ -236,7 +257,7 @@
     <link href="https://owen2016.github.io/2021/12/06/yuque/evq8l3/"/>
     <id>https://owen2016.github.io/2021/12/06/yuque/evq8l3/</id>
     <published>2021-12-06T15:35:33.000Z</published>
-    <updated>2022-07-31T09:51:42.395Z</updated>
+    <updated>2022-07-31T10:06:21.701Z</updated>
     
     
       
@@ -257,7 +278,7 @@
     <link href="https://owen2016.github.io/2021/11/30/yuque/nrl1a9/"/>
     <id>https://owen2016.github.io/2021/11/30/yuque/nrl1a9/</id>
     <published>2021-11-29T16:26:27.000Z</published>
-    <updated>2022-07-31T09:51:42.395Z</updated>
+    <updated>2022-07-31T10:06:21.702Z</updated>
     
     
       
@@ -279,7 +300,7 @@
     <link href="https://owen2016.github.io/2021/10/30/yuque/to1w2y/"/>
     <id>https://owen2016.github.io/2021/10/30/yuque/to1w2y/</id>
     <published>2021-10-30T12:17:00.000Z</published>
-    <updated>2022-07-31T09:51:42.395Z</updated>
+    <updated>2022-07-31T10:06:21.702Z</updated>
     
     
       
@@ -300,7 +321,7 @@
     <link href="https://owen2016.github.io/2021/08/29/yuque/vfvoyq/"/>
     <id>https://owen2016.github.io/2021/08/29/yuque/vfvoyq/</id>
     <published>2021-08-29T15:40:22.000Z</published>
-    <updated>2022-07-31T09:51:42.396Z</updated>
+    <updated>2022-07-31T10:06:21.702Z</updated>
     
     
       
@@ -321,7 +342,7 @@
     <link href="https://owen2016.github.io/2021/05/18/yuque/taegsk/"/>
     <id>https://owen2016.github.io/2021/05/18/yuque/taegsk/</id>
     <published>2021-05-18T15:11:42.000Z</published>
-    <updated>2022-07-31T09:51:42.396Z</updated>
+    <updated>2022-07-31T10:06:21.703Z</updated>
     
     
       
@@ -342,7 +363,7 @@
     <link href="https://owen2016.github.io/2021/05/06/yuque/rgp06g/"/>
     <id>https://owen2016.github.io/2021/05/06/yuque/rgp06g/</id>
     <published>2021-05-06T15:27:28.000Z</published>
-    <updated>2022-07-31T09:51:42.396Z</updated>
+    <updated>2022-07-31T10:06:21.703Z</updated>
     
     
       
@@ -364,7 +385,7 @@
     <link href="https://owen2016.github.io/2021/05/03/yuque/vn8en5/"/>
     <id>https://owen2016.github.io/2021/05/03/yuque/vn8en5/</id>
     <published>2021-05-03T12:46:46.000Z</published>
-    <updated>2022-07-31T09:51:42.396Z</updated>
+    <updated>2022-07-31T10:06:21.703Z</updated>
     
     
       
@@ -386,7 +407,7 @@
     <link href="https://owen2016.github.io/2021/05/02/yuque/qpnkoi/"/>
     <id>https://owen2016.github.io/2021/05/02/yuque/qpnkoi/</id>
     <published>2021-05-02T13:00:39.000Z</published>
-    <updated>2022-07-31T09:51:42.397Z</updated>
+    <updated>2022-07-31T10:06:21.703Z</updated>
     
     
       
@@ -407,7 +428,7 @@
     <link href="https://owen2016.github.io/2021/05/02/yuque/pr6163/"/>
     <id>https://owen2016.github.io/2021/05/02/yuque/pr6163/</id>
     <published>2021-05-02T10:44:48.000Z</published>
-    <updated>2022-07-31T09:51:42.397Z</updated>
+    <updated>2022-07-31T10:06:21.704Z</updated>
     
     
       
@@ -415,31 +436,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;1-基于单主干分支的持续交付&quot;&gt;&lt;a href=&quot;#1-基于单主干分支的持续交付&quot; class=&quot;headerlink&quot; title=&quot;1. 基于单主干分支的持续交付&quot;&gt;&lt;/a&gt;1.</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>前后端常见鉴权方式</title>
-    <link href="https://owen2016.github.io/2021/03/31/yuque/oggaga/"/>
-    <id>https://owen2016.github.io/2021/03/31/yuque/oggaga/</id>
-    <published>2021-03-31T10:50:23.000Z</published>
-    <updated>2022-07-31T09:51:42.397Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;目前我们常用的鉴权有四种：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;HTTP Basic Authentication&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;session-cookie&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Token</summary>
         
       
     

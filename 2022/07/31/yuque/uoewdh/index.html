@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="keywords" content="区分wsgi、uWSGI、uwsgi、php-fpm、CGI、FastCGI, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="keywords" content="语雀文档同步到Hexo博客, DevOps在路上|DevOps|Docker|CICD|K8S">
         <meta name="description" content="Every failure is leading towards success.">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -25,7 +25,7 @@
 
 
             <title>
-                区分wsgi、uWSGI、uwsgi、php-fpm、CGI、FastCGI | DevOps在路上
+                语雀文档同步到Hexo博客 | DevOps在路上
             </title>
             <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -300,12 +300,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">区分wsgi、uWSGI、uwsgi、php-fpm、CGI、FastCGI</h1>
+                    <h1 class="description center-align post-title">语雀文档同步到Hexo博客</h1>
                 </div>
             </div>
         </div>
@@ -434,7 +434,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-24
+                    2022-07-31
                 </div>
                 
 
@@ -448,14 +448,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4k
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    4 分
                 </div>
                 
 
@@ -470,142 +470,164 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>在学习 Python web 开发时候，可能会遇到诸如 uwsgi,wsgi 等名词，下面通过梳理总结探究它们之间的关系。</p>
-<h2 id="CGI"><a href="#CGI" class="headerlink" title="CGI"></a>CGI</h2><p>CGI，（Common Gateway Interface）通用网关接口，是一个协议，是外部应用程序（CGI 程序）与 WEB 服务器之间的接口标准，该协议定义了 Web 服务器调用外部应用程序的时候需要输入的参数和给 Web 服务器的返回结果。通俗来说，规定一个程序该如何与 web 服务器程序之间通信，从而可以让这个程序跑在 web 服务器上</p>
-<h3 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h3><p>最早的 Web 服务器简单地响应浏览器发来的 HTTP 请求，并将存储在服务器上的 HTML 文件返回给浏览器，也就是静态 html。这个场景下的服务器一般被称为 HTTP 服务器，常见的有 Apache 的 httpd 和 Nginx</p>
-<p>事物总是不 断发展，网站也越来越复杂，所以出现动态技术。但是服务器并不能直接运行 php，asp 这样的文件，自己不能做，外包给别人吧，但是要与第三做个约定，我给你什么，然后你给我什么，就是握把请求参数发送给你，然后我接收你的处 理结果给客户端。那这个约定就是 common gateway interface，简称 cgi。这个协议可以用 vb，c，php，python 来实现。cgi 只是接口协议，根本不是什么语言。</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616078223921-caeb1da8-42cb-41cc-9061-974035c06f7e.png#crop=0&crop=0&crop=1&crop=1&height=414&id=HYmgS&name=image.png&originHeight=414&originWidth=255&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=10784&status=done&style=none&title=&width=255" alt="image.png"></p>
-<p>引入 CGI 以便客户端请求能够触发 Web 服务器运行另一个外部程序，客户端所输入的数据也会传给这个外部程序，该程序运行结束后会将生成的 HTML 和其他数据通过 Web 服务器再返回给客户端（即动态请求，比如基于 PHP、Python、Java 实现的应用）。利用 CGI 可以针对用户请求动态返回给客户端各种各样动态变化的信息</p>
-<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p><strong>Web 服务器与 CGI 程序的交互</strong><br>WEB 服务器将根据 CGI 程序的类型决定数据向 CGI 程序的传送方式，一般是通过标准输入/输出流和环境变量来与 CGI 程序间传递数据。 如下图所示：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616078294721-4ac9733f-672c-4975-a3da-7a230139b0f9.png#crop=0&crop=0&crop=1&crop=1&height=341&id=RHNDa&name=image.png&originHeight=341&originWidth=454&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=16818&status=done&style=none&title=&width=454" alt="image.png"></p>
-<p>CGI 程序通过标准输入（STDIN）和标准输出（STDOUT）来进行输入输出。此外 CGI 程序还通过环境变量来得到输入，操作系统提供了许多环境变量，它们定义了程序的执行环境，应用程序可以存取它们。Web 服务器和 CGI 接口又另外设置了一些环境变量，用来向 CGI 程序传递一些重要的参数。</p>
-<p><strong>常用 CGI 环境变量：</strong></p>
+                <p>对此程序员，都喜欢使用 Markdown 来工作、学习笔记，主要是简洁方便 （本人一直秉持“Everthing is Code”的原则，一次编写，多处复用）。过去一直使用 VS Code + Markdown All in One +PIcGo 的方式发布文章， 也用过 Typora, Notion, 通过 Markdown 格式向各平台分发文章，但是总感觉不是很方便，直到遇见了语雀</p>
+<ol>
+<li>我希望自己的笔记能够形成不同类型的知识库，支持目录，语雀做到了</li>
+<li>同时语雀支持快速的编辑，并支持导入导出 Markdown，进行平台分发</li>
+<li>语雀也可以作为一个博客站点，内容的分发和积累。</li>
+</ol>
+<p>考虑到之前写了很多 markdown 文档在 github/gitee, 希望能够进行整合，把语雀作为输入源，其他平台作为分发，包括 github/gitee, 结果一查有插件 yuque-hexo 支持 向 hexo 博客同步文章，正好自己有一个（PS：好久没更新了），系统通过这种方式重新用起来。</p>
+<h2 id="1-Hexo-博客"><a href="#1-Hexo-博客" class="headerlink" title="1. Hexo 博客"></a>1. Hexo 博客</h2><p>在开始之前，肯定是要有一个 Hexo 博客 - <a target="_blank" rel="noopener" href="https://github.com/owen2016/owen2016.github.io">https://github.com/owen2016/owen2016.github.io</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/5374140/1659257034142-2e44a132-4f8b-4993-baf1-9038604e604e.png#clientId=u39ecb533-1eb9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=484&id=u9500b32c&margin=%5Bobject%20Object%5D&name=image.png&originHeight=615&originWidth=1365&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=84947&status=done&style=none&taskId=u8b8ddd9b-ca9f-407f-a3ca-2125e25f746&title=&width=1074" alt="image.png"></p>
+<h2 id="2-创建语雀文档库"><a href="#2-创建语雀文档库" class="headerlink" title="2. 创建语雀文档库"></a>2. 创建语雀文档库</h2><ul>
+<li>首先注册语雀账号，语雀官网：<a target="_blank" rel="noopener" href="https://www.yuque.com/">https://www.yuque.com/</a></li>
+<li>登录语雀账号，新建一个文档库</li>
+<li>导入文章 （如果之前有 markdown 文档的话）</li>
+</ul>
+<h2 id="3-获取语雀-token"><a href="#3-获取语雀-token" class="headerlink" title="3. 获取语雀 token"></a>3. 获取语雀 token</h2><ul>
+<li>在语雀上点击 个人头像 -&gt; 设置 -&gt; Token 即可获取</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/5374140/1659249488924-5c68b07a-4667-406a-a914-59f7c5584a9b.png#clientId=u39ecb533-1eb9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=389&id=Dose2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=636&originWidth=860&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=40131&status=done&style=none&taskId=u179cb20b-3d99-4a9f-a470-92be8eb8716&title=&width=526" alt="image.png"></p>
+<h2 id="4-安装-amp-配置-yuque-hexo-插件"><a href="#4-安装-amp-配置-yuque-hexo-插件" class="headerlink" title="4.安装&amp;配置 yuque-hexo 插件"></a>4.安装&amp;配置 yuque-hexo 插件</h2><p>安装 yuque-hexo 插件 官方文档：<a target="_blank" rel="noopener" href="https://github.com/x-cold/yuque-hexo">https://github.com/x-cold/yuque-hexo</a><br><code>npm i -g yuque-hexo</code></p>
+<p><strong>配置说明</strong></p>
+<ul>
+<li>adapter 使用 hexo 和 markdown 都可以，这里推荐使用 markdown，经过我自己测试 markdown 对 front-matter 支持的更好</li>
+<li>login 和 repo 可以点击 个人头像 -&gt; 设置 -&gt; Token 即可获取</li>
+<li>login 和 repo 可以从 你的仓库路径中获取，例如我的 仓库路径 ：<a target="_blank" rel="noopener" href="https://www.yuque.com/binowen/blog">https://www.yuque.com/binowen/blog</a> ,其中 binowen 就是我的 login，blog 就是我的 repo</li>
+</ul>
+<pre class="line-numbers language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"hexo-site"</span><span class="token punctuation">,</span>
+  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"0.0.0"</span><span class="token punctuation">,</span>
+  <span class="token property">"private"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"scripts"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token property">"clean"</span><span class="token operator">:</span> <span class="token string">"hexo clean"</span><span class="token punctuation">,</span>
+    <span class="token property">"clean:yuque"</span><span class="token operator">:</span> <span class="token string">"yuque-hexo clean"</span><span class="token punctuation">,</span>
+    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"hexo generate"</span><span class="token punctuation">,</span>
+    <span class="token property">"deploy"</span><span class="token operator">:</span> <span class="token string">"yuque-hexo sync &amp;&amp; hexo deploy"</span><span class="token punctuation">,</span>
+    <span class="token property">"sync"</span><span class="token operator">:</span> <span class="token string">"yuque-hexo sync"</span><span class="token punctuation">,</span>
+    <span class="token property">"reset"</span><span class="token operator">:</span> <span class="token string">"npm run clean:yuque &amp;&amp; npm run sync"</span><span class="token punctuation">,</span>
+    <span class="token property">"server"</span><span class="token operator">:</span> <span class="token string">"hexo server"</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  <span class="token property">"hexo"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"5.2.0"</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  <span class="token property">"yuqueConfig"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token property">"postPath"</span><span class="token operator">:</span> <span class="token string">"source/_posts/yuque"</span><span class="token punctuation">,</span>
+    <span class="token property">"cachePath"</span><span class="token operator">:</span> <span class="token string">"yuque.json"</span><span class="token punctuation">,</span>
+    <span class="token property">"mdNameFormat"</span><span class="token operator">:</span> <span class="token string">"slug"</span><span class="token punctuation">,</span>
+    <span class="token property">"adapter"</span><span class="token operator">:</span> <span class="token string">"hexo"</span><span class="token punctuation">,</span>
+    <span class="token property">"concurrency"</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token property">"baseUrl"</span><span class="token operator">:</span> <span class="token string">"https://www.yuque.com/api/v2"</span><span class="token punctuation">,</span>
+    <span class="token property">"login"</span><span class="token operator">:</span> <span class="token string">"binowen"</span><span class="token punctuation">,</span>
+    <span class="token property">"repo"</span><span class="token operator">:</span> <span class="token string">"blog"</span><span class="token punctuation">,</span>
+    <span class="token property">"token"</span><span class="token operator">:</span> <span class="token string">"2CA6XXXXXXXXXXXXXXXXXgRfcrLE0as"</span><span class="token punctuation">,</span>
+    <span class="token property">"onlyPublished"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"onlyPublic"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"lastGeneratePath"</span><span class="token operator">:</span> <span class="token string">"lastGeneratePath.log"</span><span class="token punctuation">,</span>
+    <span class="token property">"imgCdn"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token property">"enabled"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token property">"imageBed"</span><span class="token operator">:</span> <span class="token string">"qiniu"</span><span class="token punctuation">,</span>
+      <span class="token property">"host"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+      <span class="token property">"bucket"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+      <span class="token property">"region"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+      <span class="token property">"prefixKey"</span><span class="token operator">:</span> <span class="token string">""</span>
+    &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  <span class="token property">"dependencies"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token property">"hexo"</span><span class="token operator">:</span> <span class="token string">"^5.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-baidu-url-submit"</span><span class="token operator">:</span> <span class="token string">"0.0.6"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-deployer-ali-oss"</span><span class="token operator">:</span> <span class="token string">"^1.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-deployer-git"</span><span class="token operator">:</span> <span class="token string">"^2.1.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-generator-archive"</span><span class="token operator">:</span> <span class="token string">"^1.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-generator-baidu-sitemap"</span><span class="token operator">:</span> <span class="token string">"^0.1.9"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-generator-category"</span><span class="token operator">:</span> <span class="token string">"^1.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-generator-feed"</span><span class="token operator">:</span> <span class="token string">"^3.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-generator-index"</span><span class="token operator">:</span> <span class="token string">"^2.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-generator-search"</span><span class="token operator">:</span> <span class="token string">"^2.4.1"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-generator-sitemap"</span><span class="token operator">:</span> <span class="token string">"^1.2.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-generator-tag"</span><span class="token operator">:</span> <span class="token string">"^1.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-helper-live2d"</span><span class="token operator">:</span> <span class="token string">"^3.1.1"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-permalink-pinyin"</span><span class="token operator">:</span> <span class="token string">"^1.1.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-prism-plugin"</span><span class="token operator">:</span> <span class="token string">"^2.3.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-renderer-ejs"</span><span class="token operator">:</span> <span class="token string">"^1.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-renderer-marked"</span><span class="token operator">:</span> <span class="token string">"^3.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-renderer-stylus"</span><span class="token operator">:</span> <span class="token string">"^2.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-server"</span><span class="token operator">:</span> <span class="token string">"^2.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"hexo-wordcount"</span><span class="token operator">:</span> <span class="token string">"^6.0.1"</span><span class="token punctuation">,</span>
+    <span class="token property">"live2d-widget-model-shizuku"</span><span class="token operator">:</span> <span class="token string">"^1.0.5"</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  <span class="token property">"devDependencies"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token property">"yuque-hexo"</span><span class="token operator">:</span> <span class="token string">"^1.6.5"</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <table>
 <thead>
 <tr>
-<th>**  变量名**</th>
-<th><strong>描述</strong></th>
+<th>参数名</th>
+<th>含义</th>
+<th>默认值</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>CONTENT_TYPE</td>
-<td>这个环境变量的值指示所传递来的信息的 MIME 类型。目前，环境变量 CONTENT_TYPE 一般都是：application/x-www-form-urlencoded,他表示数据来自于 HTML 表单。</td>
+<td>postPath</td>
+<td>文档同步后生成的路径</td>
+<td>source/_posts/yuque</td>
 </tr>
 <tr>
-<td>CONTENT_LENGTH</td>
-<td>如果服务器与 CGI 程序信息的传递方式是 POST，这个环境变量即使从标准输入 STDIN 中可以读到的有效数据的字节数。这个环境变量在读取所输入的数据时必须使用。</td>
+<td>cachePath</td>
+<td>文档下载缓存文件</td>
+<td>yuque.json</td>
 </tr>
 <tr>
-<td>HTTP_COOKIE</td>
-<td>客户机内的 COOKIE 内容。</td>
+<td>mdNameFormat</td>
+<td>文件名命名方式 (title / slug)</td>
+<td>title</td>
 </tr>
 <tr>
-<td>HTTP_USER_AGENT</td>
-<td>提供包含了版本数或其他专有数据的客户浏览器信息。</td>
+<td>adapter</td>
+<td>文档生成格式 (hexo/markdown)</td>
+<td>hexo</td>
 </tr>
 <tr>
-<td>PATH_INFO</td>
-<td>这个环境变量的值表示紧接在 CGI 程序名之后的其他路径信息。它常常作为 CGI 程序的参数出现。</td>
+<td>concurrency</td>
+<td>下载文章并发数</td>
+<td>5</td>
 </tr>
 <tr>
-<td>QUERY_STRING</td>
-<td>如果服务器与 CGI 程序信息的传递方式是 GET，这个环境变量的值即使所传递的信息。这个信息经跟在 CGI 程序名的后面，两者中间用一个问号’?’分隔。</td>
+<td>baseUrl</td>
+<td>语雀 API 地址</td>
+<td>-</td>
 </tr>
 <tr>
-<td>REMOTE_ADDR</td>
-<td>这个环境变量的值是发送请求的客户机的 IP 地址，例如上面的 192.168.1.67。这个值总是存在的。而且它是 Web 客户机需要提供给 Web 服务器的唯一标识，可以在 CGI 程序中用它来区分不同的 Web 客户机。</td>
+<td>login</td>
+<td>语雀 login (group), 也称为个人路径</td>
+<td>-</td>
 </tr>
 <tr>
-<td>REMOTE_HOST</td>
-<td>这个环境变量的值包含发送 CGI 请求的客户机的主机名。如果不支持你想查询，则无需定义此环境变量。</td>
+<td>repo</td>
+<td>语雀仓库短名称，也称为语雀知识库路径</td>
+<td>-</td>
 </tr>
 <tr>
-<td>REQUEST_METHOD</td>
-<td>提供脚本被调用的方法。对于使用 HTTP/1.0 协议的脚本，仅 GET 和 POST 有意义。</td>
+<td>onlyPublished</td>
+<td>只展示已经发布的文章</td>
+<td>false</td>
 </tr>
 <tr>
-<td>SCRIPT_FILENAME</td>
-<td>CGI 脚本的完整路径</td>
-</tr>
-<tr>
-<td>SCRIPT_NAME</td>
-<td>CGI 脚本的的名称</td>
-</tr>
-<tr>
-<td>SERVER_NAME</td>
-<td>这是你的 WEB 服务器的主机名、别名或 IP 地址。</td>
-</tr>
-<tr>
-<td>SERVER_SOFTWARE</td>
-<td>这个环境变量的值包含了调用 CGI 程序的 HTTP 服务器的名称和版本号。例如，上面的值为 Apache/2.2.14(Unix)</td>
+<td>onlyPublic</td>
+<td>只展示公开文章</td>
+<td>false</td>
 </tr>
 </tbody></table>
-<p>##</p>
-<p>每当客户请求 CGI 的时候，WEB 服务器就请求操作系统生成一个新的 CGI 解释器进程(如 php-cgi.exe)，CGI 的一个进程则处理完一个请求后退出，下一个请求来时再创建新进程。当然，这样在访问量很少没有并发的情况也行。但当访问量增大，并发存在，这种方式就不适合了，于是就有了 FastCGI</p>
-<h2 id="FastCGI"><a href="#FastCGI" class="headerlink" title="FastCGI"></a>FastCGI</h2><p>FASTCGI 是 Web 服务器（ex:nginx）和语言解释器(ex:uWsgi)两者底层的通信协议的规范，是对 CGI 的开放的扩展。</p>
-<p>CGI 的一个扩展，像是一个常驻(long-live)型的 CGI ，废除了 CGI fork-and-execute （来一个请求 fork 一个新进程处理，处理完再把进程 kill 掉）的工作方式，转而使用一种长生存期的方法，减少了进程消耗，提升了性能。</p>
-<p>而 FastCGI 则会先 fork 一个 master 进程，解析配置文件，初始化执行环境，然后再 fork 多个 worker 进程（与 Nginx 有点像），当 HTTP 请求过来时，master 进程将其会传递给一个 worker 进程，然后立即可以接受下一个请求，这样就避免了重复的初始化操作，效率自然也就提高了。而且当 worker 进程不够用时，master 进程还可以根据配置预先启动几个 worker 进程等着；当空闲 worker 进程太多时，也会关掉一些，这样不仅提高了性能，还节约了系统资源</p>
-<h2 id="php-fpm"><a href="#php-fpm" class="headerlink" title="php-fpm"></a>php-fpm</h2><p>FastCGI 只是一个协议规范，需要每个语言具体去实现，<strong>PHP-FPM 就是 PHP 版本的 FastCGI 协议实现</strong>，有了它，就是实现 PHP 脚本与 Web 服务器（通常是 Nginx）之间的通信，同时它也是一个 PHP SAPI，从而构建起 PHP 解释器与 Web 服务器之间的桥梁</p>
-<p>Php-fpm 全称是 php fastcgi process manager 即 php fastcgi 进程管理器，相比 fastcgi 静态的唤起 cgi，fpm 能根据访问的压力动态的唤起 cgi 进程和销毁以到达动态的调整 cgi 数量，这样可以有效的使用内存。除此之外还有其它的一些优点，比如，fpm 还可以平滑的重载 php 配置；由于 fpm 是使用 Unix-Socket 来和服务器通讯，所以也不用再配置 cgi 端口；fpm 有更好的状态输出和 slowlog 日志，502 的时候能给出更多的错误细节。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1617120408842-18290e71-b2ad-4fe9-9958-29180e5754e1.png#crop=0&crop=0&crop=1&crop=1&height=274&id=jDhf6&originHeight=274&originWidth=902&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=902"></p>
-<p>PHP-FPM 负责管理一个进程池来处理来自 Web 服务器的 HTTP 动态请求，在 PHP-FPM 中，master 进程负责与 Web 服务器进行通信，接收 HTTP 请求，再将请求转发给 worker 进程进行处理，worker 进程主要负责动态执行 PHP 代码，处理完成后，将处理结果返回给 Web 服务器，再由 Web 服务器将结果发送给客户端。这就是 PHP-FPM 的基本工作原理</p>
-<h2 id="WSGI-uwsgi-uWSGI"><a href="#WSGI-uwsgi-uWSGI" class="headerlink" title="WSGI / uwsgi / uWSGI"></a>WSGI / uwsgi / uWSGI</h2><p>在 python web 开发中，我们经常使用 uwsgi 配合 nginx 部署一个 web 框架，如 Django 或 flask。同时我们又会说，框架和 web 服务器之间要符合 WSGI 协议</p>
-<p>那就来厘清一下这几个概念。</p>
-<p><strong>web 服务器和 web 框架</strong><br>在讲 uWSGI 和 WSGI 之前，先要弄清楚 web 开发的两大块，web 服务器和 web 框架。<br>web 服务器即用来接受客户端请求，建立连接，转发响应的程序。至于转发的内容是什么，交由 web 框架来处理，即处理这些业务逻辑。如查询数据库、生成实时信息等。Nginx 就是一个 web 服务器，Django 或 flask 就是 web 框架。</p>
-<p>那么如何实现 uWSGI 和 WSGI 的配合呢？如何做到任意一个 web 服务器，都能搭配任意一个框架呢？这就产生了 WSGI 协议。只要 web 服务器和 web 框架满足 WSGI 协议，它们就能相互搭配。所以 WSGI 只是一个协议，一个约定。而不是 python 的模块、框架等具体的功能。</p>
-<p>而 uWSGI，则是实现了 WSGI 协议的一个 web 服务器。即用来接受客户端请求，转发响应的程序。实际上，一个 uWSGI 的 web 服务器，再加上 Django 这样的 web 框架，就已经可以实现网站的功能了。</p>
-<h3 id="WSGI"><a href="#WSGI" class="headerlink" title="WSGI"></a>WSGI</h3><p>WSGI，（WEB SERVER GATEWAY INTERFACE），Web 服务器网关接口，是一种 Web 服务器网关接口，它是一个 Web 服务器（如 Nginx，uWSGI 等服务器）与 web 应用（如 Flask 框架写的程序）通信的一种规范。<strong>当前运行在 WSGI 协议之上的 Web 框架有 Bottle，Flask，Django</strong></p>
-<p>实现了 python web 程序与服务器之间交互的通用性。有了这个东西，web.py 或者 bottle 或者 django 等等的 python web 开发框架，就可以轻松地部署在不同的 web server 上了，不需要做任何特殊配置（也需要一些小小的配置调整）<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616079598776-3f18d2f8-842c-44da-acd5-52833f513c72.png#crop=0&crop=0&crop=1&crop=1&height=120&id=Cl1Ee&name=image.png&originHeight=120&originWidth=313&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=23494&status=done&style=none&title=&width=313" alt="image.png"></p>
-<p>##</p>
-<p>WSGI 协议其实是定义了一种 server 与 application 解耦的规范，即可以有多个实现 WSGI server 的服务器，也可以有多个实现 WSGI application 的框架，那么就可以选择任意的 server 和 application 组合实现自己的 web 应用。例如 uWSGI 和 Gunicorn 都是实现了 WSGI server 协议的服务器，Django，Flask 是实现了 WSGI application 协议的 web 框架，可以根据项目实际情况搭配使用。</p>
-<p>像 Django，Flask 框架都有自己实现的简单的 WSGI server，一般用于服务器调试，生产环境下建议用其他 WSGI server，WSGI 服务器的选择很多，包括 uWSGI 和 gunicorn</p>
-<h3 id="uwsgi"><a href="#uwsgi" class="headerlink" title="uwsgi"></a>uwsgi</h3><p>同 WSGI 一样是一种通信协议<br>uwsgi 协议是一个 uWSGI 服务器自有的协议，它用于定义传输信息的类型（type of information），每一个 uwsgi packet 前 4byte 为传输信息类型描述，它与 WSGI 相比是两样东西。</p>
-<h3 id="uWSGI-服务器"><a href="#uWSGI-服务器" class="headerlink" title="uWSGI (服务器)"></a>uWSGI (服务器)</h3><p>它是一个 Web 服务器，它实现了 WSGI 协议、uwsgi、http 等协议。用于接收前端服务器转发的动态请求并处理后发给 web 应用程序。<br>因为 apache 也好，nginx 也罢，它们自己都没有解析动态语言如 php 的功能，而是分派给其他模块来做，比如 apache 就可以说内置了 php 模块，支持的非常爽，让人感觉好像 apache 就支持 php 一样。uwsgi 实现了 WSGI 协议、uwsgi、http 等协议。 Nginx 中 HttpUwsgiModule 的作用是与 uWSGI 服务器进行交换。</p>
-<p>uWSGI 是使用 C 编写的，显示了自有的 uwsgi 协议的 Web 服务器。它自带丰富的组件，其中核心组件包含进程管理、监控、IPC 等功能，实现应用服务器接口的请求插件支持多种语言和平台，比如 WSGI、Rack、Lua WSAPI，网管组件实现了负载均衡、代理和理由功能</p>
-<p>uWSGI 也可以当做中间件。</p>
-<ul>
-<li>如果是 Nginx+uWSGI+App，那 uWSGI 就是一个中间件</li>
-<li>如果是 uWSGI+App，那它就是服务器</li>
+<h3 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h3><pre class="line-numbers language-json"><code class="language-json"># 同步语雀的文档到本地
+yuque-hexo sync
+
+#  清理语雀文档
+yuque-hexo clean<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>执行 yuque-hexo sync 就会拉取语雀的文章到本地 _post 路径下，所以记得先把自己的文章备份。<br>hexo g &amp; hexo s 本地启动看看。尤其是看看封面之类的，如果不对，就自己看看从语雀拉取的文章格式对不对。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/5374140/1659258258849-1031e7fa-5e60-46bb-bbd4-c7af74ce3401.png#clientId=u39ecb533-1eb9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=276&id=u1967bd26&margin=%5Bobject%20Object%5D&name=image.png&originHeight=276&originWidth=718&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=44692&status=done&style=none&taskId=u2e8dd549-ee9a-48cc-a019-e21e93fe11a&title=&width=718" alt="image.png"></p>
+<h2 id="5-自动化"><a href="#5-自动化" class="headerlink" title="5. 自动化"></a>5. 自动化</h2><p>上面已经实现了，将语雀知识库的文章拉取到 Hexo 的 _post 路径下，这时候自己 hexo deploy 也是可以的，当然，咱们要实现的是自动化，可不是要自己再拉下来一次，然后再手动 push<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36535538/article/details/123749206">https://blog.csdn.net/qq_36535538/article/details/123749206</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://yanisyoung.com/2020/10/11/yuque/hexo%20+%20github%20+%E8%AF%AD%E9%9B%80%20%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">https://yanisyoung.com/2020/10/11/yuque/hexo%20+%20github%20+%E8%AF%AD%E9%9B%80%20%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</a></li>
 </ul>
-<h3 id="Nginx-uWGSI"><a href="#Nginx-uWGSI" class="headerlink" title="Nginx+uWGSI"></a>Nginx+uWGSI</h3><p>假设我们使用 python 的 Django 框架写了一个网站，现在要将它挂在网上运行，我们一般需要：</p>
-<ul>
-<li>Nginx 做为代理服务器：负责静态资源发送（js、css、图片等）、动态请求转发以及结果的回复。</li>
-<li>uWSGI 做为后端服务器：负责接收 Nginx 转发的请求并处理后发给 Django 应用以及接收 Django 应用返回信息转发给 Nginx。</li>
-<li>Django 应用收到请求后处理数据并渲染相应的返回页面给 uWSGI 服务器。</li>
-</ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616077881390-3e148c74-910a-40f7-84d8-975a6ed752eb.png#crop=0&crop=0&crop=1&crop=1&height=178&id=hEJjd&name=image.png&originHeight=178&originWidth=616&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=13163&status=done&style=none&title=&width=616" alt="image.png"><br>一个 Django 应用，通过 WSGI 协议连接 uWSGI 服务器，uWSGI 服务器实现 WSGI、http 等协议，通过 uwsgi 协议和 Nginx 服务器实现 http 的动态请求和转发以及结果</p>
-<p><strong>问题：有 uWGSI 了 Django 为什么还需要 Nginx？</strong><br>一个普通的个人网站，访问量不大的话，当然可以由 uWSGI 和 Django 构成。但是一旦访问量过大，客户端请求连接就要进行长时间的等待。这个时候就出来了分布式服务器，我们可以多来几台 web 服务器，都能处理请求。但是谁来分配客户端的请求连接和 web 服务器呢？Nginx 就是这样一个管家的存在，由它来分配。这也就是由 Nginx 实现反向代理，即代理服务器。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616079509341-0a5ff5cc-8811-4cbc-93e9-26aefb4d4b9e.png#crop=0&crop=0&crop=1&crop=1&height=343&id=q0Qtl&margin=%5Bobject%20Object%5D&name=image.png&originHeight=366&originWidth=386&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=35037&status=done&style=none&title=&width=362" alt="image.png"></p>
-<p>Nginx 是一个 HTTP 和反向代理服务器</p>
-<ul>
-<li><p>正向代理</p>
-<pre><code>正向的就是由浏览器主动的想代理服务器发出请求，经代理服务器做出处理后再转给目标服务器</code></pre>
-</li>
-<li><p>反向代理</p>
-<p>反向的就是不管浏览器同不同意，请求都会经过代理服务器处理再发给目标服务器</p>
-</li>
-</ul>
-<p>使用 Nginx 作为反向代理服务器的好处：</p>
-<ul>
-<li>安全</li>
-</ul>
-<p>不管什么请求都要经过代理服务器，可以避免外部程序直接攻击 Web 服务器</p>
-<ul>
-<li>负载均衡</li>
-</ul>
-<p>根据请求情况和服务器负载情况，将请求分配给不同的 Web 服务器，保证服务器性能</p>
-<ul>
-<li>提高 Web 服务器的 IO 性能</li>
-</ul>
-<p>请求从客户端传到 Web 服务器是需要时间的，传递多长时间就会让这个进程阻塞多长时间，而通过反向代理，就可以由反向代理完整接受该请求，然后再传给 Web 服务器，从而保证服务器性能，而且有的一些简单的事情（比如静态文件）可以直接由反向代理处理，不经过 Web 服务器</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li>WSGI 是一种通信协议</li>
-<li>uwsgi 是一种通信协议，常用于在 uWSGI 服务器与其他网络服务器的数据通信</li>
-<li>而 uWSGI 是实现了 uwsgi 和 WSGI 两种协议的 Web 服务器</li>
-</ul>
-<p>百度百科上说 uwsgi 是一种线路协议而不是通信协议，个人更倾向于 uwsgi 是类似 WSGI 的通信协议的说法，uwsgi 和 WSGI 都是基于 CGI 扩展出来的。</p>
-<h2 id="ASGI"><a href="#ASGI" class="headerlink" title="ASGI"></a>ASGI</h2><p><strong>异步网关协议接口</strong>，一个介于网络协议服务和 Python 应用之间的标准接口，能够处理多种通用的协议类型，包括 HTTP，HTTP2 和 WebSocket。<br>然而目前的常用的 WSGI 主要是针对 HTTP 风格的请求响应模型做的设计，并且越来越多的不遵循这种模式的协议逐渐成为 Web 变成的标准之一，例如 WebSocket。</p>
-<p>ASGI 尝试保持在一个简单的应用接口的前提下，提供允许数据能够在任意的时候、被任意应用进程发送和接受的抽象。并且同样描述了一个新的，兼容 HTTP 请求响应以及 WebSocket 数据帧的序列格式。允许这些协议能通过网络或本地 socket 进行传输，以及让不同的协议被分配到不同的进程中。</p>
-<h3 id="WSGI-和-ASGI-的区别"><a href="#WSGI-和-ASGI-的区别" class="headerlink" title="WSGI 和 ASGI 的区别"></a>WSGI 和 ASGI 的区别</h3><p>WSGI 是基于 HTTP 协议模式的，不支持 WebSocket，而 ASGI 的诞生则是为了解决 Python 常用的 WSGI 不支持当前 Web 开发中的一些新的协议标准。同时，ASGI 对于 WSGI 原有的模式的支持和 WebSocket 的扩展，即 ASGI 是 WSGI 的扩展。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wanghetao/p/3934350.html">https://www.cnblogs.com/wanghetao/p/3934350.html</a><br><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/fastcgi/10880685">https://baike.baidu.com/item/fastcgi/10880685</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/679dee0a4193">https://www.jianshu.com/p/679dee0a4193</a><br><a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1590941335729952485%ED%94%B4=spider&for=pc">https://baijiahao.baidu.com/s?id=1590941335729952485픴=spider&amp;for=pc</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35318838/article/details/61198183">https://blog.csdn.net/qq_35318838/article/details/61198183</a></p>
-<p>#</p>
 
             </div>
             <hr/>
@@ -631,7 +653,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://owen2016.github.io/2021/02/24/yuque/ny150b/">https://owen2016.github.io/2021/02/24/yuque/ny150b/</a>
+                    <a href="https://owen2016.github.io/2022/07/31/yuque/uoewdh/">https://owen2016.github.io/2022/07/31/yuque/uoewdh/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -834,54 +856,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/03/12/yuque/xqn5e9/">
+                <a href="/2022/07/31/yuque/uoewdh/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="语雀-用户初体验">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="语雀文档同步到Hexo博客">
                         
-                        <span class="card-title">语雀-用户初体验</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-12
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Owen Li
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/09/05/devops/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="DevOps 实战">
-                        
-                        <span class="card-title">DevOps 实战</span>
+                        <span class="card-title">语雀文档同步到Hexo博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -892,27 +878,53 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-31
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
-                                    运维
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Owen Li
                             
                         </span>
                     </div>
                 </div>
+
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%BF%90%E7%BB%B4/">
-                        <span class="chip bg-color">运维</span>
-                    </a>
-                    
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/07/30/yuque/dgegwt/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Markdown快速入门">
+                        
+                        <span class="card-title">Markdown快速入门</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Owen Li
+                            
+                        </span>
+                    </div>
                 </div>
                 
             </div>
