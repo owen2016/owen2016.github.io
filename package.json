@@ -3,13 +3,38 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "build": "hexo generate",
         "clean": "hexo clean",
-        "deploy": "hexo deploy",
+        "clean:yuque": "yuque-hexo clean",
+        "build": "hexo generate",        
+        "deploy": "yuque-hexo sync && hexo deploy",
+        "sync": "yuque-hexo sync",
+        "reset": "npm run clean:yuque && npm run sync",
         "server": "hexo server"
     },
     "hexo": {
         "version": "5.2.0"
+    },
+    "yuqueConfig": {
+        "postPath": "source/_posts/yuque",
+        "cachePath": "yuque.json",
+        "mdNameFormat": "slug",
+        "adapter": "hexo",
+        "concurrency": 5,
+        "baseUrl": "https://www.yuque.com/api/v2",
+        "login": "binowen",
+        "repo": "blog",
+        "token": "2CA6vws8MQbK5jNou7I56jl7hk34aigRfcrLE0as",
+        "onlyPublished": true,
+        "onlyPublic": true,
+        "lastGeneratePath": "lastGeneratePath.log",
+        "imgCdn": {
+            "enabled": false,
+            "imageBed": "qiniu",
+            "host": "",
+            "bucket": "",
+            "region": "",
+            "prefixKey": ""
+        }
     },
     "dependencies": {
         "hexo": "^5.0.0",
@@ -33,5 +58,8 @@
         "hexo-server": "^2.0.0",
         "hexo-wordcount": "^6.0.1",
         "live2d-widget-model-shizuku": "^1.0.5"
-    }
+    },
+    "devDependencies": {
+        "yuque-hexo": "^1.6.5"
+      }
 }
