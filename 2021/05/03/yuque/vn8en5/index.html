@@ -1,0 +1,1314 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="Git 在团队中的最佳实践, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="description" content="Every failure is leading towards success.">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <!-- 表示页面同时适合在移动设备和PC上进行浏览。 -->
+        <meta name="applicable-device" content="pc,mobile">
+        <meta name="renderer" content="webkit|ie-stand|ie-comp">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <!-- 添加百度统计和谷歌统计代码 -->
+        <meta name="baidu-site-verification" content="code-KajABoHffk" />
+        <!-- <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
+        <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+            <title>
+                Git 在团队中的最佳实践 | DevOps在路上
+            </title>
+            <link rel="icon" type="image/png" href="/favicon.png">
+
+            <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+            <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+            <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+            <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+            <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+            <link rel="stylesheet" type="text/css" href="/css/matery.css">
+            <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+
+            <script src="/libs/jquery/jquery.min.js"></script>
+
+    <meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="DevOps在路上" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">DevOps在路上</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">DevOps在路上</div>
+        <div class="logo-desc">
+            
+            Every failure is leading towards success.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/owen2016/owen2016.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/owen2016/owen2016.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Git 在团队中的最佳实践</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-05-03
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-07-31
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    15 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>现代软件开发过程中要实现高效的团队协作，需要使用代码分支管理工具实现代码的共享、追溯、回滚及维护等功能。目前流行的代码管理工具，包括 CVS，SVN，Git，Mercurial 等。</p>
+<p>相比 CVS 和 SVN 的集中管理，Git 具有非常明显的优势，<strong>例如：去中心化的代码管理方式减少了开发者对中心服务器的依赖，每个成员在本地都有一个完整的代码库，在不联网的情况下也能提交代码；不同于 SVN 中的每个分支具有独立的代码，Git 中的每一个分支只是指向当前版本的一个指针，Git 的分支策略使创建和合并分支变得快捷灵活</strong>。</p>
+<p>根据开源社区网站 OpenHub 的统计，使用 Git 管理代码的项目逐年快速增加，如今 Git 在代码管理领域已经占据主导地位。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1620048579072-f2416483-61a4-4d39-b1bb-f60fd4a7bef8.png#clientId=u26d01617-abe4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=462&id=u9fb555b3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=525&originWidth=720&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=42133&status=done&style=none&taskId=u5a960790-1542-4db9-910e-93859feb3a5&title=&width=634" alt="image.png"><br>从百度指数，也可以看到 Git 的优势被越来越多的人所认可。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1620048686121-0fe5f3c1-d5ca-4956-8a27-75b4ebd86397.png#clientId=u26d01617-abe4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=315&id=uc0e4a818&margin=%5Bobject%20Object%5D&name=image.png&originHeight=476&originWidth=1235&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=91375&status=done&style=none&taskId=u8717a9cd-6909-4bda-b1fa-a441b8e0fba&title=&width=818" alt="image.png"></p>
+<h2 id="Git-的优势"><a href="#Git-的优势" class="headerlink" title="Git 的优势"></a>Git 的优势</h2><ul>
+<li>Git 可以在本地进行提交以支持离线工作；</li>
+<li>Git 可以在本地创建分支并且没有命名空间冲突的问题；</li>
+<li>Git 可以让提交通过 Pull Request 的方式进行，不需要所有的开发者都有主仓库的写权限；</li>
+<li>Git 在优化性能时选择了合并分支作为主要的性能衡量指标，将合并分支变成了成本非常低的操作以鼓励分支的使用；</li>
+<li>Git 通过 SHA-1 哈希来保证仓库中数据的可靠性，通过 SHA-1 就可以对数据进行校验，抵御了来自攻击者的恶意篡改；</li>
+</ul>
+<p>Git 作为分布式的代码管理工具，越来越多的团队开始使用它并逐步替代集中式的 SVN 或 TFVC，同时也面临新的挑战。这里我将从以下几个方面总结分享一些最佳实践。</p>
+<h2 id="版本管理的挑战"><a href="#版本管理的挑战" class="headerlink" title="版本管理的挑战"></a>版本管理的挑战</h2><p>大家工作在同一个仓库上，那么彼此的代码协作必然带来很多问题和挑战，如下：</p>
+<ol>
+<li><strong>如何开始一个 Feature 的开发，而不影响别的 Feature？</strong></li>
+<li><strong>由于很容易创建新分支，分支多了如何管理，时间久了，如何知道每个分支是干什么的？</strong></li>
+<li><strong>哪些分支已经合并回了主干？</strong></li>
+<li><strong>如何进行 Release 的管理？开始一个 Release 的时候如何冻结 Feature, 如何在 Prepare Release 的时候，开发人员可以继续开发新的功能？</strong></li>
+<li><strong>线上代码出 Bug 了，如何快速修复？而且修复的代码要包含到开发人员的分支以及下一个 Release?</strong></li>
+</ol>
+<p>大部分开发人员现在使用 Git 就只是用三个甚至两个分支，一个是 Master, 一个是 Develop, 还有一个是基于 Develop 打得各种分支。这个在小项目规模的时候还勉强可以支撑，因为很多人做项目就只有一个 Release, 但是人员一多，而且项目周期一长就会出现各种问题。</p>
+<h2 id="Git-代码分支模型"><a href="#Git-代码分支模型" class="headerlink" title="Git 代码分支模型"></a>Git 代码分支模型</h2><p>在使用 Git 管理代码以及多人协作的开发模式下，一个团队甚至一个公司对 Git 的使用有统一规范的工作流程尤为重要<br>开发团队遵循统一的规则执行功能开发，问题修复，分支合并，版本迭代及发布等操作，可以使团队合作变得平滑顺畅，项目有序向前推进，<br>我们把组织内这样的工作流程（workflow）称为 Git 代码分支管理模型</p>
+<p><strong>主流的 git 代码分支管理模型：</strong></p>
+<ul>
+<li>Git flow</li>
+<li>GitHub flow</li>
+<li>GitLab flow</li>
+<li>TBD flow</li>
+</ul>
+<h3 id="1-Git-flow"><a href="#1-Git-flow" class="headerlink" title="1. Git flow"></a>1. Git flow</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1620049024903-7c5d1c7a-7c57-4c25-a3c4-63378f34661c.png#clientId=u26d01617-abe4-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=456&id=ud3a95db8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=503&originWidth=763&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=49143&status=done&style=none&taskId=u328f578c-02c8-4516-8ab3-59f32b81158&title=&width=691" alt="image.png"><br><strong>Git flow 存在两个长期的独立分支：主分支 master 和开发分支 develop，</strong></p>
+<ul>
+<li>主分支: 用于版本发布，主分支的每个版本都是质量稳定和功能齐全的发布版。</li>
+<li>开发分支: 用于日常开发工作，存放最新的开发版代码。当开发分支的代码达到稳定状态并可以发布版本时，代码需要被合并到 master 分支，然后标记上对应的版本标签（tag）。</li>
+</ul>
+<p>如果需要开发新的功能或者解决代码中的问题，则创建辅助分支来解决问题，辅助分支常用于：</p>
+<ul>
+<li><strong>功能开发（Feature），</strong></li>
+<li><strong>版本发布（Release），</strong></li>
+<li><strong>问题修复（Hotfix），</strong></li>
+</ul>
+<p>在辅助分支上的工作完成后，辅助分支将被删除。</p>
+<p><strong>## Feature 分支</strong><br>目的是开发新模块或新功能以满足客户需求，从 develop 分支创建，开发结束后只需要合并回 develop 分支，并不需要合并回 master 主分支。</p>
+<p><strong>## Release 分支</strong><br>是用于准备发布的版本分支，从 develop 分支创建，创建时已经包含了发布所需要的所有功能，所以在这个分支上不再开发新功能，仅对这个预发布版本进行修复问题，创建文档及其他与发布相关的工作，<br>一切就绪后将 Release 分支合并回 master 主分支并打上相应的版本号标签（Tag），同时也合并回 develop 分支。<br>创建单独的 Release 分支可以避免在不同发布版本上的工作互相受影响，例如团队 A 准备发布版本 1.0 的同时，团队 B 正在进行版本 1.1 的功能开发，二者相互独立，不会互相影响。</p>
+<p><strong>## Hotfix 分支</strong><br>通常用于紧急修复当前发布的版本中出现的严重问题，从发布版本的标签或 master 主分支创建，问题修复后合并回 master 主分支并打上新的版本号标签（Tag），同时也合并回 develop 分支或者正在进行中的 Release 分支。<br>创建单独的 Hotfix 分支可以避免打断正在进行中的各项开发工作，客户也不需要等到下一个发布周期才能拿到修复。</p>
+<p>Git flow 需要同时维护两个甚至更多分支，Hotfix 分支从 master 创建，Release 和 Feature 分支从 develop 创建，工作完成后又需要将代码合并回 develop 和 master。</p>
+<p>在实际应用中，很多开发者会忘记合并回 develop 或者 master，并且各辅助分支之间互相独立，<br>如果从 master 上 pull 代码不够及时，一方面可能造成某个分支长期使用已经过时或者错误的代码，另一方面如果与 master 相隔较远，合并分支时可能会有大量代码冲突，往往需要花费很多时间来消除代码冲突，并且非常容易出错，影响项目的持续集成。</p>
+<p>Git flow 的优点在于流程清晰，分支管理严格，适用于发布周期比较长的“版本发布”，发布周期可能是几周，几个月，甚至更长时间。<br>由于保持两个长期分支同步的开销较大，所以 Git flow 并不适用于快速的“持续发布”，ThoughtWorks 还专门将 Git flow 列为不被推荐的技术，建议彻底停止使用。</p>
+<h3 id="2-GitHub-flow"><a href="#2-GitHub-flow" class="headerlink" title="2. GitHub flow"></a>2. GitHub flow</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1620049318132-dbcdd62e-ce07-441a-b04a-ba0873a3684b.png#clientId=ud14d936f-bd46-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=257&id=uc88b0054&margin=%5Bobject%20Object%5D&name=image.png&originHeight=257&originWidth=763&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=30849&status=done&style=none&taskId=ue178d511-6cd5-493d-afb6-9586219bf40&title=&width=763" alt="image.png"></p>
+<p>GitHub flow 是由 Scott Chacon 于 2011 年提出的代码分支管理模型，这是 GitHub 官方推荐的开发流程，以快速部署为目标，目前大部分开源项目都遵循这一流程。</p>
+<p>Github flow 最大的特点是只有一个长期分支，即主分支 master，且主分支始终保持可发布状态。<br>从 master 上创建新分支进行功能开发、问题修复等，这些分支通过 pull request 将代码合并到 master。<br>为了保证主分支的代码质量，master 的权限只开放给一部分人。<br>Pull request 是请求别人 pull 你的代码库（repository），也就是把开发分支的代码经过代码评审并通过测试后，让有权限的管理员合并回 master。</p>
+<p>不过在实际情况中，代码评审不可能检查出提交的代码中的所有问题，所以对于每次提交的代码进行自动化测试，<br>主分支代码的自动化部署尤其重要，自动化测试能在产品部署前及时发现一部分问题，如果产品部署之后发现严重问题，自动化部署可以在最短时间内把产品回滚到上一个版本。</p>
+<h4 id="优点-amp-缺点"><a href="#优点-amp-缺点" class="headerlink" title="优点&amp;缺点"></a>优点&amp;缺点</h4><p>Github flow 的优点在于流程简单灵活，不需要考虑及管理太多的分支，适用于需要快速集成及“持续发布”的项目，这类项目可能需要每天发布一个版本，甚至一天发布多个版本。<br>但是对于应用场景比较复杂的情况，例如：多个环境下的产品部署，多个版本的发布或问题修复，只有一个 master 便会显得力不从心。</p>
+<h3 id="3-Gitlab-flow"><a href="#3-Gitlab-flow" class="headerlink" title="3. Gitlab flow"></a>3. Gitlab flow</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1620051820245-282bff01-1b2d-456b-bfb4-ee5a6c9db9bb.png#clientId=ud14d936f-bd46-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=517&id=u979528ba&margin=%5Bobject%20Object%5D&name=image.png&originHeight=517&originWidth=802&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=51727&status=done&style=none&taskId=uccec4fd8-61ab-4dae-9eef-238ce464b42&title=&width=802" alt="image.png"></p>
+<p>GitLab flow 是由 GitLab 的 CEO Sytse Sijbrandij 于 2014 年正式发布的代码分支管理模型，属于 GitHub flow 的演进版本。</p>
+<p>与 GitHub 相同之处是也存在一个长期主分支 mater，从 master 上创建新分支进行功能开发、问题修复等，结束后合并回 master。<br>与 GitHub 不同之处是 GitLab flow 又考虑多环境部署等现实因素，增加 production 产品分支用于在不同的环境下部署产品，或者从 master 的稳定版本创建 release 发布分支用于发布软件。</p>
+<p>如果在产品分支或者发布分支发现问题，就从对应版本分支创建修复分支，修复完成之后，GitLab flow 遵循 “上游优先” 的合并策略，也就是将代码先合并到 master，再合并到下游的 production 或 release 分支。</p>
+<p>和 Github flow 类似，master 的修改权限只开放给部分人，开发分支的工作完成后，代码通过 merge request（类似于 GitHub flow 中的 pull request）请求有权限的管理员把代码合并（merge）回主分支</p>
+<h3 id="4-TBD-flow"><a href="#4-TBD-flow" class="headerlink" title="4. TBD flow"></a>4. TBD flow</h3><p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1620051873878-946defd2-9fbe-4c95-a37c-e8241d71c156.png#clientId=ud14d936f-bd46-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=339&id=u623e853b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=339&originWidth=842&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=37470&status=done&style=none&taskId=uc1e4e96a-5dfa-4a14-8735-f2eb7fb1c87&title=&width=842" alt="image.png"></p>
+<p>TBD (Trunk-based Development) flow 是由 Paul Hammant 于 2013 年提出的模型。</p>
+<p>TBD flow 最大的特点是所有开发都基于主干 trunk，不再有长期的开发分支，要求所有的提交尽快回到主干，这样可以共享最新的代码，并且能尽可能地减少合并冲突。<br>如果需要发布版本，可以基于 trunk 直接生成新的分支用于发布。</p>
+<p>TBD flow 没有 pull 或者 push request，要求开发人员尽快把代码提交到主干分支，<br>但是 TBD flow 缺乏严格的流程来保证每一份提交代码的质量，如果一些项目开发人员众多且水平不一，同时工作在主分支上可能会在产品发布时才发现不可预知的问题，</p>
+<p>所以 TBD flow 更适用于需要快速迭代的产品，如果在主干分支上发现问题，可以快速进行修复再合并回主干分支。</p>
+<h3 id="5-TBD-flow"><a href="#5-TBD-flow" class="headerlink" title="5. TBD++ flow"></a>5. TBD++ flow</h3><h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1620052063951-d3f3cb4b-54b9-4338-a47a-1f29be6ab50f.png#clientId=ud14d936f-bd46-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=466&id=u80bb996e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=466&originWidth=802&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=63993&status=done&style=none&taskId=ub1e0c551-f173-429d-8de5-da858740a64&title=&width=802" alt="image.png"></h2><p>TBD++ flow 是 Arrus 公司软件研发部门从 2015 年开始一直沿用的 Git 分支管理模型，<br>产品项目的客户主要是电信级服务运营商，每个国家或地区的需求在主要功能上一致，<br>但在客户定制化方面又存在不少差异，同时项目开发周期较长，整个周期一般在 3 个月到 2 年之间，软件产品在项目前期需要有快速的迭代，在项目后期需要有稳定的发布版本。</p>
+<p>TBD++ flow 以敏捷开发为核心，同时吸收了以上几个主流模型的优点，主要特点如下</p>
+<h4 id="1-基于功能的主分支"><a href="#1-基于功能的主分支" class="headerlink" title="1. 基于功能的主分支"></a>1. 基于功能的主分支</h4><p>只存在一个长期的独立分支，即主分支 master，主分支上功能齐全，通过自动测试保证基本功能运行正常，因为自动测试覆盖不全面或者手动测试不及时，所以无法保证主分支的每个版本都是质量稳定的发布版，但是可以根据功能的完成程度直接从主分支上创建迭代版本用于针对不同客户或者不同时期的功能演示。基于 master 开发功能或者修复问题需要用到以下两个辅助分支：</p>
+<ul>
+<li>Feature 分支：为了开发新模块或新功能以满足客户需求，从主分支上创建 Feature 分支，但是并不要求 Feature 分支上所有的提交尽快回到主分支，开发完成并且通过代码评审及功能测试后才能合并回 master 主分支。为了共用主分支上的最新代码以及避免合并代码时解决代码冲突引起的额外开销，在功能开发过程中 Feature 分支需要始终与 master 保持同步。</li>
+<li>Bugfix 分支：基于主分支创建 Bugfix 分支修复主分支上发现的问题，修复完成并且通过代码评审后代码合并回 master 主分支。</li>
+</ul>
+<p>基于主分支的 Feature 分支和 Bugfix 分支完成后，开发者直接将代码合并回主分支 master，不需要像 GitLab 或 GitHub 那样依赖于少数几个有权限的管理员，这是因为如果一个项目中开发人员比较多的话，管理员没办法做到对每部分代码都熟悉或掌握，所以代码质量交由代码评审和功能测试来掌控，合并代码回主分支的操作由开发者自己完成。</p>
+<p>主分支上的新代码有时候可能因为评审或测试不全面而带来新问题，例如破坏其他功能模块，甚至影响整体功能。为了能尽早发现问题，主分支上的每次提交都会触发系统级自动化测试，并且周期性地对主分支进行人工测试。一旦发现问题，主分支的专职配置管理员（Software Configuration Manager，SCM）将根据问题的严重性和紧迫性决定是否需要直接回退引起问题的提交，或者基于 master 创建 bugfix 分支进行问题修复。</p>
+<p>####</p>
+<h4 id="2-基于发布的-Release-分支"><a href="#2-基于发布的-Release-分支" class="headerlink" title="2. 基于发布的 Release 分支"></a>2. 基于发布的 Release 分支</h4><p>Release 分支负责对外发布软件产品，每个 Release 分支也会配备专职版本配置管理员 SCM，SCM 具有对 Release 分支的最高管理权限。当 master 上已经包含了某个发布所需要的所有功能，并且没有已知的严重问题，此时由 SCM 从主分支上创建 Release 分支准备系统集成测试，和 Git flow 相同，在此分支上不再进行新功能的开发，仅在这个分支上进行修复问题，创建文档，客户参数配置及其他与发布相关的工作，这些代码同时也需要合并回 master 以确保主分支功能的完整性。<br>在每个 Release 分支正式发布前可能还需要将主分支上的一部分关键问题的修复选择性地同步（Cherry-pick）到 Release 分支，这个操作也是由 SCM 完成。</p>
+<p>Release 分支上的工作一切就绪并通过系统集成测试后，SCM 在 Release 分支上打上相应的版本号标签（Tag）进行发布，这点和 Git flow 在主分支上进行发布不同。</p>
+<p>软件产品发布之后，如果发现紧急或者严重的问题，此时需要基于版本发布时的 Release 分支标签创建 Hotfix 分支来修复此类问题，问题修复后合并回该 Release 分支以及其他同样需要此修复的 Release 分支，并打上新的版本号标签（Tag）用于发布，同时代码也需要合并回 master 以确保主分支的健壮性。</p>
+<h2 id="选择合适的分支模型"><a href="#选择合适的分支模型" class="headerlink" title="选择合适的分支模型"></a>选择合适的分支模型</h2><p>Git 代码分支管理模型各具特点，流程只是一个辅助工具，没有最好，只有最合适。<br>例如，</p>
+<ul>
+<li><strong>如果开发团队规模较小又比较分散，产品发布周期较短(例如:初创公司，或者开发的是一个网站或 Web 应用程序，在一天内可能需要发布多个版本)，可以选择 GitHub flow 或者 GitLab flow；</strong></li>
+<li><strong>如果开发团队规模较大，产品发布周期较长(例如:团队超过 20 人，采用了月度或季度发布周期，并且由一个团队负责并行开发多个项目)，可以选择 Git flow，发布周期较短可以选择 TBD flow；</strong></li>
+<li><strong>如果开发团队规模大，产品发布周期长，同时对敏捷的要求比较高，可以考虑 TBD++ flow。每个组织根据产品、项目、人员的特点找到最合适的模型才是共同的目标。</strong></li>
+</ul>
+<h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li>无需分支基于主干的开发是团队健康的重要标志<a target="_blank" rel="noopener" href="https://www.infoq.cn/article/tFwoy4gko3vJqp5oYYEO">https://www.infoq.cn/article/tFwoy4gko3vJqp5oYYEO</a></li>
+<li>别再推荐 Git Flow 了：<a target="_blank" rel="noopener" href="https://www.infoq.cn/article/i7m3UdTFLu1Lv2ai6abv">https://www.infoq.cn/article/i7m3UdTFLu1Lv2ai6abv</a></li>
+<li>一个成功的 Git 分支模型(译文)：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018087325">https://segmentfault.com/a/1190000018087325</a></li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Owen Li</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://blog.devopsing.site/2021/05/03/yuque/vn8en5/">http://blog.devopsing.site/2021/05/03/yuque/vn8en5/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Owen Li</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的鼓励是我前进的动力！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020234534.JPG" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020234556.JPG" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/05/06/yuque/rgp06g/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="DevOps工程师学习路径">
+                        
+                        <span class="card-title">DevOps工程师学习路径</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Owen Li
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/05/02/yuque/qpnkoi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="企业开始实践DevOps如何选择合适的工具平台？">
+                        
+                        <span class="card-title">企业开始实践DevOps如何选择合适的工具平台？</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Owen Li
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: DevOps在路上<br />'
+            + '文章作者: Owen Li<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="486899256"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+            
+                <div class="container row center-align" style="margin-bottom: 15px !important;">
+                    <div class="col s12 m8 l8 copy-right">
+                        Copyright&nbsp;&copy;
+                        <span id="year">2020</span>
+                        <a href="/about" target="_blank">
+                            Owen Li
+                        </a>
+                        |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;
+                        <a href="https://github.com/owen2016/owen2016.github.io" target="_blank">Matery</a>
+                        <br>
+                        
+                            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">124.9k</span>&nbsp;字
+                            
+                                
+                                    
+                                        
+                                            
+                                                
+                                                    <!-- <span id="busuanzi_container_site_pv" style='display:none'> -->
+                                                    <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+                                                    </span>
+                                                    
+                                                        
+                                                            <span id="busuanzi_container_site_uv">
+                                                                <!-- <span id="busuanzi_container_site_uv" style='display:none'> -->
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+                                                            </span>
+                                                            
+                                                                <br>
+                                                                
+                                                                    <span id="sitetime">载入运行时间...</span>
+                                                                    <script>
+                                                                        function siteTime() {
+                                                                            var seconds = 1000;
+                                                                            var minutes = seconds * 60;
+                                                                            var hours = minutes * 60;
+                                                                            var days = hours * 24;
+                                                                            var years = days * 365;
+                                                                            var today = new Date();
+                                                                            var startYear = "2020";
+                                                                            var startMonth = "1";
+                                                                            var startDate = "1";
+                                                                            var startHour = "0";
+                                                                            var startMinute = "0";
+                                                                            var startSecond = "0";
+                                                                            var todayYear = today.getFullYear();
+                                                                            var todayMonth = today.getMonth() + 1;
+                                                                            var todayDate = today.getDate();
+                                                                            var todayHour = today.getHours();
+                                                                            var todayMinute = today.getMinutes();
+                                                                            var todaySecond = today.getSeconds();
+                                                                            var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                                                                            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                                                                            var diff = t2 - t1;
+                                                                            var diffYears = Math.floor(diff / years);
+                                                                            var diffDays = Math.floor((diff / days) - diffYears * 365);
+                                                                            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                                                                            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                                                                                minutes);
+                                                                            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                                                                                diffMinutes * minutes) / seconds);
+                                                                            if (startYear == todayYear) {
+                                                                                document.getElementById("year").innerHTML = todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                                                                                    " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            } else {
+                                                                                document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                                                                                    " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            }
+                                                                        }
+                                                                        setInterval(siteTime, 1000);
+                                                                    </script>
+                                                                    
+                                                                        <br>
+                                                                        
+                                                                            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://www.beian.miit.gov.cn/" target="_blank">鄂ICP备2020017249号-1</a>
+            </span>
+                                                                            
+                    </div>
+                    <div class="col s12 m4 l4 social-link social-statis">
+                        
+    <a href="https://github.com/owen2016" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:libin95188@126.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="https://weibo.com/dreamfly95188" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/dreamfly95188" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/dream_fly" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/dream_fly" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+                    </div>
+                </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<!-- <script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 80000;
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script> -->
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?86e26a6f860a2299233e29f86f9f65a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

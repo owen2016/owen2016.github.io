@@ -1,0 +1,1297 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="对象存储服务-Minio, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="description" content="Every failure is leading towards success.">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <!-- 表示页面同时适合在移动设备和PC上进行浏览。 -->
+        <meta name="applicable-device" content="pc,mobile">
+        <meta name="renderer" content="webkit|ie-stand|ie-comp">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <!-- 添加百度统计和谷歌统计代码 -->
+        <meta name="baidu-site-verification" content="code-KajABoHffk" />
+        <!-- <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
+        <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+            <title>
+                对象存储服务-Minio | DevOps在路上
+            </title>
+            <link rel="icon" type="image/png" href="/favicon.png">
+
+            <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+            <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+            <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+            <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+            <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+            <link rel="stylesheet" type="text/css" href="/css/matery.css">
+            <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+
+            <script src="/libs/jquery/jquery.min.js"></script>
+
+    <meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="DevOps在路上" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">DevOps在路上</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">DevOps在路上</div>
+        <div class="logo-desc">
+            
+            Every failure is leading towards success.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/owen2016/owen2016.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/owen2016/owen2016.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">对象存储服务-Minio</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-25
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-07-31
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    7 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><strong>对象存储服务（Object Storage Service，OSS</strong>）是一种海量、安全、低成本、高可靠的云存储服务，适合存放任意类型的文件。容量和处理能力弹性扩展，多种存储类型供选择，全面优化存储成本。</p>
+<h1 id="对象存储服务"><a href="#对象存储服务" class="headerlink" title="对象存储服务"></a>对象存储服务</h1><p>在项目开发过程中，我们会产生大量的对象数据，包括：日志文件，数据库脚本文件、安装包，容器镜像，图像、视频等等，我们不仅仅是需要有一个集中的地方来存储，还需要能基于 Web 的方式来访问它们，以往我们有以下几种方法来解决：</p>
+<ul>
+<li>阿里云、Azure 等云服务商提供的 SaaS 级别的 OSS 服务</li>
+<li>自己搭建 NAS 网络存储通过 Samba 服务来访问</li>
+<li>自己搭建 FTP 服务器来存储</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616687824999-55666588-2d09-46e9-bcfb-6de25befec39.png#align=left&display=inline&height=320&margin=%5Bobject%20Object%5D&name=image.png&originHeight=320&originWidth=626&size=91754&status=done&style=none&width=626" alt="image.png"></p>
+<p>本篇文章主要介绍下其中的 Minio 方案</p>
+<h1 id="Minio"><a href="#Minio" class="headerlink" title="Minio"></a>Minio</h1><p><img src="https://cdn.nlark.com/yuque/0/2021/jpeg/5374140/1616841442916-a0aebceb-8506-441f-bc1b-2aa4b6e81318.jpeg#align=left&display=inline&height=128&margin=%5Bobject%20Object%5D&originHeight=400&originWidth=1200&size=0&status=done&style=none&width=385"><br>Minio 是 GlusterFS 创始人之一 Anand Babu Periasamy 发布新的开源项目。Minio 兼容 Amason 的 S3 分布式对象存储项目，采用 Golang 实现，客户端支持 Java,Python,Javacript, Golang 语言。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/svg/5374140/1616850954773-f56d6dad-f09f-48a2-8d68-698ab4f01d68.svg#align=left&display=inline&height=122&margin=%5Bobject%20Object%5D&originHeight=186&originWidth=800&size=0&status=done&style=none&width=524"></p>
+<p>Minio 是建立在云原生的基础上；有分布式和共享存储等功能；旨在多租户环境中以可持续的方式进行扩展的对象存储服务。它最适合存储非结构化数据，如：照片、视频、日志文件、容器/虚拟机/映像等，单次存储对象的大小最大可达 5TB</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://min.io/">https://min.io/</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.minio.org.cn/">http://www.minio.org.cn/</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/minio/minio-service">minio/minio-service: Collection of MinIO server scripts for upstart, systemd, sysvinit, launchd. (github.com)</a></li>
+</ul>
+<h2 id="Minio-架构"><a href="#Minio-架构" class="headerlink" title="Minio 架构"></a>Minio 架构</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616687945743-43cf8f65-e12b-427d-85f5-22e731990a65.png#align=left&display=inline&height=452&margin=%5Bobject%20Object%5D&name=image.png&originHeight=452&originWidth=740&size=137885&status=done&style=none&width=740" alt="image.png"></p>
+<p><strong>左边是 MINIO 集群的示意图</strong>，整个集群是由多个角色完全相同的节点所组成的。因为没有特殊的节点，所以任何节点宕机都不会影响整个集群节点之间的通信。通过 rest 跟 RPC 去通信的，主要是实现分布式的锁跟文件的一些操作</p>
+<p><strong>右边这张图是单个节点的示意图</strong>，每个节点都单独对外提供兼容 S3 的服务</p>
+<h2 id="为什么要用-Minio"><a href="#为什么要用-Minio" class="headerlink" title="为什么要用 Minio"></a>为什么要用 Minio</h2><ul>
+<li>1、Minio 有良好的存储机制</li>
+<li>2、Minio 有很好纠删码的算法与擦除编码算法</li>
+<li>3、拥有 RS code 编码数据恢复原理</li>
+<li>4、公司做强做大时，数据的拥有重要性，对数据治理与大数据分析做准备。</li>
+<li>5、搭建自己的一套文件系统服务,对文件数据进行安全保护。</li>
+<li>6、拥有自己的平台，不限于其他方限制。</li>
+</ul>
+<p>###</p>
+<h3 id="存储机制"><a href="#存储机制" class="headerlink" title="存储机制"></a>存储机制</h3><ul>
+<li>Minio 使用纠删码 erasure code 和校验和 checksum 来保护数据免受硬件故障和无声数据损坏。 即便丢失一半数量（N/2）的硬盘，仍然可以恢复数据。</li>
+</ul>
+<p>**</p>
+<h3 id="纠删码"><a href="#纠删码" class="headerlink" title="纠删码"></a>纠删码</h3><ul>
+<li>纠删码是一种恢复丢失和损坏数据的数学算法，目前，纠删码技术在分布式存储系统中的应用主要有三类，阵列纠删码（Array Code: RAID5、RAID6 等）、RS(Reed-Solomon)里德-所罗门类纠删码和 LDPC(LowDensity Parity Check Code)低密度奇偶校验纠删码。Erasure Code 是一种编码技术，它可以将 n 份原始数据，增加 m 份数据，并能通过 n+m 份中的任意 n 份数据，还原为原始数据。即如果有任意小于等于 m 份的数据失效，仍然能通过剩下的数据还原出来</li>
+</ul>
+<h2 id="MinIO-概念"><a href="#MinIO-概念" class="headerlink" title="MinIO 概念"></a>MinIO 概念</h2><p>如下图，<strong>每一行是一个机器节点</strong>，这里有 32 个集群，<strong>每个节点里有一个小方块，我们称之为 Drive，Drive 可简单地理解为磁盘</strong>。一个节点有 32 个 Drive，相当于 32 个磁盘。</p>
+<p><strong>Set 是一组 Drive 的集合</strong>，所有红色标识的 Drive 组成了一个 Set。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616688028544-2d4661ff-7d44-427e-a7b2-4e98922fbaec.png#align=left&display=inline&height=298&margin=%5Bobject%20Object%5D&name=image.png&originHeight=298&originWidth=299&size=58821&status=done&style=none&width=299" alt="image.png"><br>一个对象存储在一个 Set 上; 一个集群划分为多个 Set<br>一个 Set 包含的 Drive 数量是固定的, 默认由系统根据集群规模自动计算得出 MINIO_ERASURE_SET_DRIVE_COUNT<br>一个 SET 中的 Drive 尽可能分布在不同的节点上</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>Minio 提供了两种部署方式：单机部署和分布式，两种部署方式都非常简单，其中分布式部署还提供了纠删码功能来降低数据丢失的风险</p>
+<h3 id="单机部署："><a href="#单机部署：" class="headerlink" title="单机部署："></a>单机部署：</h3><p><code>wget </code><a target="_blank" rel="noopener" href="https://dl.min.io/server/minio/release/linux-amd64/minio"><code>https://dl.min.io/server/minio/release/linux-amd64/minio</code></a><code> chmod +x minio ./minio server /data`` #``若``/data``目录不存在，要新建一个</code></p>
+<h3 id="Docker-部署-Minio"><a href="#Docker-部署-Minio" class="headerlink" title="Docker 部署 Minio"></a>Docker 部署 Minio</h3><p><code>mkdir /data/minio-data&amp;&amp;mkdir /data/minio-config # 创建一个数据存储目录</code><br><code>docker run -p 9000:9000 --name minio \</code><br><code>-d --restart=always \</code><br><code>-e &quot;MINIO_ACCESS_KEY=admin&quot; \</code><br><code>-e &quot;MINIO_SECRET_KEY=admin123456&quot; \</code><br><code>-v /``data``/``minio-``data:/data \</code><br><code>-v /``d``ata``/``minio-``config:/root/.minio \</code><br><code>minio/minio server /data</code></p>
+<p><a target="_blank" rel="noopener" href="http://localhost:9000/">http://localhost:9000/</a> 即可登陆 Minio 的管理界面</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616688607585-b362ae32-41e7-40b0-a653-391015b514c3.png#align=left&display=inline&height=295&margin=%5Bobject%20Object%5D&name=image.png&originHeight=295&originWidth=1303&size=22817&status=done&style=none&width=1303" alt="image.png"></p>
+<p>##</p>
+<h2 id="分布式-Minio"><a href="#分布式-Minio" class="headerlink" title="分布式 Minio"></a>分布式 Minio</h2><p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616688683921-36c53272-58fe-43e1-98ef-060e091fdac2.png#align=left&display=inline&height=557&margin=%5Bobject%20Object%5D&name=image.png&originHeight=557&originWidth=1008&size=135743&status=done&style=none&width=1008" alt="image.png"><br>单机 Minio 服务存在单点故障，相反，如果是一个有 m 台服务器， n 块硬盘的分布式 Minio,只要有 m/2 台服务器或者 m*n/2 及更多硬盘在线，你的数据就是安全的。</p>
+<p>例如，一个 16 节点的 Minio 集群，每个节点 200 块硬盘，就算 8 台服務器宕机，即大概有 1600 块硬盘，这个集群仍然是可读的，不过你需要 9 台服務器在线才能写数据。<br><code>export MINIO_ACCESS_KEY=&lt;ACCESS_KEY&gt;</code><br><code>export MINIO_SECRET_KEY=&lt;SECRET_KEY&gt;</code><br><code>minio server </code><a target="_blank" rel="noopener" href="http://host/"><code>http://host</code></a><code>&#123;1...n&#125;/export&#123;1...m&#125; </code><a target="_blank" rel="noopener" href="http://host/"><code>http://host</code></a><code>&#123;1...o&#125;/export&#123;1...m&#125;</code></p>
+<p>当然如果我们只有一台机器，但是想用纠删码的功能，也可以直接配置使用多个本地盘<br><code>minio server /data1 /data2 /data3 ... /data8</code></p>
+<p>##</p>
+<h2 id="Minio-配置"><a href="#Minio-配置" class="headerlink" title="Minio 配置"></a>Minio 配置</h2><p>默认的配置目录是  ${HOME}/.minio，你可以使用–config-dir 命令行选项重写之。MinIO server 在首次启动时会生成一个新的 config.json，里面带有自动生成的访问凭据。<br><code>minio server --config-dir /etc/minio /data</code></p>
+<ul>
+<li><strong>证书目录</strong></li>
+</ul>
+<p>TLS 证书存在${HOME}/.minio/certs 目录下，你需要将证书放在该目录下来启用 HTTPS</p>
+<ul>
+<li><strong>凭据</strong></li>
+</ul>
+<p>只能通过环境变量 MINIO_ROOT_USER  和  MINIO_ROOT_PASSWORD  更改 MinIO 的 admin 凭据和 root 凭据。使用这两个值的组合，MinIO 加密存储在后端的配置</p>
+<p><code>export MINIO_ROOT_USER=minio</code><br><code>export MINIO_ROOT_PASSWORD=minio13</code><br><code>minio server /data</code></p>
+<h2 id="如何存储和访问对象"><a href="#如何存储和访问对象" class="headerlink" title="如何存储和访问对象"></a>如何存储和访问对象</h2><p>将对象数据存储到 Minio 中有以下几种方式：<br>• 通过  MINIO CLIENT<br>• 通过  MINIO SDK  目前支持的语言包括：Go，Java，Node.js，Python，.NET<br>• 通过浏览器访问 Web 管理界面，在管理界面中上传和下载对象<br>• 如果你有存储目录  minio-data  的账号和访问权限，可以直接使用 SCP 命令将数据写入磁盘</p>
+<h3 id="MinIO-Client-mc"><a href="#MinIO-Client-mc" class="headerlink" title="MinIO Client (mc)"></a>MinIO Client (mc)</h3><p><code>wget </code><a target="_blank" rel="noopener" href="https://dl.min.io/client/mc/release/linux-amd64/mc"><code>https://dl.min.io/client/mc/release/linux-amd64/mc</code></a><br><code>chmod +x mc</code></p>
+<p>MinIO Client (mc)为 ls，cat，cp，mirror，diff，find 等 UNIX 命令提供了一种替代方案。它支持文件系统和兼容 Amazon S3 的云存储服务（AWS Signature v2 和 v4）。</p>
+<h4 id="命令使用"><a href="#命令使用" class="headerlink" title="命令使用"></a>命令使用</h4><p><code>ls ``列出文件和文件夹。`` mb ``创建一个存储桶或一个文件夹。`` cat ``显示文件和对象内容。`` pipe ``将一个``STDIN``重定向到一个对象或者文件或者``STDOUT``。`` share ``生成用于共享的``URL``。`` cp ``拷贝文件和对象。`` mirror ``给存储桶和文件夹做镜像。`` find ``基于参数查找文件。`` diff ``对两个文件夹或者存储桶比较差异。`` rm ``删除文件和对象。`` events ``管理对象通知。`` watch ``监听文件和对象的事件。`` policy ``管理访问策略。`` session ``为``cp``命令管理保存的会话。`` config ``管理``mc``配置文件。`` update ``检查软件更新。`` version ``输出版本信息。</code></p>
+<p>##</p>
+<p><strong>列出 Mino 服务端</strong><br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616840462896-f6c5a2bd-562c-49c9-8d95-bc3f530ae95c.png#align=left&display=inline&height=379&margin=%5Bobject%20Object%5D&name=image.png&originHeight=379&originWidth=493&size=37287&status=done&style=none&width=493" alt="image.png"><br><strong>命令行创建 bucket</strong></p>
+<h3 id=""><a href="#" class="headerlink" title=""></a><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616840502464-6155acbc-4744-4434-9a62-5ee3a346eeb5.png#align=left&display=inline&height=166&margin=%5Bobject%20Object%5D&name=image.png&originHeight=166&originWidth=477&size=26220&status=done&style=none&width=477" alt="image.png"></h3><h3 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1616840510944-6e6085fd-2253-49bd-ac92-2cf932de3949.png#align=left&display=inline&height=414&margin=%5Bobject%20Object%5D&name=image.png&originHeight=414&originWidth=607&size=32039&status=done&style=none&width=607" alt="image.png"></h3><h3 id="通过代码存储对象"><a href="#通过代码存储对象" class="headerlink" title="通过代码存储对象"></a>通过代码存储对象</h3><p><code>// ``构造访问对象`` var minio = new MinioClient(&quot;localhost:9000&quot;,&quot;accessKey&quot;,&quot;secretKey&quot;);</code><br><code>// ``输出所有的`` Buckets `` var rs = minio.ListBucketsAsync(); foreach (varbucket in rs.Result.Buckets) &#123; Console.Out.WriteLine(bucket.Name + &quot; &quot; + bucket.CreationDateDateTime); &#125;</code><br><code>// ``存储对象`` var bucketName = &quot;logs&quot;; var objectName = &quot;logs.zip&quot;; var filePath = &quot;c:\\logs.zip&quot;; var contentType = &quot;application/zip&quot;; minio.PutObjectAsync(bucketName, objectName, filePath, contentType);</code><br><code>// ``获取对象`` var find = minio.GetObjectAsync(bucketName, objectName);</code></p>
+<p>##</p>
+<p>##</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Owen Li</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://blog.devopsing.site/2021/03/25/yuque/oc2pz7/">http://blog.devopsing.site/2021/03/25/yuque/oc2pz7/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Owen Li</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的鼓励是我前进的动力！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020234534.JPG" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020234556.JPG" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/03/31/yuque/oggaga/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="前后端常见鉴权方式">
+                        
+                        <span class="card-title">前后端常见鉴权方式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-31
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Owen Li
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/19/yuque/sehau1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="“if __name__==&#39;__main__&#39;:”">
+                        
+                        <span class="card-title">“if __name__==&#39;__main__&#39;:”</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Owen Li
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: DevOps在路上<br />'
+            + '文章作者: Owen Li<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="486899256"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+            
+                <div class="container row center-align" style="margin-bottom: 15px !important;">
+                    <div class="col s12 m8 l8 copy-right">
+                        Copyright&nbsp;&copy;
+                        <span id="year">2020</span>
+                        <a href="/about" target="_blank">
+                            Owen Li
+                        </a>
+                        |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;
+                        <a href="https://github.com/owen2016/owen2016.github.io" target="_blank">Matery</a>
+                        <br>
+                        
+                            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">124.9k</span>&nbsp;字
+                            
+                                
+                                    
+                                        
+                                            
+                                                
+                                                    <!-- <span id="busuanzi_container_site_pv" style='display:none'> -->
+                                                    <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+                                                    </span>
+                                                    
+                                                        
+                                                            <span id="busuanzi_container_site_uv">
+                                                                <!-- <span id="busuanzi_container_site_uv" style='display:none'> -->
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+                                                            </span>
+                                                            
+                                                                <br>
+                                                                
+                                                                    <span id="sitetime">载入运行时间...</span>
+                                                                    <script>
+                                                                        function siteTime() {
+                                                                            var seconds = 1000;
+                                                                            var minutes = seconds * 60;
+                                                                            var hours = minutes * 60;
+                                                                            var days = hours * 24;
+                                                                            var years = days * 365;
+                                                                            var today = new Date();
+                                                                            var startYear = "2020";
+                                                                            var startMonth = "1";
+                                                                            var startDate = "1";
+                                                                            var startHour = "0";
+                                                                            var startMinute = "0";
+                                                                            var startSecond = "0";
+                                                                            var todayYear = today.getFullYear();
+                                                                            var todayMonth = today.getMonth() + 1;
+                                                                            var todayDate = today.getDate();
+                                                                            var todayHour = today.getHours();
+                                                                            var todayMinute = today.getMinutes();
+                                                                            var todaySecond = today.getSeconds();
+                                                                            var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                                                                            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                                                                            var diff = t2 - t1;
+                                                                            var diffYears = Math.floor(diff / years);
+                                                                            var diffDays = Math.floor((diff / days) - diffYears * 365);
+                                                                            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                                                                            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                                                                                minutes);
+                                                                            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                                                                                diffMinutes * minutes) / seconds);
+                                                                            if (startYear == todayYear) {
+                                                                                document.getElementById("year").innerHTML = todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                                                                                    " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            } else {
+                                                                                document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                                                                                    " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            }
+                                                                        }
+                                                                        setInterval(siteTime, 1000);
+                                                                    </script>
+                                                                    
+                                                                        <br>
+                                                                        
+                                                                            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://www.beian.miit.gov.cn/" target="_blank">鄂ICP备2020017249号-1</a>
+            </span>
+                                                                            
+                    </div>
+                    <div class="col s12 m4 l4 social-link social-statis">
+                        
+    <a href="https://github.com/owen2016" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:libin95188@126.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="https://weibo.com/dreamfly95188" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/dreamfly95188" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/dream_fly" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/dream_fly" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+                    </div>
+                </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<!-- <script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 80000;
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script> -->
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?86e26a6f860a2299233e29f86f9f65a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -6,7 +6,7 @@
   <link href="http://blog.devopsing.site/atom.xml" rel="self"/>
   
   <link href="http://blog.devopsing.site/"/>
-  <updated>2021-05-31T16:09:10.361Z</updated>
+  <updated>2022-07-31T09:33:51.096Z</updated>
   <id>http://blog.devopsing.site/</id>
   
   <author>
@@ -17,343 +17,434 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>DevOps 实战</title>
-    <link href="http://blog.devopsing.site/2020/09/05/devops/"/>
-    <id>http://blog.devopsing.site/2020/09/05/devops/</id>
-    <published>2020-09-05T10:10:00.000Z</published>
-    <updated>2021-05-31T16:09:10.361Z</updated>
+    <title>Markdown快速入门</title>
+    <link href="http://blog.devopsing.site/2022/07/30/yuque/dgegwt/"/>
+    <id>http://blog.devopsing.site/2022/07/30/yuque/dgegwt/</id>
+    <published>2022-07-30T14:10:26.000Z</published>
+    <updated>2022-07-31T09:33:51.096Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;content&lt;br&gt;{:toc}&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;DevOps&quot;&gt;&lt;a href=&quot;#DevOps&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。&lt;/p&gt;
+&lt;p&gt;Markdown</summary>
         
       
     
     
     
-    <category term="运维" scheme="http://blog.devopsing.site/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-    <category term="运维" scheme="http://blog.devopsing.site/tags/%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
   <entry>
-    <title>Jenkins 凭证管理, 看着一篇就够了~</title>
-    <link href="http://blog.devopsing.site/2020/05/15/jenkins-ping-zheng-guan-li/"/>
-    <id>http://blog.devopsing.site/2020/05/15/jenkins-ping-zheng-guan-li/</id>
-    <published>2020-05-15T07:09:23.000Z</published>
-    <updated>2020-10-27T15:19:35.353Z</updated>
+    <title>MarkdownLint错误问题解释</title>
+    <link href="http://blog.devopsing.site/2022/07/30/yuque/ig16if/"/>
+    <id>http://blog.devopsing.site/2022/07/30/yuque/ig16if/</id>
+    <published>2022-07-30T11:19:22.000Z</published>
+    <updated>2022-07-31T09:33:51.097Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;p&gt;许多三方网站和应用可以与Jenkins交互，如Artifact仓库，基于云的存储系统和服务等. 在Jenkins中添加/配置credentials，Pipeline项目就可以使用 credentials 与三方应用交互&lt;/p&gt;
+    <summary type="html">&lt;p&gt;使用 VSCode 编写 Markdown 文件时，建议安装插件&lt;code&gt;markdownlint&lt;/code&gt;，它可以帮助自己更加规范的写文章.&lt;/p&gt;
+&lt;p&gt;下面是所有的 markdown 语法错误信息以便纠错。&lt;/p&gt;
 &lt;h2</summary>
         
       
     
     
     
-    <category term="DevOps" scheme="http://blog.devopsing.site/categories/DevOps/"/>
-    
-    
-    <category term="Jenkins, CI/CD" scheme="http://blog.devopsing.site/tags/Jenkins-CI-CD/"/>
     
   </entry>
   
   <entry>
-    <title>Agile, CI/CD, DevOps</title>
-    <link href="http://blog.devopsing.site/2020/03/27/agile-cicd-devops/"/>
-    <id>http://blog.devopsing.site/2020/03/27/agile-cicd-devops/</id>
-    <published>2020-03-27T14:51:05.000Z</published>
-    <updated>2020-10-20T14:53:44.377Z</updated>
+    <title>静态博客搭建工具汇总</title>
+    <link href="http://blog.devopsing.site/2022/07/26/yuque/ay63w4/"/>
+    <id>http://blog.devopsing.site/2022/07/26/yuque/ay63w4/</id>
+    <published>2022-07-26T15:12:05.000Z</published>
+    <updated>2022-07-31T09:33:51.097Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;随着DevOps理念的普及与扩散，可能会被一大堆名字概念搞的莫名其妙，理清它们之间的关系可以帮助团队知道DevOps如何落地，改善工作流程。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Here’s a quick and easy way to differentiate</summary>
+    <summary type="html">&lt;p&gt;Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll、Hugo、Hexo</summary>
         
       
     
     
     
-    <category term="DevOps" scheme="http://blog.devopsing.site/categories/DevOps/"/>
-    
-    
-    <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
     
   </entry>
   
   <entry>
-    <title>What is DevOps ?</title>
-    <link href="http://blog.devopsing.site/2020/02/27/what-is-devops/"/>
-    <id>http://blog.devopsing.site/2020/02/27/what-is-devops/</id>
-    <published>2020-02-27T14:51:05.000Z</published>
-    <updated>2020-10-20T15:29:43.426Z</updated>
+    <title>数据流图</title>
+    <link href="http://blog.devopsing.site/2022/07/15/yuque/gy7cen/"/>
+    <id>http://blog.devopsing.site/2022/07/15/yuque/gy7cen/</id>
+    <published>2022-07-15T03:58:36.000Z</published>
+    <updated>2022-07-31T09:33:51.097Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;最近几年”DevOps”这个关键词经常出现在项目开发当中，特别是随着微服务/容器/cloud在项目中的大范围应用，你不想知道都很难。作为一个伴随CI/CD到DevOps一路走来的工程师，我将分几个部分漫话DevOps以及相关的概念，作为软件开发工程</summary>
+    <summary type="html">&lt;h1 id=&quot;一、数据流图概念&quot;&gt;&lt;a href=&quot;#一、数据流图概念&quot; class=&quot;headerlink&quot; title=&quot;一、数据流图概念&quot;&gt;&lt;/a&gt;一、数据流图概念&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;数据流图&lt;/strong&gt;（Data Flow</summary>
         
       
     
     
     
-    <category term="DevOps" scheme="http://blog.devopsing.site/categories/DevOps/"/>
-    
-    
-    <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
     
   </entry>
   
   <entry>
-    <title>持续集成实践中的思考</title>
-    <link href="http://blog.devopsing.site/2020/02/20/chi-xu-ji-cheng-shi-jian-zhong-de-si-kao/"/>
-    <id>http://blog.devopsing.site/2020/02/20/chi-xu-ji-cheng-shi-jian-zhong-de-si-kao/</id>
-    <published>2020-02-20T14:51:05.000Z</published>
-    <updated>2020-11-17T14:29:56.815Z</updated>
+    <title>带你快速了解什么是敏捷Scrum</title>
+    <link href="http://blog.devopsing.site/2022/07/08/yuque/sowiwi/"/>
+    <id>http://blog.devopsing.site/2022/07/08/yuque/sowiwi/</id>
+    <published>2022-07-08T15:29:17.000Z</published>
+    <updated>2022-07-31T09:33:51.098Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;最近在看到ThoughtWorks的一篇技术文章提到“几项与持续集成相关的反模式”, 结合自己的实践体会特别有深切体会，所以记录下来&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;持续集成的反模式&quot;&gt;&lt;a href=&quot;#持续集成的反模式&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;Scrum-中的角色&quot;&gt;&lt;a href=&quot;#Scrum-中的角色&quot; class=&quot;headerlink&quot; title=&quot;Scrum 中的角色&quot;&gt;&lt;/a&gt;Scrum 中的角色&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Scrum</summary>
         
       
     
     
     
-    <category term="读书" scheme="http://blog.devopsing.site/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-    <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
     
   </entry>
   
   <entry>
-    <title>【读书】进化</title>
-    <link href="http://blog.devopsing.site/2019/11/16/dushu-jinhua/"/>
-    <id>http://blog.devopsing.site/2019/11/16/dushu-jinhua/</id>
-    <published>2019-11-16T07:09:23.000Z</published>
-    <updated>2020-10-17T13:39:22.079Z</updated>
+    <title>系统设计之架构图</title>
+    <link href="http://blog.devopsing.site/2022/06/20/yuque/ikzr14/"/>
+    <id>http://blog.devopsing.site/2022/06/20/yuque/ikzr14/</id>
+    <published>2022-06-20T15:37:34.000Z</published>
+    <updated>2022-07-31T09:33:51.098Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;关于&quot;&gt;&lt;a href=&quot;#关于&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;软件领域发展到今天，延伸出了企业架构、业务架构、应用架构、数据架构、产品架构、技术架构等一堆的名词。是不是有点晕了，这些架构都是用来干什么，它们之间有什么区别？不搞清楚它们之间的关系，产品架构从何谈起。&lt;/p&gt;
+&lt;h2 id=&quot;架构图的定义&quot;&gt;&lt;a</summary>
         
       
     
     
     
-    <category term="读书" scheme="http://blog.devopsing.site/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-    <category term="SRE" scheme="http://blog.devopsing.site/tags/SRE/"/>
     
   </entry>
   
   <entry>
-    <title>DevOps 我们都在路上</title>
-    <link href="http://blog.devopsing.site/2019/11/15/hello-devops/"/>
-    <id>http://blog.devopsing.site/2019/11/15/hello-devops/</id>
-    <published>2019-11-15T07:09:23.000Z</published>
-    <updated>2020-10-17T13:37:46.815Z</updated>
+    <title>最详尽教程完整介绍-Windows 的 Linux 子系统-WSL1&amp;WSL2</title>
+    <link href="http://blog.devopsing.site/2022/03/17/yuque/aeqg7c/"/>
+    <id>http://blog.devopsing.site/2022/03/17/yuque/aeqg7c/</id>
+    <published>2022-03-17T14:14:29.000Z</published>
+    <updated>2022-07-31T09:33:51.099Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;为什么会有这个博客&quot;&gt;&lt;a href=&quot;#为什么会有这个博客&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;安装-WSL&quot;&gt;&lt;a href=&quot;#安装-WSL&quot; class=&quot;headerlink&quot; title=&quot;安装 WSL&quot;&gt;&lt;/a&gt;安装 WSL&lt;/h2&gt;&lt;h3 id=&quot;1-开启-WSL&quot;&gt;&lt;a href=&quot;#1-开启-WSL&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="随笔" scheme="http://blog.devopsing.site/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
     
   </entry>
   
   <entry>
-    <title>DevOps 工具</title>
-    <link href="http://blog.devopsing.site/2019/10/02/devops-gong-ju/"/>
-    <id>http://blog.devopsing.site/2019/10/02/devops-gong-ju/</id>
-    <published>2019-10-02T14:51:05.000Z</published>
-    <updated>2020-12-01T13:14:01.530Z</updated>
+    <title>聊聊DevOps制品管理-不止是存储制品这么简单</title>
+    <link href="http://blog.devopsing.site/2022/01/14/yuque/rqeiq5/"/>
+    <id>http://blog.devopsing.site/2022/01/14/yuque/rqeiq5/</id>
+    <published>2022-01-14T13:31:42.000Z</published>
+    <updated>2022-07-31T09:33:51.099Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/owen2016/pic-hub/raw/master/pics/20200928233152.png&quot; alt=&quot;devops-tools&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;版本控制-amp-协作开发&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;什么是制品？&quot;&gt;&lt;a href=&quot;#什么是制品？&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="工具" scheme="http://blog.devopsing.site/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="DevOps" scheme="http://blog.devopsing.site/tags/DevOps/"/>
     
   </entry>
   
   <entry>
-    <title>JumpServer 架构浅解</title>
-    <link href="http://blog.devopsing.site/2019/08/16/jumpserver-jia-gou/"/>
-    <id>http://blog.devopsing.site/2019/08/16/jumpserver-jia-gou/</id>
-    <published>2019-08-16T07:09:23.000Z</published>
-    <updated>2020-11-17T14:31:50.986Z</updated>
+    <title>如何设计CI/CD流水线</title>
+    <link href="http://blog.devopsing.site/2021/12/20/yuque/aq3rz4/"/>
+    <id>http://blog.devopsing.site/2021/12/20/yuque/aq3rz4/</id>
+    <published>2021-12-20T15:53:18.000Z</published>
+    <updated>2022-07-31T09:33:51.099Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Jumpserver 是一款由python编写开源的跳板机(堡垒机)系统，实现了跳板机应有的功能。基于ssh协议来管理，客户端无需安装agent。完全开源，GPL授权 &lt;/p&gt;
-&lt;h2 id=&quot;设计思路&quot;&gt;&lt;a href=&quot;#设计思路&quot;</summary>
+    <summary type="html">&lt;p&gt;CICD 的目标是代码的快速、可靠上线运行，它应当以 DevOps 理念落地为核心，将好的 Coding 规范、运维策略融合入 CICD</summary>
         
       
     
     
     
-    <category term="SRE运维" scheme="http://blog.devopsing.site/categories/SRE%E8%BF%90%E7%BB%B4/"/>
-    
-    
-    <category term="JumpServer" scheme="http://blog.devopsing.site/tags/JumpServer/"/>
     
   </entry>
   
   <entry>
-    <title>Markdown 教程</title>
-    <link href="http://blog.devopsing.site/2019/07/02/markdown-guide/"/>
-    <id>http://blog.devopsing.site/2019/07/02/markdown-guide/</id>
-    <published>2019-07-02T14:51:05.000Z</published>
-    <updated>2020-10-17T13:39:36.252Z</updated>
+    <title>企业DevOps平台建设</title>
+    <link href="http://blog.devopsing.site/2021/12/15/yuque/yra64e/"/>
+    <id>http://blog.devopsing.site/2021/12/15/yuque/yra64e/</id>
+    <published>2021-12-15T15:00:47.000Z</published>
+    <updated>2022-07-31T09:33:51.099Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * #</summary>
+    <summary type="html">&lt;h2 id=&quot;平台固化-or-灵活？&quot;&gt;&lt;a href=&quot;#平台固化-or-灵活？&quot; class=&quot;headerlink&quot; title=&quot;平台固化 or 灵活？&quot;&gt;&lt;/a&gt;平台固化 or 灵活？&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
         
       
     
     
     
-    <category term="工具" scheme="http://blog.devopsing.site/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Markdown" scheme="http://blog.devopsing.site/tags/Markdown/"/>
     
   </entry>
   
   <entry>
-    <title>VS Code 使用</title>
-    <link href="http://blog.devopsing.site/2019/02/27/vscode-usage/"/>
-    <id>http://blog.devopsing.site/2019/02/27/vscode-usage/</id>
-    <published>2019-02-27T14:51:05.000Z</published>
-    <updated>2020-10-26T14:14:03.693Z</updated>
+    <title>CI/CD场景价值</title>
+    <link href="http://blog.devopsing.site/2021/12/06/yuque/evq8l3/"/>
+    <id>http://blog.devopsing.site/2021/12/06/yuque/evq8l3/</id>
+    <published>2021-12-06T15:35:33.000Z</published>
+    <updated>2022-07-31T09:33:51.100Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Tips-总结&quot;&gt;&lt;a href=&quot;#Tips-总结&quot; class=&quot;headerlink&quot; title=&quot;Tips 总结&quot;&gt;&lt;/a&gt;Tips 总结&lt;/h2&gt;&lt;h3 id=&quot;1-VSCode显示空格和tab符号&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;&lt;img</summary>
         
       
     
     
     
-    <category term="工具" scheme="http://blog.devopsing.site/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="VSCode" scheme="http://blog.devopsing.site/tags/VSCode/"/>
     
   </entry>
   
   <entry>
-    <title>使用私有gitlab搭建gitbook持续集成</title>
-    <link href="http://blog.devopsing.site/2019/01/27/gitbook-gitlab/"/>
-    <id>http://blog.devopsing.site/2019/01/27/gitbook-gitlab/</id>
-    <published>2019-01-27T04:51:05.000Z</published>
-    <updated>2020-10-17T13:39:27.539Z</updated>
+    <title>DevOps时代的软件过程改进</title>
+    <link href="http://blog.devopsing.site/2021/11/30/yuque/nrl1a9/"/>
+    <id>http://blog.devopsing.site/2021/11/30/yuque/nrl1a9/</id>
+    <published>2021-11-29T16:26:27.000Z</published>
+    <updated>2022-07-31T09:33:51.100Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;p&gt;在项目实践中，团队需要对用到的知识技术进行总结，即便于分享，也利于传承，而gitbook就是个不错的选择，使用gitbook-cli 对Markdown文档进行编译，生成静态文件，再通过web服务器（e.g.</summary>
+    <summary type="html">&lt;p&gt;软件开发经过多年的发展，从互联网史前，到移动互联网，再到 AI、大数据、云计算、物联网、区块链等的时代，其本质并没有发生根本性的改变，但组织形式却在持续演化，其中以敏捷和 DevOps 为特征的两个典型阶段，在今天得到了较大规模的应用。&lt;/p&gt;
+&lt;p&gt;本文将尝试探讨在</summary>
         
       
     
     
     
-    <category term="DevOps" scheme="http://blog.devopsing.site/categories/DevOps/"/>
-    
-    
-    <category term="gitbook, gitlab" scheme="http://blog.devopsing.site/tags/gitbook-gitlab/"/>
     
   </entry>
   
   <entry>
-    <title>Linux 后台运行进程</title>
-    <link href="http://blog.devopsing.site/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/"/>
-    <id>http://blog.devopsing.site/2018/02/27/linux-hou-tai-yun-xing-jin-cheng/</id>
-    <published>2018-02-27T05:11:05.000Z</published>
-    <updated>2020-10-26T14:17:17.624Z</updated>
+    <title>UML图-总结</title>
+    <link href="http://blog.devopsing.site/2021/10/30/yuque/to1w2y/"/>
+    <id>http://blog.devopsing.site/2021/10/30/yuque/to1w2y/</id>
+    <published>2021-10-30T12:17:00.000Z</published>
+    <updated>2022-07-31T09:33:51.101Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;当我们在终端或控制台工作时，可能不希望由于运行一个作业而占住了屏幕，因为可能还有更重要的事情要做，比如阅读电子邮件。对于密集访问磁盘的进程，我们更希望它能够在每天的非负荷高峰时间段运行(例如凌晨)。为了使这些进程能够在后台运行，也就是说不在终端屏幕</summary>
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;UML 图是软件工程的组成部分，软件工程从宏观的角度保证了软件开发的各个过程的质量。而 UML</summary>
         
       
     
     
     
-    <category term="Linux" scheme="http://blog.devopsing.site/categories/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SonarQube之采购选型参考</title>
+    <link href="http://blog.devopsing.site/2021/08/29/yuque/vfvoyq/"/>
+    <id>http://blog.devopsing.site/2021/08/29/yuque/vfvoyq/</id>
+    <published>2021-08-29T15:40:22.000Z</published>
+    <updated>2022-07-31T09:33:51.101Z</updated>
     
     
-    <category term="VSCode" scheme="http://blog.devopsing.site/tags/VSCode/"/>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;SonarQube 是 DevOps 实践中主流的一款质量内建工具，过插件机制，Sonar 可以集成不同的测试工具，代码分析工具，以及持续集成工具，比如</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>敏捷实践思考</title>
+    <link href="http://blog.devopsing.site/2021/05/18/yuque/taegsk/"/>
+    <id>http://blog.devopsing.site/2021/05/18/yuque/taegsk/</id>
+    <published>2021-05-18T15:11:42.000Z</published>
+    <updated>2022-07-31T09:33:51.101Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;用户故事&quot;&gt;&lt;a href=&quot;#用户故事&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DevOps工程师学习路径</title>
+    <link href="http://blog.devopsing.site/2021/05/06/yuque/rgp06g/"/>
+    <id>http://blog.devopsing.site/2021/05/06/yuque/rgp06g/</id>
+    <published>2021-05-06T15:27:28.000Z</published>
+    <updated>2022-07-31T09:33:51.102Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;##&lt;/p&gt;
+&lt;p&gt;DevOps 实际上是什么意思？?&lt;br&gt;DevOps 是一种软件开发方法，涉及持续开发，持续测试，持续集成，部署和监视。这一系列过程跨越了传统上孤立的开发和运营团队，DevOps 试图消除它们之间的障碍。&lt;br&gt;因此，DevOps 工程师基本上与</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Git 在团队中的最佳实践</title>
+    <link href="http://blog.devopsing.site/2021/05/03/yuque/vn8en5/"/>
+    <id>http://blog.devopsing.site/2021/05/03/yuque/vn8en5/</id>
+    <published>2021-05-03T12:46:46.000Z</published>
+    <updated>2022-07-31T09:33:51.102Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;现代软件开发过程中要实现高效的团队协作，需要使用代码分支管理工具实现代码的共享、追溯、回滚及维护等功能。目前流行的代码管理工具，包括 CVS，SVN，Git，Mercurial 等。&lt;/p&gt;
+&lt;p&gt;相比 CVS 和 SVN 的集中管理，Git</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>企业开始实践DevOps如何选择合适的工具平台？</title>
+    <link href="http://blog.devopsing.site/2021/05/02/yuque/qpnkoi/"/>
+    <id>http://blog.devopsing.site/2021/05/02/yuque/qpnkoi/</id>
+    <published>2021-05-02T13:00:39.000Z</published>
+    <updated>2022-07-31T09:33:51.102Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Azure-DevOps-Pipeline&quot;&gt;&lt;a href=&quot;#Azure-DevOps-Pipeline&quot; class=&quot;headerlink&quot; title=&quot;Azure DevOps Pipeline&quot;&gt;&lt;/a&gt;Azure DevOps</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何有效提升团队的微服务落地能力？</title>
+    <link href="http://blog.devopsing.site/2021/05/02/yuque/pr6163/"/>
+    <id>http://blog.devopsing.site/2021/05/02/yuque/pr6163/</id>
+    <published>2021-05-02T10:44:48.000Z</published>
+    <updated>2022-07-31T09:33:51.102Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-基于单主干分支的持续交付&quot;&gt;&lt;a href=&quot;#1-基于单主干分支的持续交付&quot; class=&quot;headerlink&quot; title=&quot;1. 基于单主干分支的持续交付&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前后端常见鉴权方式</title>
+    <link href="http://blog.devopsing.site/2021/03/31/yuque/oggaga/"/>
+    <id>http://blog.devopsing.site/2021/03/31/yuque/oggaga/</id>
+    <published>2021-03-31T10:50:23.000Z</published>
+    <updated>2022-07-31T09:33:51.103Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;目前我们常用的鉴权有四种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;HTTP Basic Authentication&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;session-cookie&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Token</summary>
+        
+      
+    
+    
+    
     
   </entry>
   

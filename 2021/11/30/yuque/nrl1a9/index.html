@@ -1,0 +1,1261 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="DevOps时代的软件过程改进, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="description" content="Every failure is leading towards success.">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <!-- 表示页面同时适合在移动设备和PC上进行浏览。 -->
+        <meta name="applicable-device" content="pc,mobile">
+        <meta name="renderer" content="webkit|ie-stand|ie-comp">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <!-- 添加百度统计和谷歌统计代码 -->
+        <meta name="baidu-site-verification" content="code-KajABoHffk" />
+        <!-- <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
+        <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+            <title>
+                DevOps时代的软件过程改进 | DevOps在路上
+            </title>
+            <link rel="icon" type="image/png" href="/favicon.png">
+
+            <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+            <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+            <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+            <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+            <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+            <link rel="stylesheet" type="text/css" href="/css/matery.css">
+            <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+
+            <script src="/libs/jquery/jquery.min.js"></script>
+
+    <meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="DevOps在路上" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">DevOps在路上</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">DevOps在路上</div>
+        <div class="logo-desc">
+            
+            Every failure is leading towards success.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/owen2016/owen2016.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/owen2016/owen2016.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">DevOps时代的软件过程改进</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-11-30
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-07-31
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    13 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>软件开发经过多年的发展，从互联网史前，到移动互联网，再到 AI、大数据、云计算、物联网、区块链等的时代，其本质并没有发生根本性的改变，但组织形式却在持续演化，其中以敏捷和 DevOps 为特征的两个典型阶段，在今天得到了较大规模的应用。</p>
+<p>本文将尝试探讨在 DevOps 时代，软件过程改进的必要性及其理念与方法方面的新挑战，并对 Cloud Native 云原生生态的 DevOps 略作展望，希望对读者有所启发。</p>
+<h2 id="01-重新审视软件过程改进"><a href="#01-重新审视软件过程改进" class="headerlink" title="01 重新审视软件过程改进"></a><strong>01 重新审视软件过程改进</strong></h2><p>SPI 相关的概念比较多，我们在此先回顾最基础的两个相关概念：<br><strong>软件过程（software process）：</strong> “软件过程为一个为建造高质量软件所需完成的任务的框架，即形成软件产品的一系列步骤，包括中间产品、资源、角色及过程中采取的方法、工具等范畴。<br>人们在开发和维护软件机器相关产品时所涉及的各种活动、方法、实践和改革等。其中软件相关产品包括软件项目计划、设计文档、程序代码、测试用例和用户手册等。”<br><strong>过程模型（process model）：</strong>“ 所谓软件过程模型就是一种开发策略，这种策略针对软件工程的各个阶段提供了一套范形，使工程的进展达到预期的目的。<br>对一个软件的开发无论其大小，我们都需要选择一个合适的软件过程模型，这种选择基于项目和应用的性质、采用的方法、需要的控制，以及要交付的产品的特点。 常见的模型包括瀑布模型、螺旋模型、增量模型、迭代模型、V 模型等。”</p>
+<p>现实往往更加残酷，在绝大部分中小企业，软件开发过程相对粗放，并不严格遵循某种模型或范式，基本是 KPI 驱动和 BOSS 驱动。<br>与此同时大型企业尤其是如今的互联网巨头公司，对效率和质量的要求较高，所以在软件开发过程方面愿意投入，在每天/每周/每月的版本迭代过程中，组织层面会更加关注每一次迭代的效率和质量与上一次相比是否有保持或者提升（下降通常是不可接受的），此时 SPI 就该出场了，这是让迭代效率和质量持续提升的法宝！ 也许很多组织内已经在做这类工作，但并没有明确把它定义为 SPI。</p>
+<p>一般大型管理咨询公司会更乐意提及 SPI，他们更加擅长帮助客户梳理和优化业务流程，给出改进建议或方案，并通过使用他们销售的产品来落地。<br>在互联网企业中，版本迭代的典型特点是周期较短，我们从 BAT 及京东、携程、美团、字节跳动等企业的工程效率相关团队发布的数据看到，大家通常会使用平均发布周期、发布成功率、日构建及发布次数等指标来观察和衡量软件开发与交付的效率和质量。</p>
+<p>建立可观测的指标，是过程改进非常重要的一个步骤！ 只有建立核心指标，才能直观地看到改进活动的效果，举个例子： 某开发团队把版本控制工具从 SVN 要切换到 Git；实践中这项工作的实施通常不会进行充分评审，最多做一个开发者调查，因为大家潜意识里认为这是”行业趋势“，我们要跟着同行的步伐；</p>
+<p>但是如果从问题的本质思考，即使是”行业趋势“，一个团队应该在什么时间点切换比较合适，切换后带来的具体收益是什么？<br>是否因为新工具/新方法的引入，短期内团队交付效率会有所下降，而长期会上升？ 这是非常典型的一个改进活动，我所服务过的雇主，有 3 个团队经历过 SVN 切换 Git，并没有一个团队从 SPI 的角度去评估过。但是如果建立了最基础的度量指标，即使没有评估，我们也可以从版本迭代和交付数据上看到变化。</p>
+<h2 id="02-DevOps-时代的软件过程改进"><a href="#02-DevOps-时代的软件过程改进" class="headerlink" title="02 DevOps 时代的软件过程改进"></a><strong>02 DevOps 时代的软件过程改进</strong></h2><p>DevOps 理念在推广初期，受到不少人士的质疑甚至反对，比如有人担心运维工程师会丢掉自己的工作；后来的结果大家都看到了，非但运维工程师没有消失或减少，有些组织反而多了一种专职 DevOps 的角色，而原有的运维工程师其效率更高，单人可以维护的系统数量和复杂度都显著提升。可以说按照新技术应用周期，验证了这一事实：“新技术在短期内其价值通常被高估，而长期被低估”。</p>
+<p>DevOps 从理念甚至组织文化层面为软件开发与交付带来了新的提升，开发从系统设计和实现阶段就考虑到对持续交付的支撑，与此同时运维也从系统设计和实现阶段就开始关注整体技术方案，让其面向持续交付来保证一定的可运维性。</p>
+<p>因此可以说 DevOps 让软件系统的开发与交付环节更加紧密，这对过程改进来说是好消息；更紧密的协作，会让过程指标传递更加高效，开发与运维甚至 QA 等角色，能共用同一套衡量指标体系，用同一把尺子衡量各环节及过程整体的效率和质量。</p>
+<p>所以，DevOps 时代，SPI 的必要性不言而喻，甚至 SPI 的效果和意义会更容易凸显，更容易通过指标体系观测到。<br>那么 DevOps 时代的 SPI 工作会有哪些新的挑战呢？理念方面，需要在组织层面持续加强对过程改进的认可度，越是紧密的协作，越是需要更灵活的过程度量方法，过程改进工作的价值也就越容易得到体现。常见的认识误区是，采用了 DevOps 就是引入了一个标准范式，无需过程改进；</p>
+<p>相反，DevOps 对每一个过程的要求相对更高，能持续对瓶颈或薄弱过程进行改进，会让 DevOps 的价值更大。方法方面，除了常见的新方法导入、工具引入或替换，还有一个方面是，现有方法或工具自身的持续改进。<br>比如自动化测试，要求在 CI 环节全部自动化，甚至在 CD 环节可以进行预发布/线上环境的无损测试，更进一步需要在红绿发布/金丝雀发布过程中通过自动化测试来判断发布是否达到预期。再比如监控和告警，要求相关信息必须做到可视化，并让开发、运维、QA 在同一个 dashboard 里观测，这样可以提高沟通效率，减少术语和指标定义不一致带来的沟通成本；可以说，优秀的监控和告警体系，会让 DevOps 链条上的所有角色能及时感知系统各部分及整体的任何风吹草动。</p>
+<p>##</p>
+<h2 id="03-从-Jenkins-发展轨迹窥视软件过程改进"><a href="#03-从-Jenkins-发展轨迹窥视软件过程改进" class="headerlink" title="03 从 Jenkins 发展轨迹窥视软件过程改进"></a><strong>03 从 Jenkins 发展轨迹窥视软件过程改进</strong></h2><p>Jenkins 在 CI 及 DevOps 生态扮演者非常重要的角色，可以说是软件交付史上的活化石！我们来回顾下 Jenkins 的发展轨迹：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1638203324550-d6a46eea-2946-4860-b431-c1a238e99caf.png#clientId=u787d3d1f-1db0-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=226&id=u9076e946&margin=%5Bobject%20Object%5D&name=image.png&originHeight=226&originWidth=903&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=22636&status=done&style=none&taskId=u53e3c09e-995d-45c8-924b-536915dfe07&title=&width=903" alt="image.png"><br>Hudson 时代，更多的是希望把写完的代码能自动编译、测试，做一些基本代码的分析，最后输出合格的部署包。这些最基本的追求，还不是每个团队都有甚至能达成共识，更多团队依然是比较粗放的开发方式，稍好一些的会通过自动化脚本来实现类似目的。</p>
+<p>在大约 2013 年之前，国内其实对于 Jenkins 的认知和应用依然只停留在“一个能自动构建项目的工具”层面上。当然也有不少团队会依赖 Jenkins 来进行部署，但主要针对把部署包 scp 到有限的物理机或虚拟机上然后执行部署 shell 脚本等场景，基本没有成品仓的概念，也没有 Docker 容器及镜像级别的打包部署。后来随着 Docker 和 K8S 的流行，以及 Jenkins 自身的快速进化，到 2016 年几乎是一夜之间所有招聘网站的相关职位 JD 里都增加了 Jenkins 技能要求。</p>
+<p>因为比较早地使用 Jenkins，并且在社区内参与了一些翻译工作，2017 年我与 Jenkins 社区的 Maxwell 沟通后在深圳发起了国内首次 Jenkins Area Meetup，受到了广泛支持和热烈欢迎。</p>
+<p>本来预期是办一个小型的 Meetup 活动而已，30 或 50 人的交流活动，结果办成了 100+人次的小型会议；实在没想到一个 Jenkins 怎么吸引了这么多人，会后我们还分析了一下报名及参与的人群特点，发现不只是开发人员很有兴趣，还有运维人员，配置管理人员，测试人员，甚至云计算和基础设施的人员。</p>
+<p>后来业内其他社区很快在北京、上海等城市发起了 Jenkins Area Meetup，并在 2017 年底于上海，召开了国内第一次 Jenkins 中文用户大会，Jenkins 作者 KK 也从 2017 年开始频繁在国内的相关会议和活动上露面。<br>今天 Jenkins 中文社区也蓬勃发展，不但有了中文版的网站 <a target="_blank" rel="noopener" href="https://jenkins.io/zh/%EF%BC%8C%E8%BF%98%E6%9C%89%E8%BF%90%E8%90%A5%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7">https://jenkins.io/zh/，还有运营微信公众号</a> “Jenkins”。</p>
+<p>作为 Jenkins 中文社区的一员，非常欢迎大家积极参与到社区活动中来，包括但不限于代码提交，测试用例提交，文档优化，文档翻译，Meetup 活动组织等。<br>至于后来 Jenkins 2.x 的出炉，以及 Pipeline 特性的持续增强，甚至到目前 Jenkins X 的发布和流行，让开发者们真正感受到了“一切皆可编程”的真理！ 我们发现不只是可使用的资源可编程，比如云计算的本质可以理解为</p>
+<p>让各种基础设施可编程，而且过程也可编程，而且是超越了资源调度或任务编排的水准。<br>也许不远的将来，开发人员真的只要关注业务逻辑的实现即可，其他都交给可编程的自动化过程来完成，包括资源的获取、初始化、启用等；当然，这些自动化过程依然需要专门的开发人员来实现。</p>
+<p>通过以上 Jenkins 的发展轨迹，特别是国内外社区的发展状况，我们可以明显地感受到，组织和个人对软件过程有着越来越高的要求，更加追求效率和质量，过程资源调度的可编程性和自动化程度日益提高。可以认为，是 Jenkins 把过程改进相关的工作串联了起来。</p>
+<p>##</p>
+<h2 id="04-云原生生态的-DevOps-与软件过程改进展望"><a href="#04-云原生生态的-DevOps-与软件过程改进展望" class="headerlink" title="04 云原生生态的 DevOps 与软件过程改进展望"></a><strong>04 云原生生态的 DevOps 与软件过程改进展望</strong></h2><p>Cloud Native 生态目前已经进入快速发展阶段，参考新技术应用周期，笔者认为已经在”快速成长期“的尾巴上了，可能很快要进入”成熟期“了。<br>关于云原生的定义，可以参考<a target="_blank" rel="noopener" href="https://jimmysong.io/kubernetes-handbook/cloud-native/cloud-native-definition.html">https://jimmysong.io/kubernetes-handbook/cloud-native/cloud-native-definition.html</a></p>
+<p>笔者的个人观点是：云原生是软件交付方式的突破性进化，而不仅仅是效率的提升。</p>
+<p>云原生所需的能力和特征：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1638203419593-4c80f20e-69f1-4faf-9166-19653130ba95.png#clientId=u787d3d1f-1db0-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=512&id=uc8b84986&margin=%5Bobject%20Object%5D&name=image.png&originHeight=654&originWidth=1071&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=292159&status=done&style=none&taskId=ud9efbe92-b9d9-4d95-b1ee-dbacc127e5b&title=&width=839" alt="image.png"></p>
+<p><a target="_blank" rel="noopener" href="https://jimmysong.io/kubernetes-handbook/cloud-native/from-kubernetes-to-cloud-native.html">https://jimmysong.io/kubernetes-handbook/cloud-native/from-kubernetes-to-cloud-native.html</a></p>
+<p>云原生时代大规模微服务的出现，让质量保证工作也面临新的挑战，目前比较火热的 CHAOS 混沌工程，是解决方案之一，可以通过随机给系统注入故障来验证系统整体的健壮性。<br>这无法通过常规的测试工作来解决，一方面系统间的关系变得更加复杂，几乎无法遍历所有路径；另一方面，不同微服务相对独立迭代，版本差别较大，只有线上拥有真实的系统演化过程信息，其他环境几乎无法模拟。</p>
+<p>云原生时代 DevOps 的挑战将会更大，还体现在开发人员离线上系统更近，对线上系统的操作会更加频繁；资源和过程的可编程性让系统复杂度持续提升，大规模微服务已经不像之前的中小系统，运维人员可以全面掌握整个系统的拓扑，必须依赖可观测性工具，甚至只能了解复杂系统的某个部分。</p>
+<p>微服务时代必备的调用链工具，在新的发展阶段，可能已经不是“链式”关系可以覆盖的了，可能是“网状”结构，虽然从系统设计角度我们追求更加优雅的拓扑结构。<br>此时的软件过程改进，已经超越了某个方法和工具的引入或替换，更需要具有良好可集成性的解决方案级别的服务导入，AIOps 就是典型案例。国内外大部分互联网企业的研发体系中，软件过程改进的相关工作通常归属在“工程效率”、“基础设施”等团队中；</p>
+<p>理想的研发体系中，比如云原生技术栈的引入，可能来自业务需求的驱动，而实践中通常是基础设施提供方来直接驱动的，因为后者更加关注资源使用效率、系统可用性与成本，并在这几个方面对业务团队的技术方案进行评估，对业务系统建立考核指标。</p>
+<p>所以此时要让软件过程改进工作顺利进行，必须进行大范围的效率、质量与成本意识培训和提升，然后给出适合组织文化的行之有效的举措，逐层实施，毕竟此时牵一发而动全身。</p>
+<p>再次回到 Jenkins ，云原生时代的 Jenkins 进化为了 Jenkin X，依赖 Git &amp; K8S 来完成云上的超级 Pipeline ，Jenkins X 还在快速进化，笔者相信它在 KK 的带领下依然是云原生时代的 CI/CD 领跑者！此时的软件过程改进依然可以极大程度地参考 Jenkins X ，任何效率和质量瓶颈都值得去做改进！</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Owen Li</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://blog.devopsing.site/2021/11/30/yuque/nrl1a9/">http://blog.devopsing.site/2021/11/30/yuque/nrl1a9/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Owen Li</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的鼓励是我前进的动力！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020234534.JPG" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020234556.JPG" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/12/06/yuque/evq8l3/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="CI/CD场景价值">
+                        
+                        <span class="card-title">CI/CD场景价值</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Owen Li
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/10/30/yuque/to1w2y/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="UML图-总结">
+                        
+                        <span class="card-title">UML图-总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Owen Li
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: DevOps在路上<br />'
+            + '文章作者: Owen Li<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="486899256"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+            
+                <div class="container row center-align" style="margin-bottom: 15px !important;">
+                    <div class="col s12 m8 l8 copy-right">
+                        Copyright&nbsp;&copy;
+                        <span id="year">2020</span>
+                        <a href="/about" target="_blank">
+                            Owen Li
+                        </a>
+                        |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;
+                        <a href="https://github.com/owen2016/owen2016.github.io" target="_blank">Matery</a>
+                        <br>
+                        
+                            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">124.9k</span>&nbsp;字
+                            
+                                
+                                    
+                                        
+                                            
+                                                
+                                                    <!-- <span id="busuanzi_container_site_pv" style='display:none'> -->
+                                                    <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+                                                    </span>
+                                                    
+                                                        
+                                                            <span id="busuanzi_container_site_uv">
+                                                                <!-- <span id="busuanzi_container_site_uv" style='display:none'> -->
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+                                                            </span>
+                                                            
+                                                                <br>
+                                                                
+                                                                    <span id="sitetime">载入运行时间...</span>
+                                                                    <script>
+                                                                        function siteTime() {
+                                                                            var seconds = 1000;
+                                                                            var minutes = seconds * 60;
+                                                                            var hours = minutes * 60;
+                                                                            var days = hours * 24;
+                                                                            var years = days * 365;
+                                                                            var today = new Date();
+                                                                            var startYear = "2020";
+                                                                            var startMonth = "1";
+                                                                            var startDate = "1";
+                                                                            var startHour = "0";
+                                                                            var startMinute = "0";
+                                                                            var startSecond = "0";
+                                                                            var todayYear = today.getFullYear();
+                                                                            var todayMonth = today.getMonth() + 1;
+                                                                            var todayDate = today.getDate();
+                                                                            var todayHour = today.getHours();
+                                                                            var todayMinute = today.getMinutes();
+                                                                            var todaySecond = today.getSeconds();
+                                                                            var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                                                                            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                                                                            var diff = t2 - t1;
+                                                                            var diffYears = Math.floor(diff / years);
+                                                                            var diffDays = Math.floor((diff / days) - diffYears * 365);
+                                                                            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                                                                            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                                                                                minutes);
+                                                                            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                                                                                diffMinutes * minutes) / seconds);
+                                                                            if (startYear == todayYear) {
+                                                                                document.getElementById("year").innerHTML = todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                                                                                    " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            } else {
+                                                                                document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                                                                                    " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            }
+                                                                        }
+                                                                        setInterval(siteTime, 1000);
+                                                                    </script>
+                                                                    
+                                                                        <br>
+                                                                        
+                                                                            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://www.beian.miit.gov.cn/" target="_blank">鄂ICP备2020017249号-1</a>
+            </span>
+                                                                            
+                    </div>
+                    <div class="col s12 m4 l4 social-link social-statis">
+                        
+    <a href="https://github.com/owen2016" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:libin95188@126.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="https://weibo.com/dreamfly95188" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/dreamfly95188" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/dream_fly" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/dream_fly" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+                    </div>
+                </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<!-- <script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 80000;
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script> -->
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?86e26a6f860a2299233e29f86f9f65a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

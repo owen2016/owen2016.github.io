@@ -1,0 +1,1299 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="如何有效提升团队的微服务落地能力？, DevOps在路上|DevOps|Docker|CICD|K8S">
+        <meta name="description" content="Every failure is leading towards success.">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <!-- 表示页面同时适合在移动设备和PC上进行浏览。 -->
+        <meta name="applicable-device" content="pc,mobile">
+        <meta name="renderer" content="webkit|ie-stand|ie-comp">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <!-- 添加百度统计和谷歌统计代码 -->
+        <meta name="baidu-site-verification" content="code-KajABoHffk" />
+        <!-- <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
+        <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+            <title>
+                如何有效提升团队的微服务落地能力？ | DevOps在路上
+            </title>
+            <link rel="icon" type="image/png" href="/favicon.png">
+
+            <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+            <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+            <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+            <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+            <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+            <link rel="stylesheet" type="text/css" href="/css/matery.css">
+            <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+
+            <script src="/libs/jquery/jquery.min.js"></script>
+
+    <meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="DevOps在路上" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">DevOps在路上</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">DevOps在路上</div>
+        <div class="logo-desc">
+            
+            Every failure is leading towards success.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/owen2016/owen2016.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/owen2016/owen2016.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">如何有效提升团队的微服务落地能力？</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-05-02
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-07-31
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    20 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="1-基于单主干分支的持续交付"><a href="#1-基于单主干分支的持续交付" class="headerlink" title="1. 基于单主干分支的持续交付"></a>1. 基于单主干分支的持续交付</h2><p>对于微服务的成功实施，团队持续交付能力是至关重要的衡量指标。在由上百个服务组成的复杂系统中，如果所有服务都按照人为指定发布周期进行整体交付，很容易出现由于细小的失误导致大面积线上故障。</p>
+<p>持续交付实践要求每个独立服务都具有完备的交付流水线，在流水线的末端随时能提供当时最新的可工作、可交付的产品。持续交付通常会配合自动化的测试和部署手段，从而减少功能代码提交到上线的端到端时间。这就使得每个独立服务能按照各自不同的节奏进行发布，并且将自己的发布状态可视化出来。</p>
+<p>采用尽可能精简且稳定的分支策略也是使得持续交付流程能够顺利实施的关键，我们提倡使用单主干的分支策略（<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=https://trunkbaseddevelopment.com/">Trunk Based Development</a>）。</p>
+<p>在单主干的开发方式中，除了一个用于持续开发和集成的『主干分支』（通常即 Master 分支）和一系列依据发布周期创建的发布分支以外，应该避免创建其他的 Long-lived 分支。如果有多个功能需要开发，则推荐采用特性开关（Feature Toggle）的方法来控制它们的发布时机。当然，单主干策略是允许存在短生命周期特性分支的（短于一周），有时这些小分支甚至无需提交到远程仓库中。</p>
+<p>下面这是一幅经典的单主干分支策略示意图。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1619942916835-702a5e11-7ece-4623-906f-16f4b3810560.png#clientId=uec067d9d-881e-4&from=paste&height=355&id=NgNjz&margin=%5Bobject%20Object%5D&name=image.png&originHeight=355&originWidth=509&originalType=url&size=118690&status=done&style=none&taskId=ue5efe7e2-2ef3-44ef-b705-af0094ba137&width=509" alt="image.png"></p>
+<p>值得指出的是，在划分得当的微服务系统中，同一个服务需要同时进行开发的特性通常不会多于两到三个（否则应该考虑这个服务是否承担了过多的职责）。因此即使在不需要特性开关和其他额外开发工作量的情况下，已经可以比较好的实现每个功能点的独立发布和测试，这反向说明了微服务架构对于持续交付的实施也是十分友好的。</p>
+<p>除了严格的单主干，一种常见的变式是多主干策略，典型的是一个开发分支加几个固定的发布分支，通常用于无需维护多个发布版本的 SaaS 服务交付。这种模式的优点是能够将发布流水线目标环境和分支显示的关联起来，例如『Develop 分支』对应集成环境，『Release 分支』对应验收环境和正式环境。下图展示了一组与此模式下的持续交付流水线。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1619943021968-d5a8bc8f-0191-4a53-9ddf-934cfbe9b8c3.png#clientId=uec067d9d-881e-4&from=paste&height=174&id=qyrAy&margin=%5Bobject%20Object%5D&name=image.png&originHeight=332&originWidth=1000&originalType=url&size=221301&status=done&style=none&taskId=u0f47803e-16d7-4d78-b082-0e58cd1def7&width=523" alt="image.png"><br><strong>多主干的流水线</strong><br>保持每个服务高频率的集成和交付，会使得有故障的功能在很短的反馈周期内被发现，在快速迭代发布的前提下做到整个系统发布井然有序。这样的氛围不仅有利于改善代码的质量，而且能够提高开发士气，频繁的发布上线也有利于增强团队对产品的荣誉感和自信心</p>
+<h2 id="2-全功能团队"><a href="#2-全功能团队" class="headerlink" title="2. 全功能团队"></a>2. 全功能团队</h2><p>全功能团队是 DevOps 运动所倡导的一种产品团队组织结构，通过将不同角色的业务和技术成员纳入到团队，组成具备端到端交付和运营能力的完整单元。</p>
+<p>康威定律阐述了开发团队的组织结构和其设计的产品结构之间具有的相似关系。许多的实践结果也表明，将全功能团队实践应用在微服务产品中带来的收益，要远远超过它在传统模块化开发的产品中所带来的收益。这是因为<strong>微服务的架构中的所有服务真正具备独立运行和独立运营的能力，从本质上来说就是一个端到端的子业务产品。</strong></p>
+<p>这种架构和团队的影响是双向的。一方面，微服务的运营结构要求团队具有高内聚的自主管理能力。另一方面，全功能团队也为特定服务进行独立技术选型提供了更灵活的发挥空间。服务与团队通常是多对一的关系，每个团队管理的是一组相互关联紧密的服务群，并且可以在必要的情况下对服务进行进一步拆分。在实际的实践中推荐采用例如接口网关（API Gateway）等方式对一组具有业务意义的服务接口进行聚合，从而保证局部服务结构变化不会直接影响服务的消费方的调用。</p>
+<p>值得一说的是，在一些传统企业内的 IT 部门划分，往往已经按照职能分为开发团队、运维团队、运营团队，甚至单独的测试团队。在这样的企业中很难快速完成全功能团队的转变，因此在实施微服务架构过程中比较容易走偏。对于这种情况可以采用<strong>逐步演进</strong>的转换方式，具体途径主要有两种。</p>
+<ul>
+<li><p><strong>第一种方式是进行项目试点</strong>。对于习惯了按功能分层、分块的『实现接口开发』式的组织，即使勉强凑齐每个角色的人组在一起也难以成为真正具备端到端交付能力的团队。因此与其做得徒有其表，不如找出项目中一些全局意识比较到位的成员，对特定的项目进行试点，然后逐步扩大，将这种端到端的责任和意识带入到更多的项目中去。试点的项目应该是以实施现有系统的一个独立业务功能点为目标，而不是开发与企业主线系统无关的短期产品，否则容易出现试点项目很成功，但项目结束便不了了之的结果。</p>
+</li>
+<li><p><strong>第二种方式是先从分开发团队入手，纵向划分项目</strong>。这是对全功能团队的一种妥协式的引入方式，即在开发团队中首先改变系统架构横向分层、局部分块的开发模式，依据业务功能进行上至外部接口、下至业务数据的独立服务拆分，但并不急于在开发团队中引入诸如测试、运维、业务等角色的成员。这种项目划分虽然在一定程度上为微服务架构执行制造了条件，但从长远来看，并不能为团队进行自主的技术栈和基础设施选型、以及业务数据的利用提供足够的空间。</p>
+</li>
+</ul>
+<h2 id="3-自动化运维"><a href="#3-自动化运维" class="headerlink" title="3. 自动化运维"></a>3. 自动化运维</h2><p>自动化运维是实施持续交付的必要前提，因此也可以说是采用微服务架构的必要前提。但这里所说的自动化运维，不仅仅包含持续交付所需的服务部署时『一键操作』能力，更重要的是运维基础设施构建的自动化、以及服务灾备、恢复的自动化。</p>
+<p>微服务架构最初受到追捧的一个原因是它灵活的『局部 Scale Out』能力，以功能点为单元的扩展、收缩，这对于具有业务周期性的服务而言更加重要。但一些企业在自身基础设施自动化不到位的情况下盲目实施微服务，期望通过其实现复杂架构的解构，结果在面对突发线上事故时出现雪崩式的连锁反应，情急之下也只能手工恢复重建，耽误大量时间。</p>
+<p>实施自动化运维涉及的工具有很多，例如 Ansible、SaltStack、Terraform，甚至 Docker 都可以看做是自动化运维的一部分。这当中大多数工具都提供有定义操作行为的领域 DSL，它们通常是一些配置式语言或脚本语言，因此自动化运维也涉及到代码的编写。与开发项目代码不同的地方在于，自动化运维的代码大多不是长期运行的，很多代码也许只在特定场景使用一次，然后就会非常长时间无人问津，直到某些紧急情况才会再次需要用到。此外，运维的代码本身并不直接具有业务价值，这些因素导致它们往往没有被很好的管理起来。</p>
+<p>下面以采用 Ansible 或 SaltStack 这类通用自动化工具为例，介绍一些在实践中需要注意的地方。</p>
+<ul>
+<li><p>首先是运维脚本应该通过 Git 或 SVN 这样的版本管理工具进行归类和管理。通常来说，推荐将特定服务部署的 Ansible 或 SaltStack YAML 脚本文件与服务本身的代码放在同一个代码仓库中，方便开发人员在必要时候快速的修改它。然后将基础设施管理的 YAML 脚本文件放在单独的代码仓库，方便复用和查找。但这样可能带来的问题是，在实际使用时可能会需要同时获取两个代码仓库的脚本以获得完整的部署功能，因此如果使用的其他配套工具对多仓库支持不佳，也可以将所有运维脚本在同一个仓库管理。</p>
+</li>
+<li><p>其次，应该在持续交付流水线上使用服务部署的自动化工具，从而实现快速的交付上线。在条件允许的情况下，还应该在流水线上直接配备自动化的灾备恢复任务入口，以及定期的对这些恢复脚本进行测试和演练。</p>
+</li>
+<li><p>最后，虽然我们鼓励每个团队使用适合自身业务的技术栈进行开发，但对于运维工具的选择通常让同一个产品的各服务采用统一技术栈比较合适（例如不要混用 Ansible 和 SaltStack 的脚本）。这个建议主要考虑到运维工作可能会有较多跨团队协作，以及故障恢复场景下的快速救灾操作，统一的技术栈能为运维人员节约掉工具切换的时间。</p>
+</li>
+</ul>
+<h2 id="4-服务高可用"><a href="#4-服务高可用" class="headerlink" title="4. 服务高可用"></a>4. 服务高可用</h2><p>由于微服务系统中存在着众多跨服务调用，任何一个服务都不能假设自己可以随意的停机一段时间而不对系统的整体功能造成影响。但在现实情况中，正常的服务升级或意外的故障都有可能造成服务短暂或长时间的中断，这种中断轻则引起局部功能不可用，重则导致连锁反应造成重大事故。这些都是在架构设计时候就应该予以考虑的问题。应对这两类情况的方法分别是对服务采用高可用的部署方式，和进行不离线的部署。</p>
+<p>实现服务高可用的方法有很多，常见的有：L7 负载均衡、DNS 负载均衡、服务发现、同步/异步消息队列等。</p>
+<ol>
+<li><p>L7 负载均衡即在 OSI 网络模型应用层进行的软件负载均衡，例如 Nginx 和 HAProxy 都属于这类。这些 L7 负载均衡通常带有后端服务检查的能力，会自动屏蔽掉不可用的后端服务，从而在一部分服务出现故障时候，请求仍然能被正常运行的后端服务接收。</p>
+</li>
+<li><p>DNS 负载均衡是利用了 DNS 服务可以为同一个域名配置多个解析地址，且配置多个地址后，每次解析域名时轮询着将配置的地址返回给请求方，这个特性称为 DNS 轮询。实际上 DNS 轮询仅仅是一种特殊的负载均衡技术，本身并不具有检测服务状态、提供后端服务高可用的功能。但一些新出现的开源 DNS 产品，例如 SkyDNS 和 Consul 将 DNS 服务与服务发现技术进行了结合，具有自动移除不可访问的解析地址的功能，这使得 DNS 负载均衡也可以被用于实现服务的高可用了。</p>
+</li>
+<li><p>服务发现是一种基于注册和查询服务信息的键值数据库服务。提供服务的一方将自己的名称和 IP 地址注册到服务发现的服务端，使用服务的一方则通过服务发现的服务端进行查询，然后将实际请求发送给查询到的目标 IP 地址。服务发现的服务端会负责检测每个注册服务的运行状态，及时移除出现故障的服务，并在每次收到查询时从符合名称的服务中任意返回一个作为结果。</p>
+</li>
+<li><p>消息队列则是一种采用中间媒介解耦服务提供者和消费者的方法。服务之间通过发布和订阅消息进行交互，所有的消息通过队列进行分发和中转。这种结构使得消息队列本身成为所有数据通信的瓶颈，与微服务的去中心化思想相悖，因此并不推荐在大型微服务系统中采用。</p>
+</li>
+</ol>
+<h2 id="5-不离线部署"><a href="#5-不离线部署" class="headerlink" title="5. 不离线部署"></a>5. 不离线部署</h2><p>不离线部署是确保服务随时能发布的必要措施，也是微服务架构团队需要关注的一种能力。在实际应用中，除了一些天生支持不离线部署的技术栈，如 Erlang，多数的服务是原生不支持热升级的。<strong>对于这些服务，通常来说可根据服务『是否能递进式升级』和『是否具有长任务』的特性，分成三种类型：『不能递进升级的服务』，『能递进升级、无长任务的服务』，以及『能递进升级、有长任务的服务』</strong>，分别采用不同策略进行。</p>
+<p>这里先介绍一下服务的『递进式升级』和『具有长任务』。</p>
+<p><strong>递进式升级（Rolling Update）</strong>是指将集群中的服务划成多个分组，每次只升级其中的一个分组，然后依次进行，直到所有服务都升级完成的过程。采用递进式升级会使得集群中的服务有一段时间同时存在新旧两个版本。</p>
+<p><strong>长任务</strong>指是接收到请求后需要花费几秒、甚至几小时才能执行完的任务，例如一些涉及大量计算或需要远程同步调用的事务。具有长任务的服务都有『运行中』和『空闲』这样的运行状态。当服务处于『运行中』的时候，中断它可能导致意外的结果。一般来说在 Linux 中停止服务的流程是先向服务发送一个 TERM 信号，使其正常结束，若是信号发送几秒后，服务仍然在运行，才会发送 KILL 信号将它强行终止。处理短任务的服务通常可以在接收到 TERM 信号后及时停止，因此不存在这种风险。这里应该将『无长任务的服务』与『无状态的服务』加以区分，后者指的是服务对每次请求的处理，不依赖于其他请求。即服务处理一次请求所需的全部信息，要么都包含在这个请求里，要么可以从外部获取到（比如说数据库），服务器本身不存储任何信息。通常来说，微服务架构中的服务一定是无状态的，但不一定是无长任务的。</p>
+<p><strong>如果服务不能采用递进式的升级</strong>，不论其是否具有长任务，蓝绿部署都是一种十分推荐的部署方式。蓝绿部署的做法是同时准备一组线上运行的服务器，以及一组用于下次部署的服务器，两组服务器具有相同的数量和配置。执行部署时，先将新的服务部署到没有放到线上运行的那组服务器上，等到部署全部完成，直接将负载均衡的流量导向到刚刚这组服务器上，从而使得两组服务器的角色互换。下一次进行部署的时候，则换用另外一组服务器执行部署，然后将负载均衡切换回来。这个过程如下图所示：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1619948703096-59fe9a4d-f3fd-490e-8a50-6999a7b6b39f.png#clientId=uec067d9d-881e-4&from=paste&height=277&id=pU73z&margin=%5Bobject%20Object%5D&name=image.png&originHeight=376&originWidth=1000&originalType=url&size=250919&status=done&style=none&taskId=u5b20efa7-0d3b-4ebc-99a5-2c2eb52cdb4&width=738" alt="image.png"></p>
+<p><strong>蓝绿部署的过程</strong><br>蓝绿部署的优点在于新旧服务的切换是瞬间完成的，并且当流量切换到另一组服务器上之后，原先的那组服务器可以继续运行，这样即使上面有未完成的任务也不会被强行中断，如果升级后的版本发现了比较严重的问题，也可以快速的切换回原先的版本。而它的缺点也十分明显，那就是会占用比实际需要多一倍的服务器作为下次部署的备用机器。</p>
+<p>一些前端服务可能会属于这类情况，我们也许不希望在升级的过程中，一部分用户看到是新的页面，另一部分看到还是旧的页面。另外对于 Nginx 这类负载均衡工具，后端服务的健康检查并非是实时生效的，有可能出现服务已经离线，但请求仍然被分发到这个主机的情况，因此采用负载均衡作为高可用方案的服务，蓝绿部署也是比较可取的方式。</p>
+<p><strong>如果服务的数量比较多，并且允许同时存在两个运行的版本，那么采用递进式升级方式则会更加节省资源</strong>。以每次升级一个节点的递进方式为例，当升级开始后，我们首先停止所有服务节点中的任意一个，将它进行升级，然后让它重新加入集群，接着从剩下的服务节点从再任意选择一个，直到最后一个服务也被升级完成。这个过程不需要增加额外的服务器资源，只要待升级的服务具有两个以上的节点，就不会对服务的整体功能造成中断。递进式升级的过程如下图所示：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1619951489336-97437006-be01-48e3-bd39-9b6a6052370d.png#clientId=uec067d9d-881e-4&from=paste&height=290&id=BMqtW&margin=%5Bobject%20Object%5D&name=image.png&originHeight=379&originWidth=1000&originalType=url&size=184021&status=done&style=none&taskId=uad032d56-7ea4-42fb-9a49-c032b5fcb84&width=765" alt="image.png"><br><strong>递进式升级的过程</strong></p>
+<p>显然如果服务本身是不能被随时停止的，那么这种简单的递进升级就不能很好的满足了。此时我们需要对服务的调度进行干涉，以采用服务发现的高可用方式为例，下图展示了一种『带状态检查的递进式升级』策略进行服务部署。<br><img src="https://cdn.nlark.com/yuque/0/2021/png/5374140/1619951608412-7accae8a-fcd3-4dd3-a3bf-81a7cf5ba528.png#clientId=uec067d9d-881e-4&from=paste&height=256&id=wvHCe&margin=%5Bobject%20Object%5D&name=image.png&originHeight=303&originWidth=1000&originalType=url&size=82297&status=done&style=none&taskId=ua254c746-108d-4e25-910d-85b4c681f52&width=845" alt="image.png"><br>带状态检查的递进式升级</p>
+<p>这种升级方法具有普通递进式升级的相似优势，但在集群中有个别服务执行任务时间很长，始终处于『运行中』状态的情况下，将使得升级过程阻塞，大大的延长服务部署的时间。事实上，长任务的服务通常都可以被改造成为批处理式的服务（Batch-Task Service），批处理式服务的升级只需要直接将服务执行文件替换，从根本上简化了升级难度。</p>
+<h2 id="6-监控告警"><a href="#6-监控告警" class="headerlink" title="6. 监控告警"></a>6. 监控告警</h2><p>内存不足、磁盘耗尽、网络中断、服务失效，这些天灾人祸随时可能殃及产品的服务集群。很难想象，在一个庞大的微服务系统中，如果没有合适的监控和告警设施，服务的运营会变得多么混乱不堪。</p>
+<p>对微服务系统进行监控主要需要考虑两个方面：基础设施的监控和应用服务的监控。</p>
+<ul>
+<li><p>基础设施的监控通常由部署在每个节点上的数据采集端、集中式的数据汇聚端、以及数据展示、数据分析和告警通知等部分组成。而监控告警系统的实施中，还需要结合团队的运维自动化能力，选择合适的技术栈进行。开源的 Promethus 和 InfluxDB 都是值得考虑的工具。</p>
+</li>
+<li><p>应用服务的监控通常需要依据具体的开发技术栈进行选择，例如 Java Spring Boot 的服务可以用 Spring Boot Admin、Nodejs 的服务则可用 node-monitor 和 pm2 等，此外也有一些通用的开源工具，例如 Monit。应用服务的监控除了需要能够比较好完成故障的告警外，一些监控工具还能尝试自动恢复故障服务的运行，这些措施都能有效的增加服务的可靠性。</p>
+</li>
+</ul>
+<h2 id="7-容器化"><a href="#7-容器化" class="headerlink" title="7. 容器化"></a>7. 容器化</h2><p>容器是一种能够加速促进团队 DevOps 水平的虚拟化技术。它通过把服务和系统依赖全量打包的镜像格式，将运行环境的设计提前到了开发阶段，并且实现了开发、测试、线上环境的高度一致。由于容器屏蔽了不同服务运行时的差异性，使得基于这种方式进行服务的大规模部署和调度变得简单。具体来说体现在以下几个方面：</p>
+<ul>
+<li><p>首先是运行环境的隔离。在虚拟机时代，由于每个业务依赖的系统环境不同，服务器之间无法通用。各个业务都需要独立管理服务运行环境，还往往造成多个服务同时运行的冲突，和各个运行环境不一致等问题。容器为每个服务提供隔离的运行环境，即使在同一个服务器上运行多种运行时相互有冲突的服务也不会出问题。</p>
+</li>
+<li><p>其次是精细的资源分配。通过虚拟机分配服务资源时，为了简化管理，通常不论服务实际使用多少 CPU 和内存资源，都只能从固定的主机类型中挑选一种，按主机的个数计费。容器能够很好的实现面向资源池的服务管理，各个服务可以根据并发进程数、CPU 和内存用量等资源计费，实现更加精细的资源管理。</p>
+</li>
+<li><p>此外，容器还有利于资源的动态调整。过去企业里的服务器资源一般是按计划分配的，有的部门为了避开繁琐的资源申请流程，一次性申请大量资源囤积备用，造成浪费。容器的面向资源池特性，使得企业能够将所有计算资源进行运行时动态调整，实现按计划分配到按需分配的转变。业务只需适应流量负载的变化。在负载高峰期快速增加资源，保证业务服务质量，在负载低峰期释放资源给其它服务，提高集群资源利用率。</p>
+</li>
+</ul>
+<p>容器将部署、运行的方式和业务很好的进行了解耦，目前已经有许多成熟的基于容器设计的开源调度框架，例如 SwarmKit、Kubernetes、Mesos、Rancher 等。由于微服务架构天生具有集群的特性，采用这些框架能够极大的简化服务部署和运维的工作量。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Owen Li</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://blog.devopsing.site/2021/05/02/yuque/pr6163/">http://blog.devopsing.site/2021/05/02/yuque/pr6163/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Owen Li</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的鼓励是我前进的动力！</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020234534.JPG" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://gitee.com/owen2016/pic-hub/raw/master/pics/20201020234556.JPG" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/05/02/yuque/qpnkoi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="企业开始实践DevOps如何选择合适的工具平台？">
+                        
+                        <span class="card-title">企业开始实践DevOps如何选择合适的工具平台？</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-02
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Owen Li
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/31/yuque/oggaga/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="前后端常见鉴权方式">
+                        
+                        <span class="card-title">前后端常见鉴权方式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Owen Li
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: DevOps在路上<br />'
+            + '文章作者: Owen Li<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="486899256"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+            
+                <div class="container row center-align" style="margin-bottom: 15px !important;">
+                    <div class="col s12 m8 l8 copy-right">
+                        Copyright&nbsp;&copy;
+                        <span id="year">2020</span>
+                        <a href="/about" target="_blank">
+                            Owen Li
+                        </a>
+                        |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;
+                        <a href="https://github.com/owen2016/owen2016.github.io" target="_blank">Matery</a>
+                        <br>
+                        
+                            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">124.9k</span>&nbsp;字
+                            
+                                
+                                    
+                                        
+                                            
+                                                
+                                                    <!-- <span id="busuanzi_container_site_pv" style='display:none'> -->
+                                                    <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+                                                    </span>
+                                                    
+                                                        
+                                                            <span id="busuanzi_container_site_uv">
+                                                                <!-- <span id="busuanzi_container_site_uv" style='display:none'> -->
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+                                                            </span>
+                                                            
+                                                                <br>
+                                                                
+                                                                    <span id="sitetime">载入运行时间...</span>
+                                                                    <script>
+                                                                        function siteTime() {
+                                                                            var seconds = 1000;
+                                                                            var minutes = seconds * 60;
+                                                                            var hours = minutes * 60;
+                                                                            var days = hours * 24;
+                                                                            var years = days * 365;
+                                                                            var today = new Date();
+                                                                            var startYear = "2020";
+                                                                            var startMonth = "1";
+                                                                            var startDate = "1";
+                                                                            var startHour = "0";
+                                                                            var startMinute = "0";
+                                                                            var startSecond = "0";
+                                                                            var todayYear = today.getFullYear();
+                                                                            var todayMonth = today.getMonth() + 1;
+                                                                            var todayDate = today.getDate();
+                                                                            var todayHour = today.getHours();
+                                                                            var todayMinute = today.getMinutes();
+                                                                            var todaySecond = today.getSeconds();
+                                                                            var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                                                                            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                                                                            var diff = t2 - t1;
+                                                                            var diffYears = Math.floor(diff / years);
+                                                                            var diffDays = Math.floor((diff / days) - diffYears * 365);
+                                                                            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                                                                            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                                                                                minutes);
+                                                                            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                                                                                diffMinutes * minutes) / seconds);
+                                                                            if (startYear == todayYear) {
+                                                                                document.getElementById("year").innerHTML = todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                                                                                    " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            } else {
+                                                                                document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                                                                                document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                                                                                    " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                                                                            }
+                                                                        }
+                                                                        setInterval(siteTime, 1000);
+                                                                    </script>
+                                                                    
+                                                                        <br>
+                                                                        
+                                                                            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://www.beian.miit.gov.cn/" target="_blank">鄂ICP备2020017249号-1</a>
+            </span>
+                                                                            
+                    </div>
+                    <div class="col s12 m4 l4 social-link social-statis">
+                        
+    <a href="https://github.com/owen2016" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:libin95188@126.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="https://weibo.com/dreamfly95188" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/dreamfly95188" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/dream_fly" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/dream_fly" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+                    </div>
+                </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<!-- <script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 80000;
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script> -->
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?86e26a6f860a2299233e29f86f9f65a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
